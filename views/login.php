@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?php echo $urlFrontEnd; ?>views/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo $urlFrontEnd; ?>views/css/estilos.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="views/img/favicon-16x16.png">
     
     <!--Estilos para login -->
     <link href="views/css/signin.css" rel="stylesheet">
