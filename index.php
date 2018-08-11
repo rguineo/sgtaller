@@ -6,6 +6,6 @@ require_once "controllers/template.controller.php";
 require_once "models/rutas.php";
 
 $template = new ControllerTemplate();
-$template -> template();
+$template -> login();
 
 ?>
