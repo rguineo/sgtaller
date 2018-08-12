@@ -7,5 +7,5 @@ require_once "models/rutas.php";
 
 $template = new ControllerTemplate();
 $template -> login();
-echo 'Hola Mundo';
+    echo 'Hola Mundo';
 ?>
