@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo $urlFrontEnd; ?>views/css/estilos.css">
     <link rel="icon" type="image/png" sizes="16x16" href="views/img/favicon-16x16.png">
-    
+
     <!--Estilos para login -->
     <link href="views/css/signin.css" rel="stylesheet">
     <title>Login - Duotek Services</title>
@@ -23,7 +23,7 @@
   <body class="text-center">
     
   <form class="form-signin" >
-      <img class="mb-4" src="views/img/logindt.png" alt="" width="300" height="72">
+      <img class="mb-4" src="views/img/logindt.png" alt="" width="300" height="60">
       <h1 class="h3 mb-3 font-weight-normal sing-titulo">Ingrese sus credenciales</h1>
       <label for="inputEmail" class="sr-only">e-mail</label>
       <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
