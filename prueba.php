@@ -8,5 +8,4 @@
 
     echo 'COn el Git No configurado';
         echo 'Tito Caceres';
-        echo 'Hugo Seledon';
 ?>
