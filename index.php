@@ -7,7 +7,5 @@ require_once "models/rutas.php";
 
 $template = new ControllerTemplate();
 $template -> login();
-
-asdasdasd
-
+    
 ?>
