@@ -6,5 +6,5 @@
         echo 'hola soy shamid';
         echo 'juguemos pubg???';
         echo 'hola soy #Chocolatito!!!!!';
-        echo 'no me resulta esta wea';
+        echo 'funciona esta wea????';
 ?>
