@@ -6,9 +6,6 @@ class ControllerTemplate {
 		include "views/template.php";
 	}
 
-	public function login(){
-		include "views/login.php";
-	}
 }
 
 ?>
