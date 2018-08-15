@@ -32,7 +32,6 @@
         <li class="header">Menú</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="home"><i class="fa fa-link"></i> <span>Home</span></a></li>
-        <li><a href="slider"><i class="fa fa-link"></i> <span>Slider</span></a></li>
         <li><a href="categorias"><i class="fa fa-link"></i> <span>Categorías</span></a></li>
         <li><a href="subcategorias"><i class="fa fa-link"></i> <span>Sub Categorías</span></a></li>
         <li><a href="productos"><i class="fa fa-link"></i> <span>Productos</span></a></li>
