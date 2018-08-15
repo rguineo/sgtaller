@@ -19,6 +19,8 @@ Class ControllerSesion {
 				
 				$_SESSION["id"] = $respuesta["id_usuario"];
 				$_SESSION["rol"] = $respuesta["rol"];
+				$_SESSION["avatar"] = $respuesta["avatar"];
+				
 
 				echo '
 					<script>

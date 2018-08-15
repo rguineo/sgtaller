@@ -3,9 +3,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>S</b>GT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Duotek</b>SGT</span>
     </a>
 
     <!-- Header Navbar -->
@@ -33,6 +33,7 @@
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
+                        <p><?php echo $_SESSION["avatar"]; ?></p>
                         <img src="<?php echo $_SESSION["avatar"]; ?>" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
