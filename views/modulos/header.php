@@ -33,7 +33,6 @@
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <p><?php echo $_SESSION["avatar"]; ?></p>
                         <img src="<?php echo $_SESSION["avatar"]; ?>" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
@@ -120,7 +119,6 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
               <img src="<?php echo $_SESSION["avatar"]; ?>" class="user-image" alt="User Image">
-
               <span class="hidden-xs"><?php echo $_SESSION["nombre"]; ?></span>
             </a>
             <ul class="dropdown-menu">
