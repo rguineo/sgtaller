@@ -48,7 +48,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   ?>
 <script src="views/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="views/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="views/dist/js/adminlte.Pmin.js"></script>
+<script src="views/dist/js/adminlte.min.js"></script>
 <script src="views/dist/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
