@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Duotek SGT</title>
-  <link rel="pez" href="C:\xampp\htdocs\sgtaller\views\dist\img">
+  <link rel="pez" href="views\dist\img">
 
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
