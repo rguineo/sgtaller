@@ -5,7 +5,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>S</b>GT</span>
       <!-- logo for regular state and mobile devices -->
-      <img src="views/dist/img/DT_Blanco.png" alt="" width="150">
+      <span class="logo-lg"><b>Duotek</b>SGT</span>
     </a>
 
     <!-- Header Navbar -->
@@ -33,7 +33,7 @@
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="<?php echo $_SESSION["avatar"]; ?>" class="http://getdrawings.com/iron-man-head-drawing#iron-man-head-drawing-63.jpg" alt="User Image">
+                        <img src="<?php echo $_SESSION["avatar"]; ?>" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
