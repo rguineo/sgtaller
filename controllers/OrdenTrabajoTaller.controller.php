@@ -1,6 +1,6 @@
 <?php 
 
-Class OrdenTrabajoTaller{
+Class OrdenTrabajoTallerCtr{
     // Atributos
         private $idOTT;
         private $fecha;
@@ -22,12 +22,13 @@ Class OrdenTrabajoTaller{
 
     public function NuevaOrdenTrabajoTaller(){
 
+
     }
 
     public function MostrarOrdenTrabajoTaller($id_ott){
 
     }
-    
+
     // gets & sets
 
     public function getIdOTT(){
