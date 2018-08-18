@@ -26,7 +26,7 @@ Class OrdenTrabajoTallerCtr{
     }
 
     public function MostrarOrdenTrabajoTaller($id_ott){
-
+        $this->getIdOtt;
     }
 
     // gets & sets
