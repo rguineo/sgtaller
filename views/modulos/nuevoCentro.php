@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Gestor de categorías
+        Gestor de Centro
         
       </h1>
       <ol class="breadcrumb">
@@ -14,7 +14,7 @@
     <!-- Main content -->
     <section class="content container-fluid">
 
-      <h1>Aquí van las categorías</h1>
+      <h1>Aquí los centro</h1>
 
     </section>
     <!-- /.content -->

@@ -7,7 +7,12 @@ class ControllerEnrutamiento {
 		$ruta = $_GET["ruta"];
 
 		if ($ruta == "home" ||
-			$ruta == "categorias" ||
+			$ruta == "nuevoCliente" ||
+			$ruta == "modificarCliente" ||
+			$ruta == "nuevoCentro" ||
+			$ruta == "modificarCentro" ||
+			$ruta == "nuevoEquipo" ||
+			$ruta == "modificarEquipo" ||
 			$ruta == "subcategorias" ||
 			$ruta == "productos" ||
 			$ruta == "salir") {

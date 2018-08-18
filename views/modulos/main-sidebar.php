@@ -28,15 +28,50 @@
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Menú</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="home"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
-        <li><a href="categorias"><i class="fa fa-suitcase"></i> <span>Cliente</span></a></li>
-        <li><a href="subcategorias"><i class="fa fa-building"></i> <span>Centro</span></a></li>
-        <li><a href="productos"><i class="fa fa-television"></i> <span>Equipos</span></a></li>
-
+<ul class="sidebar-menu" data-widget="tree">
+  <li class="header">Menú</li>
+    <!-- Optionally, you can add icons to the links -->
+  <li class="active"><a href="home"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+    <li class="treeview">
+      <a href="#">
+        <i class="fa fa-suitcase"></i>
+        <span>Cliente</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+      </a>
+      <ul class="treeview-menu">
+        <li><a href="nuevoCliente"><i class="fa fa-circle-o"></i> Nuevo Cliente </a><li>
+        <li><a href="modificarCliente"><i class="fa fa-circle-o"></i> Modificar </a><li>
       </ul>
+    </li>
+  <li class="treeview">
+    <a href="#">
+      <i class="fa fa-building"></i>
+      <span>Centro</span>
+        <span class="pull-right-container">
+          <i class="fa fa-angle-left pull-right"></i>
+        </span>
+    </a>
+    <ul class="treeview-menu">
+      <li><a href="nuevoCentro"><i class="fa fa-circle-o"></i> Nuevo Centro </a><li>
+      <li><a href="modificarCentro"><i class="fa fa-circle-o"></i> Modificar </a><li>
+    </ul>
+  </li>
+  <li class="treeview">
+    <a href="#">
+      <i class="fa fa-television"></i>
+      <span>Equipos</span>
+      <span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i>
+      </span>
+    </a>
+    <ul class="treeview-menu">
+      <li><a href="nuevoEquipo"><i class="fa fa-circle-o"></i> Nuevo Equipos </a><li>
+      <li><a href="modificarEquipo"><i class="fa fa-circle-o"></i> Modificar </a><li>
+    </ul>
+  </li>
+</ul>
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
