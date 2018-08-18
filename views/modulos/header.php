@@ -33,7 +33,7 @@
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="<?php echo $_SESSION["avatar"]; ?>" class="img-circle" alt="User Image">
+                        <img src="<?php echo $_SESSION["avatar"]; ?>" class="http://getdrawings.com/iron-man-head-drawing#iron-man-head-drawing-63.jpg" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
