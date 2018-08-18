@@ -13,25 +13,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="views/bower_components/font-awesome/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="views/dist/css/AdminLTE.min.css">
+  <!-- <link rel="stylesheet" href="views/dist/css/AdminLTE.min.css"> -->
   <link rel="stylesheet" href="views/dist/css/skins/skin-purple.min.css">
   <link rel="stylesheet" href="views/dist/plugins/iCheck/square/blue.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="views/dist/css/estilos.css">
-  <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css"> -->
   <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="views/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="views/bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css"> -->
   <!-- Theme style -->
   <link rel="stylesheet" href="views/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="views/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="views/dist/css/estilos.css">
   
 </head>
 <body class="hold-transition skin-purple sidebar-mini login-page">
