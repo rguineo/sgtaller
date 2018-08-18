@@ -127,7 +127,7 @@
                 <p>
                   <?php echo $_SESSION["nombre"]; ?>
                 </p>
-              </li>
+              </li> 
 
               <li class="user-footer">
                 <div class="pull-left">
