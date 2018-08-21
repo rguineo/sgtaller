@@ -1,7 +1,7 @@
 <?php
 
-  $respuesta = new ControllerPais();
-  $respuesta->MostrarPais();
+  // $respuesta = new MostrarPais();
+  // $respuesta->MostrarPais();
 
 ?>
 
@@ -43,12 +43,8 @@
           <label for="inputPais">País</label>
           <select id="inputPais" class="form-control" required>
             <option selected>Elija un País</option>
-            <?php
-              foreach ($respuesta as $key => $value) {
-                echo "<option>".$value["nombre_pais"]."</option>";
-              }
-              
-            ?>
+            <option>....</option>
+          
             
           </select>
         </div>
