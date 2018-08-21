@@ -5,7 +5,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>S</b>GT</span>
       <!-- logo for regular state and mobile devices -->
-      <img src="views/dist/img/DT_Blanco.png" alt="" width="150">
+      <span class="logo-lg"><b>Duotek</b>SGT</span>
     </a>
 
     <!-- Header Navbar -->
@@ -127,7 +127,7 @@
                 <p>
                   <?php echo $_SESSION["nombre"]; ?>
                 </p>
-              </li>
+              </li> 
 
               <li class="user-footer">
                 <div class="pull-left">

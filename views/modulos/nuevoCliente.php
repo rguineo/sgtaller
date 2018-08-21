@@ -1,3 +1,11 @@
+<?php
+
+  // $respuesta = new MostrarPais();
+  // $respuesta->MostrarPais();
+
+?>
+
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -14,7 +22,7 @@
       <form>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="inputRut">RUT Empresa / TIN [Taxpayer Identification Number]</label>
+            <label for="inputRut">RUT Empresa / TIN <small>[Taxpayer Identification Number]</small></label>
             <input type="text" class="form-control" id="inputRut" placeholder="RUT" required>
           </div>
           <div class="form-group col-md-8">
@@ -35,7 +43,9 @@
           <label for="inputPais">País</label>
           <select id="inputPais" class="form-control" required>
             <option selected>Elija un País</option>
-            <option>...</option>
+            <option>....</option>
+          
+            
           </select>
         </div>
         <div class="form-group col-md-4">
