@@ -1,3 +1,11 @@
+<?php
+
+  $respuesta = new ControllerPais();
+  $respuesta->MostrarPais();
+
+?>
+
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -35,7 +43,13 @@
           <label for="inputPais">País</label>
           <select id="inputPais" class="form-control" required>
             <option selected>Elija un País</option>
-            <option>...</option>
+            <?php
+              foreach ($respuesta as $key => $value) {
+                echo "<option>".$value["nombre_pais"]."</option>";
+              }
+              
+            ?>
+            
           </select>
         </div>
         <div class="form-group col-md-4">
