@@ -14,7 +14,7 @@
       <form>
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="inputRut">RUT Empresa / TIN [Taxpayer Identification Number]</label>
+            <label for="inputRut">RUT Empresa / TIN <small>[Taxpayer Identification Number]</small></label>
             <input type="text" class="form-control" id="inputRut" placeholder="RUT" required>
           </div>
           <div class="form-group col-md-8">
