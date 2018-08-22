@@ -3,21 +3,18 @@ require_once "conexion.php";
 
 Class ModelZonas{
     private $_tabla;
-   
-    public function __construct(){
 
+    public function setTabla($table){
+        $this->_tabla = $table;
     }
 
     public function getTabla(){
         return $this->_tabla;
-    }    
-
-    public function setTabla($tabla){
-        $this->_tabla = $tabla;
     }
 
     public function mdlMostrarPais(){
-        $sql = Conexion::conectar()->prepare("SELECT * FROM '.$this->getTabla().'");
+        $table = $this->getTabla();
+        $sql = Conexion::conectar()->prepare("SELECT * FROM $table");
         $sql -> execute();
         return $sql->fetchAll();
     }

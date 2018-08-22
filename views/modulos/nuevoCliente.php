@@ -1,6 +1,9 @@
 <?php
 
-   $respuesta = ControllerPais::ctrMostrarPais();
+  $pais = new ControllerZonas();
+  $resPais = $pais->ctrMostrarPais();
+  
+ // $region = ControllerZonas::ctrMostrarRegion();
 
 ?>
 
@@ -42,16 +45,18 @@
           <label for="inputPais">País</label>
           <select id="inputPais" class="form-control" required>
             <option selected>Elija un País</option>
-            <option>....</option>
-          
-            
+            <?php
+              foreach ($resPais as $key => $value) {
+                echo "<option>".$value["nombre_pais"]."</option>";
+              }
+            ?>           
           </select>
         </div>
         <div class="form-group col-md-4">
           <label for="inputRegion">Región</label>
           <select id="inputRegion" class="form-control" required>
             <option selected>Elija una Región</option>
-            <option>...</option>
+              <option>...</option>
           </select>
         </div>
 
