@@ -2,13 +2,13 @@
 
 Class ControllerPais{
 
-
-    public function MostrarPais(){
+    public function ctrMostrarPais(){
         $tabla = "pais";
 
-        $respuesta = new ModelPais();
-        $respuesta->setTabla($tabla);
-        $respuesta->mdlMostrarPais();
+        $respuesta = new ModelZonas();
+        $respuesta -> setTabla($tabla);
+        $respuesta -> mdlMostrarPais();
+
         return $respuesta;
     }
 

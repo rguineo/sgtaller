@@ -1,27 +1,26 @@
 <?php
+require_once "conexion.php";
 
-Class ModelPais{
-    private $tabla;
-
+Class ModelZonas{
+    private $_tabla;
+   
     public function __construct(){
 
     }
 
-    static public function mdlMostrarPais(){
-        $sql = Conexion::conectar()->prepare("SELECT * FROM '$this->getTabla()'");
+    public function getTabla(){
+        return $this->_tabla;
+    }    
+
+    public function setTabla($tabla){
+        $this->_tabla = $tabla;
+    }
+
+    public function mdlMostrarPais(){
+        $sql = Conexion::conectar()->prepare("SELECT * FROM '.$this->getTabla().'");
         $sql -> execute();
         return $sql->fetchAll();
     }
-    
-    public function getTabla(){
-        return $this->tabla;
-    }    
-
-    public function setTabla($nombreTabla){
-        $this->tabla = $nombreTabla;
-
-    }
-
 }
 
 ?>

@@ -1,7 +1,6 @@
 <?php
 
-  // $respuesta = new MostrarPais();
-  // $respuesta->MostrarPais();
+   $respuesta = ControllerPais::ctrMostrarPais();
 
 ?>
 
