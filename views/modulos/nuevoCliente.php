@@ -41,18 +41,18 @@
 
         <div class="form-group col-md-3">
           <label for="inputPais">País</label>
-          <select id="inputPais" class="form-control" required>
+          <select id="inputPais" class="form-control" onChange="CargarRegion()" required>
             <option selected>Elija un País</option>
             <?php
               foreach ($resPais as $key => $value) {
-                echo "<option>".$value["nombre_pais"]."</option>";
+                echo "<option value=".$value["id_pais"].">".$value["nombre_pais"]."</option>";
               }
             ?>           
           </select>
         </div>
         <div class="form-group col-md-4">
           <label for="inputRegion">Región</label>
-          <select id="inputRegion" class="form-control" required>
+          <select id="inputRegion" class="form-control" disabled required>
             <option selected>Elija una Región</option>
               <option>...</option>
           </select>
@@ -61,7 +61,7 @@
         <div class="form-row">
           <div class="form-group col-md-5">
             <label for="inputCity">Ciudad</label>
-            <input type="text" class="form-control" id="inputCity" placeholder= "Santiago de Chile 1480" required>
+            <input type="text" class="form-control" id="inputCity" placeholder= "Santiago de Chile 1480" disabled required>
           </div>
         </div>
         <div class="form-group col-md-4">
