@@ -4,7 +4,7 @@ function CargarRegion($id){
     var id_pais=$("#inputPais").val();
     
     $.ajax({
-        url: 'zonas.controller.php',
+        url: 'ajax/ajaxZonas.php',
         data: {id_pais:id_pais},
         type: 'POST',
         success: function (data)
