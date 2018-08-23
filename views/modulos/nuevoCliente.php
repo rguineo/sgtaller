@@ -3,8 +3,6 @@
   $pais = new ControllerZonas();
   $resPais = $pais->ctrMostrarPais();
   
- // $region = ControllerZonas::ctrMostrarRegion();
-
 ?>
 
 
