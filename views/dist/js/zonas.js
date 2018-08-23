@@ -9,7 +9,7 @@ function CargarRegion($id){
         type: 'POST',
         success: function (data)
         {
-            $("#cmb_region").html(data);
+            $("#inputRegion").html(data);
         }
     })
 
