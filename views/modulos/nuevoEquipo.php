@@ -29,7 +29,7 @@
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" id="datepicker" required>
+                    <input type="date" class="form-control pull-right" id="datepicker" required>
                   </div>
               </div>
             </div>
