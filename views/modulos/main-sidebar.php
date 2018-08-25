@@ -42,7 +42,7 @@
       </a>
       <ul class="treeview-menu">
         <li><a href="nuevoCliente"><i class="fa fa-circle-o"></i> Nuevo Cliente </a><li>
-        <li><a href="modificarCliente"><i class="fa fa-circle-o"></i> Modificar </a><li>
+        <li><a href="todosCliente"><i class="fa fa-circle-o"></i> Todos Clientes </a><li>
       </ul>
     </li>
   <li class="treeview">

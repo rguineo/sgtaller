@@ -47,7 +47,12 @@ class mdlCliente{
 		}
 	} 
 
-
+    public function mdlMostrarTclientes(){
+        $tabla = $this->getTabla();
+        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $sql -> execute();
+        return $sql->fetchAll();
+    }
 
 } 
 

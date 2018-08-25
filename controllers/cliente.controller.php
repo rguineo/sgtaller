@@ -20,5 +20,13 @@ class ctrCliente{
         $respuesta = $cliente->mdlGuardarCliente();
         return $respuesta;
     }
+
+    public function ctrTodosClientes(){
+        $tabla = "empresa";
+        $Tcliente = new mdlCliente();
+        $Tcliente->setTabla($tabla);
+        $respuesta = $Tcliente->mdlMostrarTclientes();
+        return $respuesta;
+    }
 }
 ?>
