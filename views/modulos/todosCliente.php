@@ -9,12 +9,9 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Gestor de Clientes
-        
-      </h1>
+      <h1>Todos Clientes Empresas     </h1>
       <ol class="breadcrumb">
-        <li><a href="home"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="home"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li class="active">TodosClientes</li>
       </ol>
     </section>
@@ -22,7 +19,7 @@
     <!-- Main content -->
     <section class="content container-fluid">
 
-      <h1>Clientes Empresas</h1>
+    <br>
       <div id='page-wrapper'>
         <div class='container-fluid'>
             <div class='row'>

@@ -33,6 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- CCS para taba dinamica avanzada -->
     <link href='views/dist/css/dataTables.bootstrap.css' rel='stylesheet'>
     <link href='views/dist/css/dataTables.responsive.css' rel='stylesheet'>
+
   <link rel="stylesheet" href="views/dist/css/estilos.css">
   
 </head>
@@ -68,6 +69,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/dist/js/jquery.Rut.js"></script>
 <script src="views/dist/js/jquery.dataTables.min.js"></script>
 <script src="views/dist/js/dataTables.bootstrap.min.js"></script>
+<script src="views/dist/js/recursos.js"></script>
 
 <script>
   $(function () {
