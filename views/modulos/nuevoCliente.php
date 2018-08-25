@@ -23,7 +23,7 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="inputRut">RUT Empresa / TIN <small>[Taxpayer Identification Number]</small></label>
-            <input type="text" class="form-control" id="inputRut" placeholder="RUT" required>
+            <input type="text" class="form-control" id="rut" placeholder="RUT" required>
           </div>
           <div class="form-group col-md-8">
             <label for="inputNombre">Nombre / Razón Social</label>
