@@ -16,12 +16,11 @@ Class ControllerZonas{
     public function ctrListarRegion(){
         $tabla = "region";
         $id = $this->getIdPais();
-        $region = new ModelZonas;
+        $region = new ModelZonas();
         $region -> setIdPais($id);
         $region -> setTabla($tabla);
         $respuesta = $region -> mdlListarRegion();
         return $respuesta; 
-
     }
 
     public function setIdPais($id){
