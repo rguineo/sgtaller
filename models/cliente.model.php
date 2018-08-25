@@ -28,7 +28,7 @@ class mdlCliente{
 
 		$sql = Conexion::conectar()->prepare("INSERT INTO $tabla() 
         VALUES (NULL, :rut, :nombre, :giro, :direccion, :id_pais, 
-        :id_region, :id_ciudad, :id_comuna, :contacto)");
+        :id_region, :id_ciudad, :id_comuna, :contacto, :telefono)");
 
 		$sql->bindParam(":rut", $datos["rut"], PDO::PARAM_STR);
 		$sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
@@ -39,6 +39,7 @@ class mdlCliente{
         $sql->bindParam(":id_ciudad", $datos["ciudad"], PDO::PARAM_INT);
         $sql->bindParam(":id_comuna", $datos["comuna"], PDO::PARAM_INT);
 		$sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
+        $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
 
 		if( $sql -> execute() ) {
 			return "ok";
