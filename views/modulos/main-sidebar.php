@@ -88,6 +88,10 @@
           <i class="fa fa-angle-left pull-right"></i>
         </span>
     </a>
+    <ul class="treeview-menu">
+      <li><a href="nuevoTaller"><i class="fa fa-circle-o"></i> Nuevo Taller </a><li>
+      <li><a href="modificarTaller"><i class="fa fa-circle-o"></i> Modificar Taller </a><li>
+    </ul>
   </li>
   <li class="treeview">
     <a href="#">
