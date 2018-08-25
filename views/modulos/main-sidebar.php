@@ -68,7 +68,7 @@
     </a>
     <ul class="treeview-menu">
       <li><a href="nuevoEquipo"><i class="fa fa-circle-o"></i> Nuevo Equipos </a><li>
-      <li><a href="modificarEquipo"><i class="fa fa-circle-o"></i> Modificar </a><li>
+      <li><a href="modificarEquipo"><i class="fa fa-circle-o"></i> Administrar Equipos </a><li>
     </ul>
   </li>
   <li class="treeview">
