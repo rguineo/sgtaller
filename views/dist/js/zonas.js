@@ -16,4 +16,5 @@ function CargarRegion($id){
 
 $("#inputRegion").on("change", function(){
     $("#inputCity").prop("disabled", false);
+    $("#inputComuna").prop("disabled", false);
 })
