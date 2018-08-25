@@ -15,6 +15,33 @@ function CargarRegion($id){
 }
 
 $("#inputRegion").on("change", function(){
-    $("#inputCity").prop("disabled", false);
+    $("#inputCiudad").prop("disabled", false);
+    var id_region=$("#inputRegion").val();
+
+    $.ajax({
+        url: 'ajax/ajaxZonas.php',
+        data: {id_region: id_region},
+        type: 'POST',
+        success: function (data)
+        {
+            $("#inputCiudad").html(data);
+        }
+    })
+
+})
+
+$("#inputCiudad").on("change", function(){
     $("#inputComuna").prop("disabled", false);
+    var id_ciudad=$("#inputCiudad").val();
+
+    $.ajax({
+        url: 'ajax/ajaxZonas.php',
+        data: {id_ciudad: id_ciudad},
+        type: 'POST',
+        success: function (data)
+        {
+            $("#inputComuna").html(data);
+        }
+    })
+
 })

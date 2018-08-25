@@ -59,13 +59,18 @@
         <div class="form-row">
           <div class="form-group col-md-5">
             <label for="inputCity">Ciudad</label>
-            <input type="text" class="form-control" id="inputCity" name="ciudad" placeholder= "Santiago de Chile 1480" disabled required>
+            <select id="inputCiudad" class="form-control" name="ciudad" disabled required>
+              <option>...</option>
+            </select>
           </div>
         </div>
+
         <div class="form-row">
           <div class="form-group col-md-5">
             <label for="inputCity">Comuna</label>
-            <input type="text" class="form-control" id="inputComuna" name="comuna" placeholder= "Recoleta" disabled required>
+            <select id="inputComuna" class="form-control" name="comuna" disabled required>
+            <option>...</option>
+            </select>
           </div>
           <div class="form-group col-md-5">
             <label for="inputCity">Contacto</label>
