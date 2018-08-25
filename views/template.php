@@ -61,7 +61,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/dist/js/adminlte.min.js"></script>
 <script src="views/dist/plugins/iCheck/icheck.min.js"></script>
 <script src="views/dist/js/zonas.js"></script>
-<script src="views/dist/js/jquery.Rut.min.js"></script>
+<script src="views/dist/js/jquery.Rut.js"></script>
 <script>
   $(function () {
     $('input').iCheck({
@@ -71,5 +71,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
   });
 </script>
+
+<script>
+	$(document).ready(function(){
+	// Rutina para validar RUT Chileno
+		$('#rut').Rut({
+		  on_error: function(){ 
+		    alert('Rut Incorrecto'); 
+		    location.reload();},
+		  format_on: 'keyup'
+		});
+	});
+</script>	
 </body>
 </html>
