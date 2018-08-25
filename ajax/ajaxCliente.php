@@ -11,6 +11,7 @@ Class Cliente{
     private $_region;
     private $_ciudad;
     private $_contacto;
+    private $_telefono;
 
     public function setRut($rut){
         $this->_rut = $rut;
@@ -83,7 +84,13 @@ Class Cliente{
         return $this->_contacto;
     }
 
+    public function setTelefono($telefono){
+        $this->_telefono = $telefono;
+    }
 
+    public function getTelefono(){
+        return $this->_telefono;
+    }
     public function GuardarCliente(){
 
         $datos = array("rut"=>$this->getRut(),
@@ -94,7 +101,8 @@ Class Cliente{
                         "region"=>$this->getRegion(),                       
                         "ciudad"=>$this->getCiudad(),
                         "comuna"=>$this->getComuna(),
-                        "contacto"=>$this->getContacto());
+                        "contacto"=>$this->getContacto(),
+                        "telefono"=>$this->getTelefono());
 
         $NewCliente = new ctrCliente();
         $NewCliente->setDatos($datos);
@@ -116,6 +124,7 @@ if ($_POST["rut"]){
     $NuevoCliente->setCiudad($_POST["ciudad"]);
     $NuevoCliente->setComuna($_POST["comuna"]);
     $NuevoCliente->setContacto($_POST["contacto"]);
+    $NuevoCliente->setTelefono($_POST["telefono"]);
     $NuevoCliente->GuardarCliente();
 }
 
