@@ -1,5 +1,5 @@
 <?php
-include_once ("../controllers/zonas.controllers.php");
+include_once ("../controllers/zonas.controller.php");
 include_once ("../models/zonas.model.php");
 
 Class ctrRegiones{
@@ -13,19 +13,26 @@ Class ctrRegiones{
         return $this->id_pais;
     }
 
-    public function ListarRegiones(){
+    public function listarRegiones(){
         $id = $this->getIdPais();
-        $region = new ControllerZonas;
+        $region = new ControllerZonas();
         $region -> setIdPais($id);
-        $respuesta = $region -> ListarRegion();
-        return json_encode($respuesta);
+        $respuesta = $region -> ctrListarRegion();
+        $listaRegion = "<option value='0' selected> Elija una opcion</option>";
+        foreach ($respuesta as $key => $value) {
+            $listaRegion .= "<option value='$value[0]'>$value[1]</option>";
+        }
+        echo $listaRegion;
     }
 }
 
-if ($_POST["id_pais"] != NULL){
-    $cmbRegion = new ctrRegiones;
+if ($_POST["id_pais"]){
+    $id = $_POST["id_pais"];
+    $cmbRegion = new ctrRegiones();
     $cmbRegion -> setIdPais($_POST["id_pais"]);
-    $cmbRegion -> ListarRegiones();
+    $cmbRegion -> listarRegiones();
+}else{
+    echo "<script> alert('VACIO') </script>";
 }
 
 ?>
