@@ -53,8 +53,6 @@
         <div class="form-group col-md-4">
           <label for="inputRegion">Región</label>
           <select id="inputRegion" class="form-control" disabled required>
-            <option selected>Elija una Región</option>
-              <option>...</option>
           </select>
         </div>
 
