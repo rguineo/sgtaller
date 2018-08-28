@@ -5,7 +5,15 @@ class mdlCliente{
 
     private $_tabla;
     private $_datos = array();
+    private $_resultado = "";
 
+    public function setResultado($result){
+        $this->_resultado = $result;
+    }
+
+    public function getResultado(){
+        return $this->_resultado;
+    }
     public function setTabla($tabla){
         $this->_tabla = $tabla;
     }
@@ -22,30 +30,59 @@ class mdlCliente{
         return $this->_datos;
     }
 
+    public function consultaCliente(){
+
+        $datos = $this->getDatos();
+        $rut = $datos["rut"];
+
+        $tabla = $this->getTabla();
+        // echo "SELECT * FROM $tabla WHERE rut = '$rut'";
+        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE rut = '$rut'");
+        $sql -> execute();
+
+        if ( $sql->fetch() ){
+            $res = "existe";
+            // echo "existe";
+            $this->setResultado($res);
+        }else{
+            $res = "vacio";
+            // echo "noexiste";
+            $this->setResultado($res);
+        }
+    }
+
+
     public function mdlGuardarCliente() {
         $tabla = $this->getTabla();
         $datos = $this->getDatos();
 
-		$sql = Conexion::conectar()->prepare("INSERT INTO $tabla() 
-        VALUES (NULL, :rut, :nombre, :giro, :direccion, :id_pais, 
-        :id_region, :id_ciudad, :id_comuna, :contacto, :telefono)");
+        $this->consultaCliente();
 
-		$sql->bindParam(":rut", $datos["rut"], PDO::PARAM_STR);
-		$sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-        $sql->bindParam(":giro", $datos["giro"], PDO::PARAM_STR);
-		$sql->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
-		$sql->bindParam(":id_pais", $datos["pais"], PDO::PARAM_INT);
-		$sql->bindParam(":id_region", $datos["region"], PDO::PARAM_INT);
-        $sql->bindParam(":id_ciudad", $datos["ciudad"], PDO::PARAM_INT);
-        $sql->bindParam(":id_comuna", $datos["comuna"], PDO::PARAM_INT);
-		$sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
-        $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+        if ($this->getResultado() == "vacio"){
+            $sql = Conexion::conectar()->prepare("INSERT INTO $tabla() 
+            VALUES (NULL, :rut, :nombre, :giro, :direccion, :id_pais, 
+            :id_region, :id_ciudad, :id_comuna, :contacto, :telefono)");
 
-		if( $sql -> execute() ) {
-			return "ok";
-		} else {
-			return "error";
-		}
+            $sql->bindParam(":rut", $datos["rut"], PDO::PARAM_STR);
+            $sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+            $sql->bindParam(":giro", $datos["giro"], PDO::PARAM_STR);
+            $sql->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+            $sql->bindParam(":id_pais", $datos["pais"], PDO::PARAM_INT);
+            $sql->bindParam(":id_region", $datos["region"], PDO::PARAM_INT);
+            $sql->bindParam(":id_ciudad", $datos["ciudad"], PDO::PARAM_INT);
+            $sql->bindParam(":id_comuna", $datos["comuna"], PDO::PARAM_INT);
+            $sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
+            $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+
+            if( $sql -> execute() ) {
+                return "ok";
+            } else {
+                return "error";
+            }
+        }else {
+            return "error";
+        }
+
 	} 
 
     public function mdlMostrarTclientes(){
