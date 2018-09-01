@@ -1,7 +1,7 @@
 <?php 
 
- $todosClientes = new ctrCliente(); 
- $respuesta =  $todosClientes->ctrTodosClientes();
+ $equipos = new ctrEquipo(); 
+ $respuesta =  $equipos->ctrMostrarEquipo();
 
 ?>
 
@@ -24,8 +24,8 @@
         <div class='container-fluid'>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
-                    <div class='table-responsive table_productos'>
-                        <table class='table table-striped table-bordered table-hover tabla-usuarios' id='dataTables-example'>
+                    <div class='table-responsive table_equipos'>
+                        <table class='table table-striped table-bordered table-hover tabla-equipos' id='dataTables-example'>
 
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
@@ -44,10 +44,8 @@
                            
                            foreach ($respuesta as $key => $value) {
                             echo "<tr>";
-                              echo "<td>".$value['rut']."</td>";
-                              echo "<td>".$value['razon_social']."</td>";
-                              echo "<td>".$value['giro']."</td>";
-                              echo "<td>".$value['direccion']."</td>"; 
+                              echo "<td>".$value['numero_serie']."</td>";
+                              echo "<td>".$value['nombre_equipo']."</td>"; 
                               echo "<td>"; 
                               echo "<center>";
                                 echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
@@ -60,7 +58,7 @@
                           ?> 
 
 
-                            </tbody>
+                          </tbody>
                       </table>
                   </div>
             </div>
@@ -70,12 +68,3 @@
     </section>
     <!-- /.content -->
   </div>
-
-
-<th>#</th>
-<th>N° Serie</th>
-<th>Marca Equipo</th>
-<th>Modelo Equipo</th>
-<th>Empresa</th>
-<th>Fecha Ingreso</th>
-<th>Nombre Equipo</th>

@@ -16,6 +16,7 @@ class ControllerEnrutamiento {
 			$ruta == "subcategorias" ||
 			$ruta == "productos" ||
 			$ruta == "nuevoTaller" ||
+			$ruta == "usuario" ||
 			$ruta == "salir") {
 
 			include "views/modulos/".$ruta.".php";

@@ -79,6 +79,11 @@
           <i class="fa fa-angle-left pull-right"></i>
         </span>
     </a>
+    <ul class="treeview-menu">
+      <li><a href="#"><i class="fa fa-circle-o"></i> Nuevo Usuario </a><li>
+      <li><a href="usuario"><i class="fa fa-circle-o"></i> Administrar Usuarios </a><li>
+    </ul>
+  </li>
   </li>
   <li class="treeview">
     <a href="#">

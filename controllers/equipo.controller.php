@@ -1,12 +1,12 @@
 <?php
 
-Class equipoCtr{
-
+Class ctrEquipo{
+    
     public function ctrMostrarEquipo(){
         $tabla = "equipo";
-
-        $repuesta = ModelEmpresa::mdlMostrarEquipo($tabla);
-
+        $Tequipo = new mdlEquipo();
+        $Tequipo->setTabla($tabla);
+        $repuesta = $Tequipo->mdlMostrarEquipo();
         return $repuesta;
     }
 }
