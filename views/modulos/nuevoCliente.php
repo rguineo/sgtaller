@@ -72,11 +72,16 @@
             <option>...</option>
             </select>
           </div>
-          <div class="form-group col-md-5">
+          <div class="form-group col-md-4">
             <label for="inputCity">Contacto</label>
             <input type="text" class="form-control" id="inputContact" name="contacto" placeholder= "Juan Perez" required>
           </div>         
-        </div>    
+
+        <div class="form-group col-md-3">
+            <label for="inputCity">Teléfono</label>
+            <input type="text" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
+          </div>         
+        </div>  
 
         <div class="form-row">
           <div class="form-group col-md-12">

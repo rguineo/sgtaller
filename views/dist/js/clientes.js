@@ -22,6 +22,16 @@ $(document).ready(function(){
 					    window.location = "nuevoCliente"
 					  }
 					})
+				}else if (respuesta == "error"){
+					swal({
+					  type: 'warning',
+					  title: 'Malas Noticias',
+                      text: 'Cliente ya existe'
+					}).then((result) => {
+					  if (result.value) {
+					    window.location = "nuevoCliente"
+					  }
+					})					
 				}
 			}
 
