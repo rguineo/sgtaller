@@ -23,20 +23,20 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="inputRut">RUT Empresa / TIN <small>[Taxpayer Identification Number]</small></label>
-            <input type="text" class="form-control" id="rut" name="rut" placeholder="RUT" required>
+            <input type="text" class="form-control" id="rut" name="rut" placeholder="RUT" maxlength="10" required>
           </div>
           <div class="form-group col-md-8">
             <label for="inputNombre">Nombre / Razón Social</label>
-            <input type="text" class="form-control" id="inputNombre" name="nombre"placeholder="Nombre / Razon Solcial" required>
+            <input type="text" class="form-control" id="inputNombre" name="nombre"placeholder="Nombre / Razon Solcial" maxlength="50" required>
           </div>
         </div>
         <div class="form-group col-md-12">
           <label for="inputAddress">Dirección Comercial</label>
-          <input type="text" class="form-control" id="inputAddress" name="direccion" placeholder="Av. La Cruz 666" required>
+          <input type="text" class="form-control" id="inputAddress" name="direccion" placeholder="Av. La Cruz 666" maxlength="50" required>
         </div>
         <div class="form-group col-md-12">
           <label for="inputGiro" >Giro / Actividad</label>
-          <input type="text" class="form-control" id="inputGiro" name="giro" placeholder="Actividad Económica" required>
+          <input type="text" class="form-control" id="inputGiro" name="giro" placeholder="Actividad Económica" maxlength="50" required>
         </div>
 
         <div class="form-group col-md-3">
@@ -74,12 +74,12 @@
           </div>
           <div class="form-group col-md-4">
             <label for="inputCity">Contacto</label>
-            <input type="text" class="form-control" id="inputContact" name="contacto" placeholder= "Juan Perez" required>
+            <input type="text" class="form-control" id="inputContact" name="contacto" placeholder= "Juan Perez" maxlength="20" required>
           </div>         
 
         <div class="form-group col-md-3">
             <label for="inputCity">Teléfono</label>
-            <input type="text" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
+            <input type="tel" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
           </div>         
         </div>  
 
