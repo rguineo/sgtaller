@@ -1,7 +1,12 @@
 <?php 
 
+<<<<<<< HEAD
  $todosClientes = new centrosCtr(); 
  $respuesta =  $todosClientes->ctrMostrarCentros();
+=======
+ $todosCentros = new ctrCentros(); 
+ $respuesta =  $todosCentros->ctrMostrarCentros();
+>>>>>>> f38524cee45b7478d60efccb2e9e880e79ff6100
 
 ?>
 
@@ -42,10 +47,11 @@
                            
                            foreach ($respuesta as $key => $value) {
                             echo "<tr>";
-                              echo "<td>".$value['rut']."</td>";
-                              echo "<td>".$value['razon_social']."</td>";
-                              echo "<td>".$value['giro']."</td>";
-                              echo "<td>".$value['direccion']."</td>"; 
+                              echo "<td>".$value['nombre']."</td>";
+                              echo "<td>".$value['id_ciudad']."</td>";
+                              echo "<td>".$value['id_comuna']."</td>";
+                              echo "<td>".$value['id_empresa']."</td>";
+                              echo "<td>".$value['url_ubicacion']."</td>";
                               echo "<td>"; 
                               echo "<center>";
                                 echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
