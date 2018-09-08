@@ -1,7 +1,6 @@
 <?php 
 
- $todosCentros = new ctrCentros(); 
- $respuesta =  $todosCentros->ctrMostrarCentros();
+ $respuesta = (new ctrCentros)->ctrMostrarCentros();
 
 ?>
 
@@ -20,7 +19,7 @@
     <section class="content container-fluid">
 
     <br>
-      <div id='page-wrapper'>
+      <div id='page-wrapper'> 
         <div class='container-fluid'>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>

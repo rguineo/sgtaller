@@ -1,7 +1,7 @@
 <?php
 require_once "conexion.php";
 
-class mdlCentros{
+class mdlCentros {
 
     private $_tabla;
     private $_datos = array ();
@@ -30,12 +30,11 @@ class mdlCentros{
         return $this->_datos;
     }
 
-    public function mdlMostrarCentros() {
-        $tabla = $this->getTabla();
-        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+    public function mdlMostrarCentros($tabla) {
+        // $tabla = $this->getTabla();
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla");
         $sql -> execute();
         return $sql->fetchAll();
-
     }
 }
 

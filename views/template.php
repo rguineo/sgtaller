@@ -30,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="views/dist/css/skins/_all-skins.min.css">
-  <!-- CCS para taba dinamica avanzada -->
+  <!-- CCS para tabLa dinamica avanzada -->
     <link href='views/dist/css/dataTables.bootstrap.css' rel='stylesheet'>
     <link href='views/dist/css/dataTables.responsive.css' rel='stylesheet'>
 
@@ -55,9 +55,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         include "modulos/home.php";
       }
       
-      include "modulos/footer.php";
+        include "modulos/footer.php";
     } else {
-      include "modulos/login.php";
+        include "modulos/login.php";
     }
   ?>
 <script src="views/bower_components/jquery/dist/jquery.min.js"></script>
