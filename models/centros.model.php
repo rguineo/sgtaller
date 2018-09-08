@@ -1,11 +1,37 @@
 <?php
+require_once "conexion.php";
 
-require "conexion.php";
+class mdlCentros{
 
-class ModelCentros {
+    private $_tabla;
+    private $_datos = array ();
+    private $_resultado = "";
 
-    static public function mdlMostrartCentros($tabla) {
-        
+    public function setResultado($result){
+        $this->_resultado = $result;
+    }
+
+    public function getResultado(){
+        return $this->_resultado;
+    }
+    public function setTabla($tabla){
+        $this->_tabla = $tabla;
+    }
+
+    public function getTabla(){
+        return $this->_tabla;
+    }
+
+    public function setDatos($datos){
+        $this->_datos = $datos;
+    }
+
+    public function getDatos(){
+        return $this->_datos;
+    }
+
+    public function mdlMostrarCentros() {
+        $tabla = $this->getTabla();
         $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla");
         $sql -> execute();
         return $sql->fetchAll();
