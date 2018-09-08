@@ -1,7 +1,7 @@
 <?php 
 
- $todosClientes = new ctrCliente(); 
- $respuesta =  $todosClientes->ctradministrarCentros();
+ $todosClientes = new centrosCtr(); 
+ $respuesta =  $todosClientes->ctrMostrarCentros();
 
 ?>
 

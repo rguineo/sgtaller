@@ -5,7 +5,7 @@ Class centrosCtr{
     public function ctrMostrarCentros(){
         $tabla = "centros";
 
-        $repuesta = ModelEmpresa::mdlMostrarCentros($tabla);
+        $repuesta = ModelCentros::mdlMostrarCentros($tabla);
 
         return $repuesta;
     }
