@@ -1,12 +1,7 @@
 <?php 
 
-<<<<<<< HEAD
- $todosClientes = new centrosCtr(); 
- $respuesta =  $todosClientes->ctrMostrarCentros();
-=======
  $todosCentros = new ctrCentros(); 
  $respuesta =  $todosCentros->ctrMostrarCentros();
->>>>>>> f38524cee45b7478d60efccb2e9e880e79ff6100
 
 ?>
 
