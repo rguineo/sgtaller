@@ -17,7 +17,7 @@
 
     <!-- Main content -->
     <section class="content container-fluid">
-
+    <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-insertar-centro">Agregar Centro <i class="fa fa-plus-square-o"></i></button>
     <br>
       <div id='page-wrapper'> 
         <div class='container-fluid'>
