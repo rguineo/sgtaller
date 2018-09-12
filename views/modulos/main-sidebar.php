@@ -32,10 +32,10 @@
   <li class="header">Menú</li>
     <!-- Optionally, you can add icons to the links -->
   <li class="active"><a href="home"><i class="fa fa-home"></i><span>Inicio</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="todosCliente"><i class="fa fa-suitcase"></i><span>Cliente</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="modificarCentro"><i class="fa fa-building"></i><span>Centro</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="modificarEquipo"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="usuario"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="clientes"><i class="fa fa-suitcase"></i><span>Cliente</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="centros"><i class="fa fa-building"></i><span>Centros</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="bodega"><i class="fa fa-building"></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="#"><i class="fa fa-user-secret"></i><span>Administrativo</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>

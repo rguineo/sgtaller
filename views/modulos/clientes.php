@@ -18,15 +18,13 @@
 
     <!-- Main content -->
     <section class="content container-fluid">
-    <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-insertar-cliente">Agregar Cliente <i class="fa fa-user-plus"></i></button>
-    <br>
       <div id='page-wrapper'>
         <div class='container-fluid'>
+          <a href="nuevoCliente" class="btn bg-purple margin">Agregar Cliente <i class="fa fa-user-plus"></i></a>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
-                    <div class='table-responsive table_productos'>
-                        <table class='table table-striped table-bordered table-hover tabla-usuarios' id='dataTables-example'>
-
+                    <div class='table-responsive table_clientes'>
+                        <table class='table table-striped table-bordered table-hover tabla-clientes' id='dataTables-example'>
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
                                   <th style='text-align: center;'> RUT Empresa</th>

@@ -8,15 +8,15 @@ class ControllerEnrutamiento {
 
 		if ($ruta == "home" ||
 			$ruta == "nuevoCliente" ||
-			$ruta == "todosCliente" ||
+			$ruta == "clientes" ||
 			$ruta == "nuevoCentro" ||
-			$ruta == "modificarCentro" ||
+			$ruta == "centros" ||
 			$ruta == "nuevoEquipo" ||
-			$ruta == "modificarEquipo" ||
+			$ruta == "equipos" ||
 			$ruta == "subcategorias" ||
 			$ruta == "productos" ||
 			$ruta == "nuevoTaller" ||
-			$ruta == "usuario" ||
+			$ruta == "usuarios" ||
 			$ruta == "taller" ||
 			$ruta == "bodega" ||
 			$ruta == "salir") {
