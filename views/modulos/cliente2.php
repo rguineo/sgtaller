@@ -50,6 +50,7 @@
             ?>           
           </select>
         </div>
+        
         <div class="form-group col-md-4">
           <label for="inputRegion">Región</label>
           <select id="inputRegion" class="form-control" name="region" disabled required>

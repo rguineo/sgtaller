@@ -8,7 +8,7 @@ class ControllerEnrutamiento {
 
 		if ($ruta == "home" ||
 			$ruta == "nuevoCliente" ||
-			$ruta == "todosCliente" ||
+			$ruta == "cliente" ||
 			$ruta == "nuevoCentro" ||
 			$ruta == "modificarCentro" ||
 			$ruta == "nuevoEquipo" ||

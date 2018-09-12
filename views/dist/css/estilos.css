@@ -1,0 +1,13 @@
+.tituloModal{
+    background: purple;
+}
+
+.tituloModal h3{
+    color: white;
+    font-size: 18px;
+}
+
+.close{
+    color: white;
+    font-size: 18px;
+}
