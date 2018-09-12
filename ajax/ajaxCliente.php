@@ -12,6 +12,7 @@ Class Cliente{
     private $_ciudad;
     private $_contacto;
     private $_telefono;
+    private $_idCliente;
 
     public function setRut($rut){
         $this->_rut = $rut;
@@ -91,6 +92,16 @@ Class Cliente{
     public function getTelefono(){
         return $this->_telefono;
     }
+
+    public function setIdCliente($id){
+        $this->_idCliente = $id;
+    }
+
+    public function getIdCliente(){
+        return $this->_idCliente;
+    }
+
+
     public function GuardarCliente(){
 
         $datos = array("rut"=>$this->getRut(),
@@ -111,11 +122,20 @@ Class Cliente{
 
     }
 
+    public function eliminarCliente(){
+        $id = $this->getIdCliente();
+        $eliminar = new ctrCliente();
+        $eliminar -> setIdCliente($id);
+        $respuesta = $eliminar -> ctrEliminarCliente();
+        echo $respuesta;
+    }
+
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
 
 if($tipoOperacion == "nuevoCliente") {
+    
     $NuevoCliente = new Cliente();
     $NuevoCliente->setRut($_POST["rutCliente"]);
     $NuevoCliente->setNombre($_POST["razonCliente"]);
@@ -129,5 +149,10 @@ if($tipoOperacion == "nuevoCliente") {
     $NuevoCliente->setTelefono($_POST["telefono"]);
     $NuevoCliente->GuardarCliente();
 }
+if ($tipoOperacion == "eliminarCliente"){
+    $eliminarCliente = new Cliente();
+    $eliminarCliente -> setIdCliente($_POST["id"]);
+    $eliminarCliente -> eliminarCliente();
 
+  }
 ?>

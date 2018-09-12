@@ -25,7 +25,7 @@
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive table_productos'>
-                        <table class='table table-striped table-bordered table-hover tabla-usuarios' id='dataTables-example'>
+                        <table class='table table-striped table-bordered table-hover tabla-usuarios table-dark' id='dataTables-example'>
 
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
@@ -49,7 +49,7 @@
                               echo "<td>"; 
                               echo "<center>";
                                 echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
-                                echo "<a href='#' data-toggle='modal' data-target='#delUsrModal' title='Eliminar'>
+                                echo "<a href='#' class='btnEliminarCliente' data-toggle='modal' data-target='#delUsrModal' id=".$value["id_empresa"]." title='Eliminar'>
                                 <i class='fa fa-remove fa-2x'style='color: red;'></i></a>";
                               echo "</center>";
                               echo "</td>";

@@ -2,6 +2,7 @@
 
 class ctrCliente{
     private $_datos = array();
+    private $_idCliente;
 
     public function setDatos($datos){
         $this->_datos = $datos;
@@ -9,6 +10,14 @@ class ctrCliente{
 
     public function getDatos(){
         return $this->_datos;
+    }
+
+    public function setIdCliente($id){
+        $this->_idCliente = $id;
+    }
+
+    public function getIdCliente(){
+        return $this->_idCliente;
     }
 
     public function ctrGuardarCliente(){
@@ -26,6 +35,16 @@ class ctrCliente{
         $Tcliente = new mdlCliente();
         $Tcliente->setTabla($tabla);
         $respuesta = $Tcliente->mdlMostrarTclientes();
+        return $respuesta;
+    }
+
+    public function ctrEliminarCliente(){
+        $tabla = "empresa";
+        $id = $this->getIdCliente();
+        $eliminar = new mdlCliente();
+        // $eliminar -> setIdCliente($id);
+        // $eliminar -> setTabla($tabla);
+        $respuesta = $eliminar -> mdlEliminarCliente($tabla, $id);
         return $respuesta;
     }
 }
