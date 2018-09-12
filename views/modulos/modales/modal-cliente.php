@@ -204,7 +204,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputCity">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="tel" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
+                        <input type="tel" class="form-control" id="Etelefono" name="Etelefono" placeholder= "+56 9" required>
                     </div>
                 </div>     
 

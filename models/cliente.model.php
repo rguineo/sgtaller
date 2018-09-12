@@ -128,6 +128,32 @@ class mdlCliente{
         }
     }
 
+    public function mdlActualizarCliente($tabla, $datos, $id) {
+
+        $sql =(new Conexion)->conectar()->prepare("UPDATE $tabla 
+        SET rut = :rut, razon_social = :razon, giro = :giro, direccion = :direccion, 
+        id_pais = :pais, id_region = :region, id_ciudad = :ciudad, id_comuna = :comuna, 
+        contacto = :contacto, nfono = :telefono
+        WHERE id_empresa = :id");
+
+        $sql->bindParam(":id", $datos["id_cliente"], PDO::PARAM_INT);
+        $sql->bindParam(":rut", $datos["rut"], PDO::PARAM_STR);
+        $sql->bindParam(":razon", $datos["nombre"], PDO::PARAM_STR);
+        $sql->bindParam(":giro", $datos["giro"], PDO::PARAM_STR);
+        $sql->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+        $sql->bindParam(":pais", $datos["pais"], PDO::PARAM_INT);
+        $sql->bindParam(":region", $datos["region"], PDO::PARAM_INT);
+        $sql->bindParam(":ciudad", $datos["ciudad"], PDO::PARAM_INT);
+        $sql->bindParam(":comuna", $datos["comuna"], PDO::PARAM_INT);
+        $sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
+        $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+
+        if( $sql -> execute() ) {
+            return "ok";
+        } else {
+            return "error";
+        }
+	} 
 
 } 
 
