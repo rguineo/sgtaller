@@ -47,5 +47,14 @@ class ctrCliente{
         $respuesta = $eliminar -> mdlEliminarCliente($tabla, $id);
         return $respuesta;
     }
+
+    public function ctrEditarCliente(){
+        $tabla = "empresa";
+        $id = $this->getIdCliente();
+        $eliminar = new mdlCliente();
+
+        $respuesta = $eliminar -> mdlEditarCliente($tabla, $id);
+        return $respuesta;
+    }
 }
 ?>

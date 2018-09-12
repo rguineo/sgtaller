@@ -130,6 +130,35 @@ Class Cliente{
         echo $respuesta;
     }
 
+    public function editarCliente(){
+        $id = $this->getIdCliente();
+        $eliminar = new ctrCliente();
+        $eliminar -> setIdCliente($id);
+        $respuesta = $eliminar -> ctrEditarCliente();
+        echo json_encode($respuesta);
+    }
+
+    public function actualizarCliente(){
+        $datos = array("rut"=>$this->getRut(),
+                        "nombre"=>$this->getNombre(),
+                        "direccion"=>$this->getDireccion(),
+                        "giro"=>$this->getGiro(),                        
+                        "pais"=>$this->getPais(),
+                        "region"=>$this->getRegion(),                       
+                        "ciudad"=>$this->getCiudad(),
+                        "comuna"=>$this->getComuna(),
+                        "contacto"=>$this->getContacto(),
+                        "telefono"=>$this->getTelefono(),
+                        "id_cliente"=>$this->getIdCliente());
+
+        $NewCliente = new ctrCliente();
+        $NewCliente->setDatos($datos);
+        $respuesta = $NewCliente->ctrActualizarCliente();
+        echo $respuesta;
+
+
+    }
+
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
@@ -155,4 +184,28 @@ if ($tipoOperacion == "eliminarCliente"){
     $eliminarCliente -> eliminarCliente();
 
   }
+
+  if ($tipoOperacion == "editarCliente"){
+    $eliminarCliente = new Cliente();
+    $eliminarCliente -> setIdCliente($_POST["id_empresa"]);
+    $eliminarCliente -> editarCliente();
+
+  }
+
+  if($tipoOperacion == "actualizarrCliente") {
+    
+    $modificarCliente = new Cliente();
+    $modificarCliente->setIdCliente($_POST["idCliente"]);
+    $modificarCliente->setRut($_POST["rutCliente"]);
+    $modificarCliente->setNombre($_POST["razonCliente"]);
+    $modificarCliente->setDireccion($_POST["direccionCliente"]);
+    $modificarCliente->setGiro($_POST["giroCliente"]);
+    $modificarCliente->setPais($_POST["pais"]);
+    $modificarCliente->setRegion($_POST["region"]);
+    $modificarCliente->setCiudad($_POST["ciudad"]);
+    $modificarCliente->setComuna($_POST["comuna"]);
+    $modificarCliente->setContacto($_POST["contacto"]);
+    $modificarCliente->setTelefono($_POST["telefono"]);
+    $modificarCliente->ActualizarCliente();
+}
 ?>

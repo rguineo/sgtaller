@@ -102,8 +102,6 @@ class mdlCliente{
     }
 
     public function mdlEliminarCliente($tabla, $id){
-        // $tabla = $this->getTabla();
-        // $id = $this->getIdCliente();
 
         $sql = (new Conexion)->conectar()->prepare("DELETE FROM $tabla WHERE id_empresa = :id");
 
@@ -115,6 +113,21 @@ class mdlCliente{
             return "error";
         }
     }
+
+
+    public function mdlEditarCliente($tabla, $id){
+
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_empresa = :id");
+
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+
+        if( $sql->execute()) {
+            return $sql->fetch();
+        } else {
+            return "error";
+        }
+    }
+
 
 } 
 

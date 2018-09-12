@@ -48,8 +48,8 @@
                               echo "<td>".$value['direccion']."</td>"; 
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
-                                echo "<a href='#' class='btnEliminarCliente' data-toggle='modal' data-target='#delUsrModal' id=".$value["id_empresa"]." title='Eliminar'>
+                                echo "<a href='#' class='btnEditarCliente' data-toggle='modal' data-target='#modal-editar-cliente' title='Editar' idCliente=".$value["id_empresa"]." ><i class='fa fa-edit fa-2x'></i></a>";
+                                echo "<a href='#' class='btnEliminarCliente' id=".$value["id_empresa"]." title='Eliminar'>
                                 <i class='fa fa-remove fa-2x'style='color: red;'></i></a>";
                               echo "</center>";
                               echo "</td>";
