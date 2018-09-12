@@ -113,12 +113,14 @@ Class Cliente{
 
 }
 
-if ($_POST["rut"]){
+$tipoOperacion = $_POST["tipoOperacion"];
+
+if($tipoOperacion == "nuevoCliente") {
     $NuevoCliente = new Cliente();
-    $NuevoCliente->setRut($_POST["rut"]);
-    $NuevoCliente->setNombre($_POST["nombre"]);
-    $NuevoCliente->setDireccion($_POST["direccion"]);
-    $NuevoCliente->setGiro($_POST["giro"]);
+    $NuevoCliente->setRut($_POST["rutCliente"]);
+    $NuevoCliente->setNombre($_POST["razonCliente"]);
+    $NuevoCliente->setDireccion($_POST["direccionCliente"]);
+    $NuevoCliente->setGiro($_POST["giroCliente"]);
     $NuevoCliente->setPais($_POST["pais"]);
     $NuevoCliente->setRegion($_POST["region"]);
     $NuevoCliente->setCiudad($_POST["ciudad"]);

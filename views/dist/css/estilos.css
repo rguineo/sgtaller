@@ -1,8 +1,8 @@
 .tituloModal{
-    background: purple;
+    background: rgb(96, 92, 168);
 }
 
-.tituloModal h3{
+.tituloModal h5{
     color: white;
     font-size: 18px;
 }

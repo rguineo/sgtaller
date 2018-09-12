@@ -10,7 +10,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header tituloModal">
-        <h3 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h3>
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -24,22 +24,7 @@
                         <input type="text" id="rut-cliente" class="form-control" placeholder="11.111.111-1" onkeyup=""  required name="rutCliente">
                     </div>
                 </div>
-                <!-- <div class="form-group row">
-                    <label class="col-sm-4 col-form-label">Categoria</label>
-                    <div class="col-sm-8">
-                    <select class="form-control col-sm-10" id="inputCategorias" name="idCategorias" required>
-                        <option selected>Elija una Categoria</option>
-                        <?php
-                            // foreach ($respuesta as $key => $value) {
-                            // echo "<option value=".$value["id"]." rutaImagenCat=".$value["imagen"].">".$value["categoria"]."</option>";
-                            // }
-                        ?>           
-                    </select>
-                    </div>
-                    <div class="col-sm-8 conteImagenCat">
-                        <img src="" id="imagenCategoria" alt="" class="thumbnail" width="100">
-                    </div>
-                </div> -->
+
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre / Razon</label>
                     <div class="col-sm-8">
@@ -57,7 +42,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Giro Comercial</label>
                     <div class="col-sm-8">
-                        <input type="text" id="giro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="direccionCliente">
+                        <input type="text" id="giro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="giroCliente">
                     </div>
                 </div> 
 
@@ -115,7 +100,7 @@
                     </div>
                 </div>     
 
-                <input type="hidden" name="tipoOperacion" value="insertarCliente">
+                <input type="hidden" name="tipoOperacion" value="nuevoCliente">
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
