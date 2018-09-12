@@ -19,7 +19,7 @@ $(document).ready(function(){
                       text: 'Cliente guardado con éxito'
 					}).then((result) => {
 					  if (result.value) {
-					    window.location = "nuevoCliente"
+					    window.location = "clientes"
 					  }
 					})
 				}else if (respuesta == "error"){
@@ -29,12 +29,12 @@ $(document).ready(function(){
                       text: 'Cliente ya existe'
 					}).then((result) => {
 					  if (result.value) {
-					    window.location = "nuevoCliente"
+					    window.location = "clientes"
 					  }
 					})					
 				}
 			}
 
 		})
-    })
+  })
 })
