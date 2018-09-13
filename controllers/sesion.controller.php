@@ -9,7 +9,7 @@ Class ControllerSesion {
 			$tabla = "usuarios";
 			$usuario = $_POST["user"];
 
-			$respuesta = ModeloSesion::iniciarSesionMdl($tabla, $usuario);
+			$respuesta = (new ModeloSesion)->iniciarSesionMdl($tabla, $usuario);
 			
 			if($respuesta["user"] == $_POST["user"] && $respuesta["password"] == $_POST["password"]) {
 
