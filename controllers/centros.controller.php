@@ -25,8 +25,6 @@ Class ctrCentros {
         $newCentro = (new mdlCentros);
         $respuesta = $newCentro->mdlGuardarCentro($tabla, $datos);
         return $respuesta;
-
-
     }
 
 }
