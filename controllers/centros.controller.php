@@ -2,7 +2,7 @@
 
 Class ctrCentros {
     private $_datos = array();
-    private $_id;
+    private $_idCentro;
 
     public function setDatos($datos){
         $this->_datos = $datos;
@@ -44,6 +44,16 @@ Class ctrCentros {
         return $respuesta;
 
     }
+
+    public function ctrEditarCentro(){
+        $tabla = "centros";
+        $id = $this->getIdCentro();
+        $delCentro = (new mdlCentros);
+        $respuesta = $delCentro->mdlEditarCentro($tabla, $id);
+        return $respuesta;
+
+    }
+
 
 }
 

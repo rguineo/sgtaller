@@ -134,9 +134,9 @@ Class ajaxCentro{
 
     public function editarCentro(){
         $id = $this->getIdCentro();
-        $eliminar = new ctrCentros();
-        $eliminar -> setIdCentro($id);
-        $respuesta = $eliminar -> ctrEditarCentro();
+        $editar = new ctrCentros();
+        $editar -> setIdCentro($id);
+        $respuesta = $editar -> ctrEditarCentro();
         echo json_encode($respuesta);
     }
 
@@ -188,7 +188,7 @@ if ($tipoOperacion == "eliminarCentro"){
 
   if ($tipoOperacion == "editarCentro"){
     $eliminarCentro = new ajaxCentro();
-    $eliminarCentro -> setIdCentro($_POST["id_empresa"]);
+    $eliminarCentro -> setIdCentro($_POST["id_centro"]);
     $eliminarCentro -> editarCentro();
 
   }

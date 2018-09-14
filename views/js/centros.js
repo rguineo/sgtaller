@@ -80,14 +80,14 @@ $(document).ready(function(){
 		})	
 	})
 
-	$("body .table-dark").on("click", ".btnEditarCliente", function(){
-		var idCliente = $(this).attr("idCliente")
+	$("body .table-dark").on("click", ".btnEditarCentro", function(){
+		var idCentro = $(this).attr("idCentro")
 		var datos = new FormData()
-		datos.append("id_empresa", idCliente)
-		datos.append("tipoOperacion", "editarCliente")
+		datos.append("id_centro", idCentro)
+		datos.append("tipoOperacion", "editarCentro")
 
 		$.ajax({
-			url: 'ajax/ajaxCliente.php',
+			url: 'ajax/ajaxCentro.php',
 			type: 'POST',
 			data: datos,
 			processData: false,
@@ -95,14 +95,11 @@ $(document).ready(function(){
 			success: function(respuesta) {
 				var valor = JSON.parse(respuesta)
 					
-				$('#formu-editar-cliente input[name="ErutCliente"]').val(valor.rut)
-				$('#formu-editar-cliente input[name="ErazonCliente"]').val(valor.razon_social)
-				$('#formu-editar-cliente input[name="EdireccionCliente"]').val(valor.direccion)
-				$('#formu-editar-cliente input[name="EgiroCliente"]').val(valor.giro)
-				$('#formu-editar-cliente input[name="Econtacto"]').val(valor.contacto)
-				$('#formu-editar-cliente input[name="Etelefono"]').val(valor.nfono)
-				$('#formu-editar-cliente input[name="EidCliente"]').val(valor.id_empresa)
-				
+				$('#formu-editar-centro input[name="EnombreCentro"]').val(valor.nombre)
+				$('#formu-editar-centro input[name="EdireccionCentro"]').val(valor.direccion)
+				$('#formu-editar-centro input[name="EubicacionCentro"]').val(valor.url_ubicacion)
+				$('#formu-editar-centro input[name="Econtacto"]').val(valor.contacto)
+				$('#formu-editar-centro input[name="Etelefono"]').val(valor.telefono)				
 			}
 
 		})
