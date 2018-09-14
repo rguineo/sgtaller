@@ -37,24 +37,25 @@ class mdlCentros {
         ON $tabla.id_empresa = empresa.id_empresa
         INNER JOIN ciudad
         ON empresa.id_ciudad = ciudad.id_ciudad");
+
         $sql -> execute();
         return $sql->fetchAll();
     }
 
     public function mdlValidarCentro($tabla, $datos){
 
-        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla() 
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla 
         WHERE nombre = :nombre AND id_empresa = :empresa AND id_pais = :pais 
         AND id_region = :region AND id_ciudad = :ciudad");
 
         $sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-        $sql->bindParam(":id_empresa", $datos["empresa"], PDO::PARAM_INT);
-        $sql->bindParam(":id_pais", $datos["pais"], PDO::PARAM_INT);
-        $sql->bindParam(":id_region", $datos["region"], PDO::PARAM_INT);
-        $sql->bindParam(":id_ciudad", $datos["ciudad"], PDO::PARAM_INT);
-        $sql->bindParam(":id_comuna", $datos["comuna"], PDO::PARAM_INT);
+        $sql->bindParam(":empresa", $datos["empresa"], PDO::PARAM_INT);
+        $sql->bindParam(":pais", $datos["pais"], PDO::PARAM_INT);
+        $sql->bindParam(":region", $datos["region"], PDO::PARAM_INT);
+        $sql->bindParam(":ciudad", $datos["ciudad"], PDO::PARAM_INT);
+        $sql -> execute();
 
-        if( $sql -> execute() ) {
+        if( $sql->fetch() ) {
             return "existe";
         } else {
             return "vacio";
@@ -63,7 +64,7 @@ class mdlCentros {
 
     }
 
-    static public function mdlGuardarCentro($tabla, $datos){
+    public function mdlGuardarCentro($tabla, $datos){
 
         $respuesta = $this->mdlValidarCentro($tabla, $datos);
 

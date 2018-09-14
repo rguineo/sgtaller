@@ -120,7 +120,7 @@ Class ajaxCentro{
         $NewCentro = new ctrCentros();
         $NewCentro->setDatos($datos);
         $respuesta = $NewCentro->ctrGuardarCentro();
-        echo ($respuesta);
+        echo $respuesta;
 
     }
 

@@ -23,7 +23,7 @@ $(document).ready(function(){
 					    window.location = "centros"
 					  }
 					})
-				}else if (respuesta == "error"){
+				}else if (cadena == "error"){
 					swal({
 					  type: 'warning',
 					  title: 'Malas Noticias',
