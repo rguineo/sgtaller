@@ -19,7 +19,8 @@
     <section class="content container-fluid">
       <div id='page-wrapper'> 
         <div class='container-fluid'>
-        <a href="nuevoCentro" class="btn bg-purple margin">Agregar Centro <i class="fa fa-user-plus"></i></a>
+        <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-centro">
+        <i class="fa fa-user-plus"></i>  Agregar Centro</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive table_productos'>

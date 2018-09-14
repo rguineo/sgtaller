@@ -30,7 +30,7 @@ class mdlCentros {
         return $this->_datos;
     }
 
-    public function mdlMostrarCentros($tabla) {
+    static public function mdlMostrarCentros($tabla) {
         // $tabla = $this->getTabla();
         $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla");
         $sql -> execute();

@@ -1,0 +1,13 @@
+.tituloModal{
+    background: rgb(96, 92, 168);
+}
+
+.tituloModal h5{
+    color: white;
+    font-size: 18px;
+}
+
+.close{
+    color: white;
+    font-size: 18px;
+}

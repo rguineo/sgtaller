@@ -48,13 +48,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       if( isset($_GET["ruta"])) {
         
         $enrutar = new ControllerEnrutamiento();
-        $enrutar -> enrutamiento();
-        
+        $enrutar -> enrutamiento(); 
+        include "modulos/modales/modal-".$_GET["ruta"].".php";
 
       } else {
         include "modulos/home.php";
       }
-      
         include "modulos/footer.php";
     } else {
         include "modulos/login.php";
@@ -64,6 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="views/dist/js/adminlte.min.js"></script>
 <script src="views/dist/plugins/iCheck/icheck.min.js"></script>
+
 <script src="views/dist/js/zonas.js"></script>
 <script src="views/dist/js/clientes.js"></script>
 <script src="views/dist/js/jquery.Rut.js"></script>
@@ -84,13 +84,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>
 	$(document).ready(function(){
 	// Rutina para validar RUT Chileno
-		$('#rut').Rut({
+		$('#rut-cliente').Rut({
 		  on_error: function(){ 
-		    alert('Rut Incorrecto'); 
-		    location.reload();},
+        swal({
+					  type: 'warning',
+					  title: 'Malas noticias',
+					  text: 'RUT incorrecto, intente nuevamente'
+					}).then((result) => {
+					  if (result.value) {
+					    location.reload()
+					  }
+					})
+		    },
 		  format_on: 'keyup'
-		});
-	});
+		})
+	})
 </script>	
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script>
 </body>
