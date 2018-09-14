@@ -23,8 +23,8 @@ $respuesta = $usuario->ctrMostrarUsuario();
           <a href="nuevoUsuario" class="btn bg-purple margin">Agregar Cliente <i class="fa fa-user-plus"></i></a>
             <div class='row'>
               <div class='col-lg-offset-1 col-lg-10'>
-                <div class='table-responsive table_clientes'>
-                  <table class='table table-striped table-bordered table-hover tabla-clientes' id='dataTables-example'>
+                <div class='table-responsive table_usuario'>
+                  <table class='table table-striped table-bordered table-hover tabla-usuario' id='dataTables-example'>
                     <thead style='text-align: center; background: #eaeaea;'>
                       <tr>
                           <th scope="col">#</th>
