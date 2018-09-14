@@ -47,18 +47,13 @@
                               echo "<td>".$value['razon_social']."</td>";
                               echo "<td>".$value['giro']."</td>";
                               echo "<td>".$value['direccion']."</td>"; 
-                              echo "<td>"; 
-                              echo "<center>";
-                                echo "<a href='#' class='btnEditarCliente' data-toggle='modal' data-target='#modal-editar-cliente' title='Editar' idCliente=".$value["id_empresa"]." ><i class='fa fa-edit fa-2x'></i></a>";
-                                echo "<a href='#' class='btnEliminarCliente' id=".$value["id_empresa"]." title='Eliminar'>
-                                <i class='fa fa-remove fa-2x'style='color: red;'></i></a>";
-                              echo "</center>";
-                              echo "</td>";
+                              echo "<td><center>"; 
+                                echo "<button href='#' type='button' class='btnEditarCliente btn btn-primary' data-toggle='modal' data-target='#modal-editar-cliente' title='Editar' idCliente=".$value["id_empresa"]." ><i class='fa fa-edit'></i></button>";
+                                echo "<button href='#' type='button' class='btnEliminarCliente btn btn-danger' id=".$value["id_empresa"]." title='Eliminar'><i class='fa fa-trash'></i></button>";
+                              echo "</center></td>";
                             echo "</tr>";
                             }
                           ?> 
-
-
                           </tbody>
                       </table>
                   </div>

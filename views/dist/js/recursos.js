@@ -18,7 +18,9 @@ $(document).ready(function() {
 
 
     // Tablas Dinamicas
-    $('#dataTables-example').DataTable()
+    $('#dataTables-example').DataTable( {
+        "scrollX": false
+    } )
 
     $(function () {
         $('input').iCheck({

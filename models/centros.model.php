@@ -31,7 +31,12 @@ class mdlCentros {
     }
 
     static public function mdlMostrarCentros($tabla) {
-        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla");
+        $sql = (new Conexion)->conectar()->prepare("SELECT $tabla.nombre, $tabla.url_ubicacion, $tabla.contacto, $tabla.telefono, empresa.razon_social, ciudad.nombre_ciudad
+        FROM $tabla
+        INNER JOIN empresa
+        ON $tabla.id_empresa = empresa.id_empresa
+        INNER JOIN ciudad
+        ON empresa.id_ciudad = ciudad.id_ciudad");
         $sql -> execute();
         return $sql->fetchAll();
     }

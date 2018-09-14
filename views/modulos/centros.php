@@ -33,6 +33,7 @@
                                   <th style='text-align: center;'> Empresa</th>
                                   <th style='text-align: center;'> Ciudad </th>	
                                   <th style='text-align: center;'> Telefono </th>
+                                  <th style='text-align: center;'> Acciones </th>
                               </tr>
                           </thead>
 
@@ -42,10 +43,10 @@
                            foreach ($respuesta as $key => $value) {
                             echo "<tr>";
                               echo "<td>".$value['nombre']."</td>";
-                              echo "<td>".$value['id_ciudad']."</td>";
-                              echo "<td>".$value['id_comuna']."</td>";
-                              echo "<td>".$value['id_empresa']."</td>";
-                              echo "<td>".$value['url_ubicacion']."</td>";
+                              echo "<td><center><a href=".$value["url_ubicacion"]." target='_blank'><i class='fas fa-map-marker-alt fa-2x'></i></center></td>";
+                              echo "<td>".$value['razon_social']."</td>";
+                              echo "<td>".$value['nombre_ciudad']."</td>";
+                              echo "<td>".$value['telefono']."</td>";
                               echo "<td>"; 
                               echo "<center>";
                                 echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
