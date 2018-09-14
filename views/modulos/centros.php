@@ -20,7 +20,7 @@
       <div id='page-wrapper'> 
         <div class='container-fluid'>
         <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-centro">
-        <i class="fa fa-user-plus"></i>  Agregar Centro</button>
+        <i class="fa fa-plus"></i>  Agregar Centro</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive table_productos'>

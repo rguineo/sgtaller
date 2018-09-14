@@ -40,14 +40,14 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Ubicación</label>
                     <div class="col-sm-8">
-                        <input type="text" id="ubicacion-cliente" class="form-control" placeholder="Ubicación Googel Maps"  required name="razonCliente">
+                        <input type="text" id="ubicacion-cliente" class="form-control" placeholder="Ubicación Googel Maps"  required name="ubicacionCentro">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputPais">Empresa</label>
                     <div class="col-sm-8">
-                        <select id="inputEmpresa" class="form-control" onChange="" name="empresa" required>
+                        <select id="inputEmpresa" class="form-control" onChange="" name="idEmpresa" required>
                             <option selected>Elija una Empresa</option>
                             <?php
                             foreach ($resEmpresa as $key => $value) {
@@ -112,7 +112,7 @@
                     </div>
                 </div>     
 
-                <input type="hidden" name="tipoOperacion" value="nuevoCliente">
+                <input type="hidden" name="tipoOperacion" value="nuevoCentro">
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

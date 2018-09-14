@@ -31,10 +31,34 @@ class mdlCentros {
     }
 
     static public function mdlMostrarCentros($tabla) {
-        // $tabla = $this->getTabla();
         $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla");
         $sql -> execute();
         return $sql->fetchAll();
+    }
+
+    static public function mdlGuardarCentro($tabla, $datos){
+
+        $sql = (new Conexion)->conectar()->prepare("INSERT INTO $tabla() 
+        VALUES (NULL, :nombre, :direccion, :id_pais, :id_region, :id_ciudad, 
+        :id_comuna, :id_empresa, :ubicacion, :contacto, :telefono)");
+
+        $sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+        $sql->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+        $sql->bindParam(":ubicacion", $datos["ubicacion"], PDO::PARAM_STR);
+        $sql->bindParam(":id_empresa", $datos["empresa"], PDO::PARAM_INT);
+        $sql->bindParam(":id_pais", $datos["pais"], PDO::PARAM_INT);
+        $sql->bindParam(":id_region", $datos["region"], PDO::PARAM_INT);
+        $sql->bindParam(":id_ciudad", $datos["ciudad"], PDO::PARAM_INT);
+        $sql->bindParam(":id_comuna", $datos["comuna"], PDO::PARAM_INT);
+        $sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
+        $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+
+        if( $sql -> execute() ) {
+            return "ok";
+        } else {
+            return "error";
+        }
+
     }
 }
 
