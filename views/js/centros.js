@@ -4,7 +4,7 @@ $(document).ready(function(){
 		e.preventDefault()
 
 		var datos = new FormData($(this)[0])
-        console.log("paso por el JS")
+
 		$.ajax({
 			url: 'ajax/ajaxCentro.php',
 			type: 'POST',
@@ -12,8 +12,8 @@ $(document).ready(function(){
 			processData: false,
 			contentType: false,
 			success: function(respuesta) {
-                console.log(respuesta)
-				if (respuesta == "ok") {
+				cadena = $.trim(respuesta)
+				if (cadena == "ok") {
 					swal({
 					  type: 'success',
 					  title: 'Excelente',

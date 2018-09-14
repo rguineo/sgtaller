@@ -64,45 +64,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/dist/js/adminlte.min.js"></script>
 <script src="views/dist/plugins/iCheck/icheck.min.js"></script>
 
-
 <script src="views/dist/js/jquery.Rut.js"></script>
 <script src="views/dist/js/jquery.dataTables.min.js"></script>
 <script src="views/dist/js/dataTables.bootstrap.js"></script>
 <script src="views/dist/js/recursos.js"></script>
 
-<script src="js/zonas.js"></script>
-<script src="js/clientes.js"></script>
-<script src="js/centros.js"></script>
+<script src="views/js/zonas.js"></script>
+<script src="views/js/clientes.js"></script>
+<script src="views/js/centros.js"></script>
+<script src="views/js/usuario.js"></script>
 
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
-
-<script>
-	$(document).ready(function(){
-	// Rutina para validar RUT Chileno
-		$('#rut-cliente').Rut({
-		  on_error: function(){ 
-        swal({
-					  type: 'warning',
-					  title: 'Malas noticias',
-					  text: 'RUT incorrecto, intente nuevamente'
-					}).then((result) => {
-					  if (result.value) {
-					    location.reload()
-					  }
-					})
-		    },
-		  format_on: 'keyup'
-		})
-	})
-</script>	
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
