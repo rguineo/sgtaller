@@ -49,9 +49,9 @@
                               echo "<td>".$value['telefono']."</td>";
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
-                                echo "<a href='#' data-toggle='modal' data-target='#delUsrModal' title='Eliminar'>
-                                <i class='fa fa-remove fa-2x'style='color: red;'></i></a>";
+                                echo "<button type='button' id='btnEditarCentro' class='btn btn-primary btnEditarCentro' href='#' title='Editar'><i class='fa fa-edit'></i></button>";
+                                echo "<button type='button' id='btnEliminarCentro' class='btn btn-danger btnEliminarCentro' href='#' title='Eliminar'>
+                                <i class='fa fa-trash''></i></button>";
                               echo "</center>";
                               echo "</td>";
                             echo "</tr>";
