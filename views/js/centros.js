@@ -38,12 +38,12 @@ $(document).ready(function(){
 		})
 	})
 	
-	$("body .table-dark").on("click", ".btnEliminarCliente", function(){
-		var id = $(this).attr("id")
+	$("body .table-dark").on("click", ".btnEliminarCentro", function(){
+		var id = $(this).attr("idCentro")
 		var datos = new FormData()
 		datos.append("id", id)
-		datos.append("tipoOperacion", "eliminarCliente")
-
+		datos.append("tipoOperacion", "eliminarCentro")
+		console.log(id)
 		swal({
 		  title: '¿Estás seguro de eliminar?',
 		  text: "Los cambios son irreversibles!",
@@ -55,21 +55,21 @@ $(document).ready(function(){
 		}).then((result) => {
 		  if (result.value) {
 		  	$.ajax({
-				url: 'ajax/ajaxCliente.php',
+				url: 'ajax/ajaxCentro.php',
 				type: 'POST',
 				data: datos,
 				processData: false,
 				contentType: false,
 				success: function(respuesta) {
-					var cadena = respuesta.substr(0,2)
+					var cadena = $.trim(respuesta)
 					if ( cadena == "ok") {
 						swal(
 					      'Eliminado!',
-					      'El Cliente ha sido eliminado.',
+					      'El Centro ha sido eliminado.',
 					      'success'
 					    ).then((result) => {
 						  if (result.value) {
-						    window.location = "cliente"
+						    window.location = "centros"
 						  }
 						})
 					}

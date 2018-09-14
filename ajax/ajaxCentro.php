@@ -126,7 +126,7 @@ Class ajaxCentro{
 
     public function eliminarCentro(){
         $id = $this->getIdCentro();
-        $eliminar = new ctrCentro();
+        $eliminar = new ctrCentros();
         $eliminar -> setIdCentro($id);
         $respuesta = $eliminar -> ctrEliminarCentro();
         echo $respuesta;
@@ -134,7 +134,7 @@ Class ajaxCentro{
 
     public function editarCentro(){
         $id = $this->getIdCentro();
-        $eliminar = new ctrCentro();
+        $eliminar = new ctrCentros();
         $eliminar -> setIdCentro($id);
         $respuesta = $eliminar -> ctrEditarCentro();
         echo json_encode($respuesta);
@@ -154,7 +154,7 @@ Class ajaxCentro{
                         "telefono"=>$this->getTelefono(),
                         "id_Centro"=>$this->getIdCentro());
 
-        $NewCentro = new ctrCentro();
+        $NewCentro = new ctrCentros();
         $NewCentro->setDatos($datos);
         $NewCentro->setIdCentro($id);
         $respuesta = $NewCentro->ctrActualizarCentro();

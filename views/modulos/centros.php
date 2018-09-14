@@ -24,7 +24,7 @@
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive table_productos'>
-                        <table class='table table-striped table-bordered table-hover tabla-usuarios' id='dataTables-example'>
+                        <table class='table table-striped table-bordered table-hover tabla-usuarios table-dark' id='dataTables-example'>
 
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
@@ -49,8 +49,8 @@
                               echo "<td>".$value['telefono']."</td>";
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<button type='button' id='btnEditarCentro' class='btn btn-primary btnEditarCentro' href='#' title='Editar'><i class='fa fa-edit'></i></button>";
-                                echo "<button type='button' id='btnEliminarCentro' class='btn btn-danger btnEliminarCentro' href='#' title='Eliminar'>
+                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-primary btnEditarCentro' href='#' title='Editar'><i class='fa fa-edit'></i></button>";
+                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-danger btnEliminarCentro' href='#' title='Eliminar'>
                                 <i class='fa fa-trash''></i></button>";
                               echo "</center>";
                               echo "</td>";

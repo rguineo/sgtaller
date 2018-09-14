@@ -31,7 +31,7 @@ class mdlCentros {
     }
 
     static public function mdlMostrarCentros($tabla) {
-        $sql = (new Conexion)->conectar()->prepare("SELECT $tabla.nombre, $tabla.url_ubicacion, $tabla.contacto, $tabla.telefono, empresa.razon_social, ciudad.nombre_ciudad
+        $sql = (new Conexion)->conectar()->prepare("SELECT $tabla.id_centro, $tabla.nombre, $tabla.url_ubicacion, $tabla.contacto, $tabla.telefono, empresa.razon_social, ciudad.nombre_ciudad
         FROM $tabla
         INNER JOIN empresa
         ON $tabla.id_empresa = empresa.id_empresa
@@ -60,8 +60,6 @@ class mdlCentros {
         } else {
             return "vacio";
         }
-
-
     }
 
     public function mdlGuardarCentro($tabla, $datos){
@@ -93,6 +91,20 @@ class mdlCentros {
             return "error";
         }
     }
+
+    public function mdlEliminarCentro($tabla, $id){
+
+        $sql = (new Conexion)->conectar()->prepare("DELETE FROM $tabla WHERE id_centro = :id");
+        
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+
+        if( $sql->execute()) {
+            return "ok";
+        } else {
+            return "error";
+        }
+    }
+
 }
 
 ?>      

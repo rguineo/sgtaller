@@ -60,7 +60,6 @@ class mdlCliente{
         }
     }
 
-
     public function mdlGuardarCliente() {
         $tabla = $this->getTabla();
         $datos = $this->getDatos();
@@ -91,7 +90,6 @@ class mdlCliente{
         }else {
             return "error";
         }
-
 	} 
 
     public function mdlMostrarTclientes(){
@@ -113,7 +111,6 @@ class mdlCliente{
             return "error";
         }
     }
-
 
     public function mdlEditarCliente($tabla, $id){
 
