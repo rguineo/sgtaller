@@ -33,6 +33,7 @@ $respuesta = $usuario->ctrMostrarUsuario();
                           <th scope="col">Apellido</th>
                           <th scope="col">Rol</th>
                           <th scope="col">Avatar</th>
+                          <th scope="col">Acciones</th>
                       </tr>
                     </thead>
                     
@@ -40,12 +41,14 @@ $respuesta = $usuario->ctrMostrarUsuario();
                     <?php 
 
                       foreach ($respuesta as $key => $value) {
-                        echo "<tr>";
+                        echo "<tr style='text-align: center'>";
                             echo "<td>".$value["id_usuario"]."</td>";
                             echo "<td>".$value["user"]."</td>";
                             echo "<td>".$value["nombre"]."</td>";
                             echo "<td>".$value["apellido"]."</td>";
                             echo "<td>".$value["rol"]."</td>";
+                            echo "<td><center><img src='".$value["avatar"]."' width='50'></center></td>";
+                            
                             echo "<td>"; 
                             echo "<center>";
                               echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
