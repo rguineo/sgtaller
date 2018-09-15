@@ -41,7 +41,7 @@ Class ModelZonas{
 
     public function mdlMostrarPais(){
         $table = $this->getTabla();
-        $sql = Conexion::conectar()->prepare("SELECT * FROM $table");
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $table");
         $sql -> execute();
         return $sql->fetchAll();
     }
@@ -49,14 +49,16 @@ Class ModelZonas{
     public function mdlListarRegion(){
         $id = $this->getIdPais();
         $tabla = $this->getTabla();
-        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_pais=$id");
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_pais = :id");
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
         $sql -> execute();
         return $sql->fetchAll();
     }
     public function mdlListarCiudades(){
         $id = $this->getIdRegion();
         $tabla = $this->getTabla();
-        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_region=$id");
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_region = :id");
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
         $sql -> execute();
         return $sql->fetchAll();
     }
@@ -64,9 +66,9 @@ Class ModelZonas{
     public function mdlListarComunas(){
         $id = $this->getIdCiudad();
         $tabla = $this->getTabla();
-        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_ciudad=$id");
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_ciudad = :id");
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
         $sql -> execute();
-        echo "comunas";
         return $sql->fetchAll();
     }
 }

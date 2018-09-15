@@ -165,7 +165,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputPais">Empresa</label>
                     <div class="col-sm-8">
-                        <select id="inputEmpresa" class="form-control" onChange="" name="EidEmpresa" required>
+                        <select id="EinputEmpresa" class="form-control" onChange="" name="EidEmpresa" required>
                             <option selected>Elija una Empresa</option>
                             <?php
                             foreach ($resEmpresa as $key => $value) {
@@ -179,11 +179,11 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputPais">País</label>
                     <div class="col-sm-8">
-                        <select id="inputPais" class="form-control" onChange="CargarRegion()" name="Epais" required>
+                        <select id="EinputPais" class="form-control" name="Epais" required>
                             <option selected>Elija un País</option>
                             <?php
                             foreach ($resPais as $key => $value) {
-                                echo "<option value=".$value["id_pais"].">".$value["nombre_pais"]."</option>";
+                                echo '<option value="'.$value["id_pais"].'">'.$value["nombre_pais"].'</option>';
                             }
                             ?>           
                         </select>
@@ -191,47 +191,45 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputRegion">Región</label>
+                    <label class="col-sm-4 col-form-label" for="EinputRegion">Región</label>
                     <div class="col-sm-8">
-                        <select id="inputRegion" class="form-control" name="Eregion" disabled required>
+                        <select id="EinputRegion" class="form-control" name="Eregion" disabled required>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Ciudad</label>
+                    <label class="col-sm-4 col-form-label" for="EinputCiudad">Ciudad</label>
                     <div class="col-sm-8">
-                        <select id="inputCiudad" class="form-control" name="Eciudad" disabled required>
-                        <option>...</option>
+                        <select id="EinputCiudad" class="form-control" name="Eciudad" disabled required>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Comuna</label>
+                    <label class="col-sm-4 col-form-label" for="EinputComuna">Comuna</label>
                     <div class="col-sm-8">
-                        <select id="inputComuna" class="form-control" name="Ecomuna" disabled required>
-                        <option>...</option>
+                        <select id="EinputComuna" class="form-control" name="Ecomuna" disabled required>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Contacto</label>
+                    <label class="col-sm-4 col-form-label" for="EinputContact">Contacto</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputContact" name="Econtacto" placeholder= "Juan Perez" maxlength="20" required>
+                        <input type="text" class="form-control" id="EinputContact" name="Econtacto" placeholder= "Juan Perez" maxlength="20" required>
                     </div>
                 </div>   
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Teléfono</label>
+                    <label class="col-sm-4 col-form-label" for="EinputFono">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="tel" class="form-control" id="inputFono" name="Etelefono" placeholder= "+56 9" required>
+                        <input type="tel" class="form-control" id="EinputFono" name="Etelefono" placeholder= "+56 9" required>
                     </div>
                 </div>     
 
-                <input type="hidden" name="tipoOperacion" value="nuevoCentro">
-                
+                <input type="hidden" name="tipoOperacion" value="actualizarCentro">
+                <input type="hidden" name="idCentro" value="">
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

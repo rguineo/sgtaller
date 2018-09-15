@@ -98,6 +98,21 @@ $(document).ready(function(){
 				$('#formu-editar-centro input[name="EnombreCentro"]').val(valor.nombre)
 				$('#formu-editar-centro input[name="EdireccionCentro"]').val(valor.direccion)
 				$('#formu-editar-centro input[name="EubicacionCentro"]').val(valor.url_ubicacion)
+
+				$("#EinputEmpresa option[value="+ valor.id_empresa +"]").attr("selected",true);
+				
+				$("#EinputPais option[value="+ valor.id_pais +"]").attr("selected",true);
+				CargarRegionE();
+				console.log( "valor region: "+valor.id_region)
+				$("#EinputRegion option[value="+ valor.id_region +"]").attr("selected",true);
+				
+				
+				// $("#EinputCiudad option[value="+ valor.id_ciudad +"]").attr("selected",true);
+				
+				// $("#EinputComuna option[value="+ valor.id_comuna +"]").attr("selected",true);
+				
+				// CargarCiudadE();
+				// CargarComunaE();
 				$('#formu-editar-centro input[name="Econtacto"]').val(valor.contacto)
 				$('#formu-editar-centro input[name="Etelefono"]').val(valor.telefono)				
 			}

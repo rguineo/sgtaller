@@ -39,7 +39,7 @@ Class ctrRegiones{
         $respuesta = $region -> ctrListarRegion();
         $listaRegion = "<option value='0' selected> Elija una opcion</option>";
         foreach ($respuesta as $key => $value) {
-            $listaRegion .= "<option value=".$value['id_region'].">$value[1]</option>";
+            $listaRegion .= "<option value=".$value['id_region'].">".$value[1]."</option>";
         }
         echo $listaRegion;
     }
@@ -51,7 +51,7 @@ Class ctrRegiones{
         $respuesta = $ciudad -> ctrListarCiudades();
         $listaCiudad = "<option value='0' selected> Elija una opcion</option>";
         foreach ($respuesta as $key => $value) {
-            $listaCiudad .= "<option value=".$value['id_ciudad'].">$value[1]</option>";
+            $listaCiudad .= "<option value=".$value['id_ciudad'].">".$value[1]."</option>";
         }
         echo $listaCiudad;
     }
@@ -63,9 +63,9 @@ Class ctrRegiones{
         $respuesta = $comuna -> ctrListarComunas();
         $listaComuna = "<option value='0' selected> Elija una opcion</option>";
         foreach ($respuesta as $key => $value) {
-            $listaComuna .= "<option value=".$value['id_comuna'].">$value[1]</option>";
+            $listaComuna .= "<option value=".$value['id_comuna'].">".$value[1]."</option>";
         }
-        echo $listaComuna;
+        printf( $listaComuna );
     }
 }
 
@@ -86,7 +86,6 @@ if (isset($_POST["id_pais"])){
     $cmbRegion = new ctrRegiones();
     $cmbRegion -> setIdCiudad($_POST["id_ciudad"]);
     $cmbRegion -> listarComunas();
-    echo "hola";
 }
 
 
