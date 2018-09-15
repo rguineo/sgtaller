@@ -1,6 +1,6 @@
 <?php
 
-$usuario = new mdlMostrarUsuario();
+$usuario = new ctrUsuario();
 $respuesta = $usuario->ctrMostrarUsuario();
 
 ?>
