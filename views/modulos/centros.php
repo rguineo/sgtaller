@@ -20,11 +20,11 @@
       <div id='page-wrapper'> 
         <div class='container-fluid'>
         <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-centro">
-        <i class="fa fa-user-plus"></i>  Agregar Centro</button>
+        <i class="fa fa-plus"></i>  Agregar Centro</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive table_productos'>
-                        <table class='table table-striped table-bordered table-hover tabla-usuarios' id='dataTables-example'>
+                        <table class='table table-striped table-bordered table-hover tabla-usuarios table-dark' id='dataTables-example'>
 
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
@@ -33,6 +33,7 @@
                                   <th style='text-align: center;'> Empresa</th>
                                   <th style='text-align: center;'> Ciudad </th>	
                                   <th style='text-align: center;'> Telefono </th>
+                                  <th style='text-align: center;'> Acciones </th>
                               </tr>
                           </thead>
 
@@ -42,15 +43,15 @@
                            foreach ($respuesta as $key => $value) {
                             echo "<tr>";
                               echo "<td>".$value['nombre']."</td>";
-                              echo "<td>".$value['id_ciudad']."</td>";
-                              echo "<td>".$value['id_comuna']."</td>";
-                              echo "<td>".$value['id_empresa']."</td>";
-                              echo "<td>".$value['url_ubicacion']."</td>";
+                              echo "<td><center><a href=".$value["url_ubicacion"]." target='_blank'><i class='fas fa-map-marker-alt fa-2x'></i></center></td>";
+                              echo "<td>".$value['razon_social']."</td>";
+                              echo "<td>".$value['nombre_ciudad']."</td>";
+                              echo "<td>".$value['telefono']."</td>";
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
-                                echo "<a href='#' data-toggle='modal' data-target='#delUsrModal' title='Eliminar'>
-                                <i class='fa fa-remove fa-2x'style='color: red;'></i></a>";
+                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-primary btnEditarCentro' href='#' data-toggle='modal' data-target='#modal-editar-centro' title='Editar'><i class='fa fa-edit'></i></button>";
+                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-danger btnEliminarCentro' href='#' title='Eliminar'>
+                                <i class='fa fa-trash''></i></button>";
                               echo "</center>";
                               echo "</td>";
                             echo "</tr>";

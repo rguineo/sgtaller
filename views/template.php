@@ -18,8 +18,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="views/dist/css/skins/skin-purple.min.css">
   <link rel="stylesheet" href="views/dist/plugins/iCheck/square/blue.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
-  <!-- <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="views/bower_components/font-awesome/css/font-awesome.min.css">
@@ -64,42 +63,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/dist/js/adminlte.min.js"></script>
 <script src="views/dist/plugins/iCheck/icheck.min.js"></script>
 
-<script src="views/dist/js/zonas.js"></script>
-<script src="views/dist/js/clientes.js"></script>
 <script src="views/dist/js/jquery.Rut.js"></script>
 <script src="views/dist/js/jquery.dataTables.min.js"></script>
 <script src="views/dist/js/dataTables.bootstrap.js"></script>
 <script src="views/dist/js/recursos.js"></script>
 
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
+<script src="views/js/zonas.js"></script>
+<script src="views/js/clientes.js"></script>
+<script src="views/js/centros.js"></script>
+<script src="views/js/usuario.js"></script>
 
-<script>
-	$(document).ready(function(){
-	// Rutina para validar RUT Chileno
-		$('#rut-cliente').Rut({
-		  on_error: function(){ 
-        swal({
-					  type: 'warning',
-					  title: 'Malas noticias',
-					  text: 'RUT incorrecto, intente nuevamente'
-					}).then((result) => {
-					  if (result.value) {
-					    location.reload()
-					  }
-					})
-		    },
-		  format_on: 'keyup'
-		})
-	})
-</script>	
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
