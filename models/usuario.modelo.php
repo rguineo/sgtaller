@@ -37,7 +37,7 @@ class mdlUsuario {
 		$user = $datos["user"];
 
 		$tabla = $this->getTabla();
-		$sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE user = '$user'");
+		$sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE user = '$user'");
 		$sql -> execute();
 
 		if ( $sql->fetch() ){
@@ -79,9 +79,9 @@ class mdlUsuario {
 
 	}
 
-	public function mdlMostrarUsuario() {
+	public function mdlMostrarUsuario(){
 		$tabla = $this->getTabla();
-		$sql = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		$sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla");
 		$sql -> execute();
 		return $sql -> fetchAll();
 

@@ -1,6 +1,6 @@
 <?php 
 
-Class ctrUsuario {
+class ctrUsuario{
 	private $_datos = array();
 
 	public function setDatos($datos){
