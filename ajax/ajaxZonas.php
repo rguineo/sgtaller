@@ -37,7 +37,7 @@ Class ctrRegiones{
         $region = new ControllerZonas();
         $region -> setIdPais($id);
         $respuesta = $region -> ctrListarRegion();
-        $listaRegion = "<option value='0' selected> Elija una opcion</option>";
+        $listaRegion = "<option> Elija una opcion</option>";
         foreach ($respuesta as $key => $value) {
             $listaRegion .= "<option value=".$value['id_region'].">".$value[1]."</option>";
         }
@@ -49,7 +49,7 @@ Class ctrRegiones{
         $ciudad = new ControllerZonas();
         $ciudad -> setIdRegion($id);
         $respuesta = $ciudad -> ctrListarCiudades();
-        $listaCiudad = "<option value='0' selected> Elija una opcion</option>";
+        $listaCiudad = "<option> Elija una opcion</option>";
         foreach ($respuesta as $key => $value) {
             $listaCiudad .= "<option value=".$value['id_ciudad'].">".$value[1]."</option>";
         }
@@ -61,7 +61,7 @@ Class ctrRegiones{
         $comuna = new ControllerZonas();
         $comuna -> setIdCiudad($id);
         $respuesta = $comuna -> ctrListarComunas();
-        $listaComuna = "<option value='0' selected> Elija una opcion</option>";
+        $listaComuna = "<option> Elija una opcion</option>";
         foreach ($respuesta as $key => $value) {
             $listaComuna .= "<option value=".$value['id_comuna'].">".$value[1]."</option>";
         }

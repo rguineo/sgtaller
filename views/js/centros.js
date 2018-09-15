@@ -98,21 +98,54 @@ $(document).ready(function(){
 				$('#formu-editar-centro input[name="EnombreCentro"]').val(valor.nombre)
 				$('#formu-editar-centro input[name="EdireccionCentro"]').val(valor.direccion)
 				$('#formu-editar-centro input[name="EubicacionCentro"]').val(valor.url_ubicacion)
-
 				$("#EinputEmpresa option[value="+ valor.id_empresa +"]").attr("selected",true);
-				
 				$("#EinputPais option[value="+ valor.id_pais +"]").attr("selected",true);
-				CargarRegionE();
-				console.log( "valor region: "+valor.id_region)
-				$("#EinputRegion option[value="+ valor.id_region +"]").attr("selected",true);
+
+				$("#EinputRegion").prop("disabled", false);
+
+				var id_pais = valor.id_pais
+	
+				$.ajax({
+						url: 'ajax/ajaxZonas.php',
+						data: {id_pais: id_pais},
+						type: 'POST',
+						success: function (data)
+						{
+								$("#EinputRegion").html(data)
+								$("#EinputRegion option[value="+ valor.id_region +"]").attr("selected",true);
+						}
+				})
+
 				
+
+				$("#EinputCiudad").prop("disabled", false);
+				var id_region= valor.id_region;
+
+				$.ajax({
+						url: 'ajax/ajaxZonas.php',
+						data: {id_region: id_region},
+						type: 'POST',
+						success: function (data)
+						{
+								$("#EinputCiudad").html(data)
+								$("#EinputCiudad option[value="+ valor.id_ciudad +"]").attr("selected",true);
+						}
+				})		
 				
-				// $("#EinputCiudad option[value="+ valor.id_ciudad +"]").attr("selected",true);
-				
-				// $("#EinputComuna option[value="+ valor.id_comuna +"]").attr("selected",true);
-				
-				// CargarCiudadE();
-				// CargarComunaE();
+				$("#EinputComuna").prop("disabled", false);
+				var id_ciudad= valor.id_ciudad
+
+				$.ajax({
+						url: 'ajax/ajaxZonas.php',
+						data: {id_ciudad: id_ciudad},
+						type: 'POST',
+						success: function (data)
+						{
+								$("#EinputComuna").html(data)
+								$("#EinputComuna option[value="+ valor.id_comuna +"]").attr("selected",true);
+						}
+				})
+
 				$('#formu-editar-centro input[name="Econtacto"]').val(valor.contacto)
 				$('#formu-editar-centro input[name="Etelefono"]').val(valor.telefono)				
 			}
@@ -150,8 +183,6 @@ $(document).ready(function(){
 	
 		})
 	})
-
-
 
 
 })
