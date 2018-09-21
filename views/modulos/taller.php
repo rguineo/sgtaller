@@ -1,3 +1,11 @@
+<?php 
+
+ $todoTaller = new ctrTaller(); 
+ $respuesta =  $todoTaller->ctrTodoTaller();
+
+?>
+
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -37,8 +45,8 @@
                               echo "<td>".$value['direccion_taller']."</td>";
                               echo "<td>".$value['ciudad_taller']."</td>";
                               echo "<td><center>"; 
-                                echo "<button href='#' type='button' class='btnEditarCliente btn btn-primary' data-toggle='modal' data-target='#modal-editar-cliente' title='Editar' idCliente=".$value["id_empresa"]." ><i class='fa fa-edit'></i></button>";
-                                echo "<button href='#' type='button' class='btnEliminarCliente btn btn-danger' id=".$value["id_empresa"]." title='Eliminar'><i class='fa fa-trash'></i></button>";
+                                echo "<button href='#' type='button' class='btnEditarTaller btn btn-primary' data-toggle='modal' data-target='#modal-editar-taller' title='Editar' idCliente=".$value["id_taller"]." ><i class='fa fa-edit'></i></button>";
+                                echo "<button href='#' type='button' class='btnEliminarTaller btn btn-danger' id=".$value["id_taller"]." title='Eliminar'><i class='fa fa-trash'></i></button>";
                               echo "</center></td>";
                             echo "</tr>";
                             }
