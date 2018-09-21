@@ -23,7 +23,7 @@
         <i class="fa fa-plus"></i>  Agregar Centro</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
-                    <div class='table-responsive table_productos'>
+                    <div class='table-responsive'>
                         <table class='table table-striped table-bordered table-hover tabla-usuarios table-dark' id='dataTables-example'>
 
                           <thead style='text-align: center; background: #eaeaea;'>
