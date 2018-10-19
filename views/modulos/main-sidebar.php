@@ -38,9 +38,9 @@
   <li class="active"><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="bodega"><i class="fa fa-building"></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="#"><i class="fa fa-user-secret"></i><span>Administrativo</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <!-- <li class="active"><a href="#"><i class="fa fa-user-secret"></i><span>Administrativo</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="#"><i class="fa fa-file-word-o"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="#"><i class="fa fa-gear"></i><span>Configuración</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="#"><i class="fa fa-gear"></i><span>Configuración</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li> -->
 </ul>
       <!-- /.sidebar-menu -->
     </section>

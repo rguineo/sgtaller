@@ -2,6 +2,7 @@
 
 class ctrUsuario{
 	private $_datos = array();
+	private $_idUsuario;
 
 	public function setDatos($datos){
         $this->_datos = $datos;
@@ -9,7 +10,15 @@ class ctrUsuario{
 
     public function getDatos(){
         return $this->_datos;
-    }
+	}
+	
+	public function setIdUsuario($id){
+		$this->_idUsuario = $id;
+	}
+
+	public function getIdUsuario(){
+		return $this->_idUsuario;
+	}
 
 	public function ctrMostrarUsuario() {
 		$tabla = "usuarios";
@@ -18,6 +27,15 @@ class ctrUsuario{
 		$respuesta = $Musuario->mdlMostrarUsuario();
 		return $respuesta;
 	}
+
+	public function ctrEliminarUsuario(){
+        $tabla = "usuarios";
+        $id = $this->getIdUsuario();
+        $delUsuario = (new mdlUsuario);
+        $respuesta = $delUsuario->mdlEliminarUsuario($tabla, $id);
+        return $respuesta;
+
+    }
 
 	// static public function ctrCrearUsuario($datos) {
 	// 	$tabla = "usuarios";

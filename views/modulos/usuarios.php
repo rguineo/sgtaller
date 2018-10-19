@@ -20,7 +20,8 @@ $respuesta = $usuario->ctrMostrarUsuario();
     <section class="content container-fluid">
       <div id='page-wrapper'>
         <div class='container-fluid'>
-          <a href="nuevoUsuario" class="btn bg-purple margin">Agregar Cliente <i class="fa fa-user-plus"></i></a>
+          <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-usuario">
+          <i class="fa fa-plus"></i>  Agregar Usuario</button>
             <div class='row'>
               <div class='col-lg-offset-1 col-lg-10'>
                 <div class='table-responsive table_usuario'>
@@ -48,12 +49,11 @@ $respuesta = $usuario->ctrMostrarUsuario();
                             echo "<td>".$value["apellido"]."</td>";
                             echo "<td>".$value["rol"]."</td>";
                             echo "<td><center><img src='".$value["avatar"]."' width='50'></center></td>";
-                            
                             echo "<td>"; 
                             echo "<center>";
-                              echo "<a href='#' title='Editar'><i class='fa fa-edit fa-2x'></i></a>";
-                              echo "<a href='#' data-toggle='modal' data-target='#delUsrModal' title='Eliminar'>
-                              <i class='fa fa-remove fa-2x'style='color: red;'></i></a>";
+                            echo "<button type='button' idUsuario='".$value["id_usuario"]."' class='btn btn-primary btnEditarUsuario' href='#' data-toggle='modal' data-target='#modal-editar-usuario' title='Editar'><i class='fa fa-edit'></i></button>";
+                            echo "<button type='button' idUsuario='".$value["id_usuario"]."' class='btn btn-danger btnEliminarUsuario' href='#' title='Eliminar'>
+                            <i class='fa fa-trash''></i></button>";
                             echo "</center>";
                             echo "</td>";
                           echo "</tr>";

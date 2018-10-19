@@ -6,7 +6,8 @@ class mdlUsuario {
 
 	private $_tabla;
     private $_datos = array();
-    private $_resultado = "";
+	private $_resultado = "";
+	private $_idUsuario;
 
     public function setResultado($result){
         $this->_resultado = $result;
@@ -29,7 +30,15 @@ class mdlUsuario {
 
     public function getDatos(){
         return $this->_datos;
-    }
+	}
+	
+	public function setIdUsuario($id){
+		$this->_idUsuario = $id;
+	}
+
+	public function getIdUsuario(){
+		return $this->_idUsuario;
+	}
 
 	public function consultaUsuario(){
 
@@ -78,6 +87,19 @@ class mdlUsuario {
 		}
 
 	}
+
+	public function mdlEliminarUsuario($tabla, $id){
+
+        $sql = (new Conexion)->conectar()->prepare("DELETE FROM $tabla WHERE id_usuario = :id");
+        
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+
+        if( $sql->execute()) {
+            return "ok";
+        } else {
+            return "error";
+        }
+    }
 
 	public function mdlMostrarUsuario(){
 		$tabla = $this->getTabla();

@@ -3,13 +3,64 @@ require_once "../controllers/usuario.controller.php";
 require_once "../models/usuario.modelo.php";
 
 Class ajaxUsuario{
-	public $_id_admin;
-	public $_nombre_admin;
-	public $_correo_admin;
-	public $_password_admin;
-    public $_avatar_admin;
-    public $_rutaActual;
+	private $_user;
+	private $_password;
+	private $_nombre;
+    private $_apellido;
+    private $_rol;
+    private $_avatar;
+    private $_id_usuario;
 
+    public function setUser($user){
+        $this->_user = $user;
+    }
+
+    public function getUser(){
+        return $this->_user;
+    }
+    public function setPassword($password){
+        $this->_password = $password;
+    }
+
+    public function getPassword(){
+        return $this->_password;
+    }
+    public function setNombre($nombre){
+        $this->_nombre = $nombre;
+    }
+
+    public function getNombre(){
+        return $this->_nombre;
+    }
+    public function setApellido($apellido){
+        $this->_apellido = $apellido;
+    }
+
+    public function getApellido(){
+        return $this->_apellido;
+    }
+    public function setRol($rol){
+        $this->_rol = $rol;
+    }
+
+    public function getRol(){
+        return $this->_rol;
+    }
+    public function setAvatar($avatar){
+        $this->_avatar = $avatar;
+    }
+
+    public function getAvatar(){
+        return $this->_avatar;
+    }
+    public function setId_usuario($id_usuario){
+        $this->_id_usuario = $id_usuario;
+    }
+
+    public function getId_usuario(){
+        return $this->_id_usuario;
+    }
+    
     public function crearUsuario(){
 		$datos = array(	"nombre_admin"=>$this->_nombre_admin,
                         "correo_admin"=>$this->_correo_admin,
@@ -51,12 +102,16 @@ Class ajaxUsuario{
 	}
 
     public function eliminarUsuario(){
-		$id_admin = $this->id_admin;
-		$ruta = $this->avatar_admin;
+        $id_usuario = $this->getId_usuario();
+        $eliminar = new ctrUsuario();
+        $eliminar -> setIdUsuario($id_usuario);
+        $respuesta = $eliminar -> ctrEliminarUsuario();
+        echo $respuesta;
+		// $ruta = $this->avatar_admin;
 
-		$respuesta = ControllerUsuario::ctrEliminarUsuario($id_admin, $ruta);
+		// $respuesta = ControllerUsuario::ctrEliminarUsuario($id_admin, $ruta);
 
-		echo $respuesta;
+		// echo $respuesta;
 
 	}
 }
@@ -91,8 +146,7 @@ Class ajaxUsuario{
     }
     if ($tipoOperacion == "eliminarUsuario") {
         $eliminarUsuario = new ajaxUsuario();
-        $eliminarUsuario -> id_admin = $_POST["id_admin"];
-        $eliminarUsuario -> avatar_admin = $_POST["avatar_admin"];
+        $eliminarUsuario -> setId_usuario($_POST["id_usuario"]);
         $eliminarUsuario -> eliminarUsuario();
     }
     

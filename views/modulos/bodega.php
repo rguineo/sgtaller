@@ -17,11 +17,10 @@
     </section>
 
     <section class="content container-fluid">
-    <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-bodega">
-    <i class="fa fa-user-plus"></i>  Agregar Bodega</button>
-    <br><br>
       <div id='page-wrapper'>
         <div class='container-fluid'>
+          <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-bodega">
+          <i class="fa fa-user-plus"></i>  Agregar Bodega</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive table_bodega'>

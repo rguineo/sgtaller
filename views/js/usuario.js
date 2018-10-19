@@ -86,13 +86,13 @@ $(document).ready(function(){
 	})
 
 	$("body .table-dark").on("click", ".btnEliminarUsuario", function(){
-		var idUsuario = $(this).attr("idUsuario")
-		var rutaImagen = $(this).attr("rutaImagen")
+		var id_usuario = $(this).attr("idUsuario")
+		// var rutaImagen = $(this).attr("rutaImagen")
 		var datos = new FormData()
-		datos.append("id_admin", idUsuario)
+		datos.append("id_usuario", idUsuario)
 		datos.append("tipoOperacion", "eliminarUsuario")
-		datos.append("avatar_admin", rutaImagen)
-    console.log("pasoporaca")
+		// datos.append("avatar_admin", rutaImagen)
+    console.log(id_usuario)
 		swal({
 		  title: '¿Estás seguro de eliminar?',
 		  text: "Los cambios no son reversibles!",
@@ -110,7 +110,8 @@ $(document).ready(function(){
 				processData: false,
 				contentType: false,
 				success: function(respuesta) {
-					if ( respuesta == "ok") {
+					var cadena = $.trim(respuesta)
+					if ( cadena == "ok") {
 						swal(
 					      'Eliminado!',
 					      'Su archivo a sido eliminado.',
