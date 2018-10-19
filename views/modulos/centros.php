@@ -49,8 +49,8 @@
                               echo "<td>".$value['telefono']."</td>";
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-primary btnEditarCentro' href='#' data-toggle='modal' data-target='#modal-editar-centro' title='Editar'><i class='fa fa-edit'></i></button>";
-                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-danger btnEliminarCentro' href='#' title='Eliminar'>
+                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-sm btn-primary btnEditarCentro' href='#' data-toggle='modal' data-target='#modal-editar-centro' title='Editar'><i class='fa fa-edit'></i></button>";
+                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-sm btn-danger btnEliminarCentro' href='#' title='Eliminar'>
                                 <i class='fa fa-trash''></i></button>";
                               echo "</center>";
                               echo "</td>";
