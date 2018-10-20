@@ -18,6 +18,13 @@
                 </div>
 
                 <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Nombre Equipo</label>
+                    <div class="col-sm-8">
+                        <input type="text" id="nombre-equipo" class="form-control" placeholder="Industria Acuícola"  required name="nombreEquipo">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Marca Equipo</label>
                     <div class="col-sm-8">
                         <input type="text" id="marca-equipo" class="form-control" placeholder="xForce"  required name="marcaEquipo">
@@ -32,11 +39,13 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label">Empresa</label>
+                    <label class="col-sm-4 col-form-label" for="inputEmpresa">Empresa</label>
                     <div class="col-sm-8">
-                        <input type="text" id="empresa" class="form-control" placeholder="Industria Acuícola"  required name="empresaEquipo">
+                        <select id="inputEmpresa" class="form-control" name="empresa" required>
+                            <option selected>Elija una Empresa</option>          
+                        </select>
                     </div>
-                </div> 
+                </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Fecha Ingreso</label>
@@ -45,12 +54,6 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label class="col-sm-4 col-form-label">Nombre Equipo</label>
-                    <div class="col-sm-8">
-                        <input type="text" id="nombre-equipo" class="form-control" placeholder="Industria Acuícola"  required name="nombreEquipo">
-                    </div>
-                </div>
      
 
                 <input type="hidden" name="tipoOperacion" value="nuevoEquipo">

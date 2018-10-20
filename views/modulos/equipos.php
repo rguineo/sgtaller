@@ -32,11 +32,11 @@
                       <thead style='text-align: center; background: #eaeaea;'>
                           <tr>
                               <th style='text-align: center;'> N° Serie</th>
+                              <th style='text-aling: center;'> Nombre Equipo </th>
                               <th style='text-align: center;'> Marca Equipo</th>
                               <th style='text-align: center;'> Modelo Equipo </th>	
                               <th style='text-align: center;'> Empresa </th>
                               <th style='text-align: center;'> Fecha Ingreso </th>
-                              <th style='text-aling: center;'> Nombre Equipo </th>
                               <th style='text-align: center;'> Accion </th>
                           </tr>
                       </thead>
