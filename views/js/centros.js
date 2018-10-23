@@ -172,10 +172,10 @@ $(document).ready(function(){
 					swal({
 					  type: 'success',
 					  title: 'Actualizado',
-					  text: 'Cliente actualizado con éxito'
+					  text: 'Centro actualizado con éxito'
 					}).then((result) => {
 					  if (result.value) {
-						window.location = "cliente"
+						window.location = "centros"
 					  }
 					})
 				}

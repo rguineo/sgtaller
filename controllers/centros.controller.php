@@ -54,6 +54,12 @@ Class ctrCentros {
 
     }
 
+    public function ctrActualizarCentro(){
+        $tabla = "centros";
+        
+
+    }
+
 
 }
 

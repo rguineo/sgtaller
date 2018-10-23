@@ -142,10 +142,8 @@ Class ajaxCentro{
 
     public function actualizarCentro(){
         $id = $this->getIdCentro();
-        $datos = array("rut"=>$this->getRut(),
-                        "nombre"=>$this->getNombre(),
-                        "direccion"=>$this->getDireccion(),
-                        "giro"=>$this->getGiro(),                        
+        $datos = array( "nombre"=>$this->getNombre(),
+                        "direccion"=>$this->getDireccion(),                
                         "pais"=>$this->getPais(),
                         "region"=>$this->getRegion(),                       
                         "ciudad"=>$this->getCiudad(),
@@ -195,17 +193,16 @@ if ($tipoOperacion == "eliminarCentro"){
 
   if($tipoOperacion == "actualizarCentro") {
     $modificarCentro = new ajaxCentro();
-    $modificarCentro->setRut($_POST["ErutCentro"]);
-    $modificarCentro->setNombre($_POST["ErazonCentro"]);
+    $modificarCentro->setNombre($_POST["EnombreCentro"]);
     $modificarCentro->setDireccion($_POST["EdireccionCentro"]);
-    $modificarCentro->setGiro($_POST["EgiroCentro"]);
+    $modificarCentro->setUbicacion($_POST["EubicacionCentro"]);
+    $modificarCentro->setIdEmpresa($_POST["EidEmpresa"]);
     $modificarCentro->setPais($_POST["Epais"]);
     $modificarCentro->setRegion($_POST["Eregion"]);
     $modificarCentro->setCiudad($_POST["Eciudad"]);
     $modificarCentro->setComuna($_POST["Ecomuna"]);
     $modificarCentro->setContacto($_POST["Econtacto"]);
     $modificarCentro->setTelefono($_POST["Etelefono"]);
-    $modificarCentro->setIdCentro($_POST["EidCentro"]);
     $modificarCentro->ActualizarCentro();
 }
 ?>
