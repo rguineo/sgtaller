@@ -30,13 +30,13 @@ $respuesta = (new crtProductos)->ctrListarProductos();
                           <table class='table table-striped table-bordered table-hover tabla-archivos table-dark' id='dataTables-example'>
                             <thead>
                               <tr>
-                                <th scope="col">Producto</th>
-                                <th scope="col">Descripci&oacute;n</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">$ Unitario</th>
-                                <th scope="col">N° Cr&iacute;tico</th>
-
-                                <th scope="col">Acci&oacute;n</th>
+                                <th width="35%">Producto</th>
+                                <th width="35%">Descripci&oacute;n</th>
+                                <th width="8%">Cantidad</th>
+                                <th width="8%">$ Unitario</th>
+                                <th width="8%">N° Cr&iacute;tico</th>
+                                <th width="6%">Acci&oacute;n</th>
+                              </tr>
                             </thead>
                             <tbody>
 
