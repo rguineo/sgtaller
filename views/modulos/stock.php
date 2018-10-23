@@ -1,9 +1,6 @@
 <?php
-require_once "controllers/productos.controller.php";
-require_once "models/productos.modelo.php";
 
-
-$respuesta = (new crtProductos)->ctrListarTodosProductos();
+$respuesta = (new crtProductos)->ctrListarProductos();
 // $grafico = (new ControllerProducto)->ctrCantidadProducto();
 
 ?>
@@ -25,20 +22,19 @@ $respuesta = (new crtProductos)->ctrListarTodosProductos();
     <!-- Main content --> 
     <section class="content container-fluid">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modal-insertar-producto">Agregar Producto <i class="fa fa-plus"></i></button>
-        <p><br><h3>Productos</h3></p>
+<!--             <button class="btn btn-primary" data-toggle="modal" data-target="#modal-insertar-usuario">Agregar Usuario <i class="fa fa-plus"></i></button> -->
+        <p><br><h3>Productos en Bodega</h3></p>
               <div class='row'>
                   <div class='col-lg-offset-1 col-lg-10'>
                       <div class='table-responsive table_productos'>
                           <table class='table table-striped table-bordered table-hover tabla-archivos table-dark' id='dataTables-example'>
                             <thead>
                               <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Producto</th>
                                 <th scope="col">Descripci&oacute;n</th>
-                                <th scope="col">Unidad</th>
-                                <th scope="col">BarCode</th>
-                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">$ Unitario</th>
+                                <th scope="col">N° Cr&iacute;tico</th>
 
                                 <th scope="col">Acci&oacute;n</th>
                             </thead>
@@ -49,23 +45,22 @@ $respuesta = (new crtProductos)->ctrListarTodosProductos();
                               foreach ($respuesta as $key => $value) {
                                 echo '
                                   <tr>
-                                    <td><button class="btn btn-primary" id="btn-stock" idProducto ="'.$value["id"].'"><i class="fa fa-sign-in"></i></button></td>
                                     <td>'.$value["nombre"].'</td>
                                     <td>'.$value["detalle"].'</td>
-                                    <td style="text-align: center">'.$value["umedida"].'</td>
-                                    <td style="text-align: center">'.$value["barcode"].'</td>
+                                    <td style="text-align: center">'.$value["cantidad"].'</td>
                                     <td style="text-align: center">$ '.number_format($value["precio"]).'</td>
+                                    <td style="text-align: center">'.$value["ncritico"].'</td>
 
 
                                     <td width="100">
-                                      <button class="btn btn-sm btn-info btnEditarPro" idProducto="'.$value["id"].'" data-toggle="modal" data-target="#modal-editar-producto">
-                                        <i class="fa fa-edit fa-2x"></i>
-                                      </button>
+                                      <button class="btn btn-sm btn-info btnEgreso" idStock="'.$value["id"].'" data-toggle="modal" data-target="#modal-egreso-stock" title="Egreso Stock">
+                                        <i class="fa fa-sign-out fa-2x"></i>
+                                      </button>';
+                                      if ($value["cantidad"] <= $value["ncritico"]){
+                                        echo '<i class="fa fa-eye fa-2x" style="color: red; margin-left: 10px;"></i>';
+                                      }
 
-                                      <button class="btn btn-sm btn-warning btnEliminarProd" idProducto="'.$value["id"].'">
-                                        <i class="fa fa-trash fa-2x"></i>
-                                      </button>
-
+                                    echo '
                                     </td>
                                   </tr>
                                 ';

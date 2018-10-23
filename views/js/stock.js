@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 				if (cadena == "ok") {
 					swal({				
-						icon: 'success',
+						type: 'success',
 						title: 'Excelente',
 						text: 'Stock actualizado con exito'
 					}).then((value) => {
@@ -110,12 +110,10 @@ $(document).ready(function(){
 		
 		var stk = $("#stockEgreso").val()
 		var can = $("#cantidadEgreso").val()
-		console.log("Stock:"+stk)
-		console.log("Retiro:"+can)
 		
 		if (can > stk) {
 			swal({				
-				icon: 'warning',
+				type: 'warning',
 				title: 'Atencion',
 				text: 'No puedes sacar mas de lo que hay registrado en stock'
 			}).then((value) => {
@@ -138,7 +136,7 @@ $(document).ready(function(){
 
 					if (cadena == "ok") {
 						swal({				
-							icon: 'success',
+							type: 'success',
 							title: 'Excelente',
 							text: 'Stock actualizado con exito'
 						}).then((value) => {
