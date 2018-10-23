@@ -72,6 +72,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/js/clientes.js"></script>
 <script src="views/js/centros.js"></script>
 <script src="views/js/usuario.js"></script>
+<script src="views/js/productos.js"></script>
+<script src="views/js/stock.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script>
 </body>

@@ -35,6 +35,12 @@
   <li class="active"><a href="cliente"><i class="fa fa-suitcase"></i><span>Cliente</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="centros"><i class="fa fa-building"></i><span>Centros</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  
+  <li class="active"><a href="productos"><i class="fa fa-television"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="stock"><i class="fa fa-television"></i><span>Stock</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  
+  
+  
   <li class="active"><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="bodega"><i class="fa fa-building"></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
