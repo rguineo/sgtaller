@@ -29,4 +29,14 @@ $(document).ready(function() {
           increaseArea: '20%' /* optional */
         })
       })
+
+    $("#e1").select2();
+        $('#empresaSelect').select2({
+         // minimumInputLength: 2,
+         theme: 'bootstrap',
+         placeholder: "Seleccione Empresa",
+         allowClear: true
+        })
 })
+
+ 
