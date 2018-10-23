@@ -1,7 +1,5 @@
 <?php
-require_once "controllers/productos.controller.php";
-require_once "models/productos.modelo.php";
-require_once "views/modulos/modales/modales-stock.php";
+require_once "views/modulos/modales/modal-stock.php";
 
 $respuesta = (new crtProductos)->ctrListarTodosProductos();
 // $grafico = (new ControllerProducto)->ctrCantidadProducto();

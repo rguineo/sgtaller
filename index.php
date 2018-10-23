@@ -22,7 +22,7 @@ require_once "models/centros.model.php";
 require_once "models/usuario.modelo.php";
 require_once "models/taller.model.php";
 require_once "models/bodega.model.php";
-require_once "models/producto.modelo.php";
+require_once "models/productos.modelo.php";
 require_once "models/stock.modelo.php";
 
 error_reporting(0);
