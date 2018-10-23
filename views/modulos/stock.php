@@ -1,7 +1,7 @@
 <?php
 require_once "controllers/productos.controller.php";
 require_once "models/productos.modelo.php";
-require_once "views/modulos/modales/modales-stock.php";
+
 
 $respuesta = (new crtProductos)->ctrListarTodosProductos();
 // $grafico = (new ControllerProducto)->ctrCantidadProducto();
@@ -33,7 +33,7 @@ $respuesta = (new crtProductos)->ctrListarTodosProductos();
                           <table class='table table-striped table-bordered table-hover tabla-archivos table-dark' id='dataTables-example'>
                             <thead>
                               <tr>
-                                <th scope="col">+ Stock</th>
+                                <th scope="col">#</th>
                                 <th scope="col">Producto</th>
                                 <th scope="col">Descripci&oacute;n</th>
                                 <th scope="col">Unidad</th>
@@ -49,7 +49,7 @@ $respuesta = (new crtProductos)->ctrListarTodosProductos();
                               foreach ($respuesta as $key => $value) {
                                 echo '
                                   <tr>
-                                    <td><button class="btn btn-primary btnStockPro" id="btn-stock" idProducto ="'.$value["id"].'" data-toggle="modal" data-target="#modal-insertar-stock" title="Ingresar Stock"><i class="fa fa-sign-in"></i></button></td>
+                                    <td><button class="btn btn-primary" id="btn-stock" idProducto ="'.$value["id"].'"><i class="fa fa-sign-in"></i></button></td>
                                     <td>'.$value["nombre"].'</td>
                                     <td>'.$value["detalle"].'</td>
                                     <td style="text-align: center">'.$value["umedida"].'</td>
@@ -58,11 +58,13 @@ $respuesta = (new crtProductos)->ctrListarTodosProductos();
 
 
                                     <td width="100">
-                                      <button class="btn btn-sm btn-info btnEditarPro" idProducto="'.$value["id"].'" data-toggle="modal" data-target="#modal-editar-producto" title="Editar Producto">
-                                        <i class="fa fa-edit"></i></button>
+                                      <button class="btn btn-sm btn-info btnEditarPro" idProducto="'.$value["id"].'" data-toggle="modal" data-target="#modal-editar-producto">
+                                        <i class="fa fa-edit fa-2x"></i>
+                                      </button>
 
-                                      <button class="btn btn-sm btn-danger btnEliminarProd" idProducto="'.$value["id"].'" title="Eliminar Producto">
-                                        <i class="fa fa-trash "></i></button>
+                                      <button class="btn btn-sm btn-warning btnEliminarProd" idProducto="'.$value["id"].'">
+                                        <i class="fa fa-trash fa-2x"></i>
+                                      </button>
 
                                     </td>
                                   </tr>
