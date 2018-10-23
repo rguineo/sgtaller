@@ -41,8 +41,10 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputEmpresa">Empresa</label>
                     <div class="col-sm-8">
-                        <select id="inputEmpresa" class="form-control" name="empresa" required>
-                            <option selected>Elija una Empresa</option>          
+                        <select class="custom-select" name="empresaSelect" id="empresaSelect">
+                            <option value="0"></option>
+                            <option value="1"></option>
+                            <option value="2"></option>
                         </select>
                     </div>
                 </div>

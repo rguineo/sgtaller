@@ -30,8 +30,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="views/dist/css/skins/_all-skins.min.css">
   <!-- CCS para tabLa dinamica avanzada -->
-    <link href='views/dist/css/dataTables.bootstrap.css' rel='stylesheet'>
-    <link href='views/dist/css/dataTables.responsive.css' rel='stylesheet'>
+  <link href='views/dist/css/dataTables.bootstrap.css' rel='stylesheet'>
+  <link href='views/dist/css/dataTables.responsive.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="views/dist/css/select2.css">
+  <link rel="stylesheet" href="views/dist/css/select2-bootstrap.min.css">
 
   <link rel="stylesheet" href="views/dist/css/estilos.css">
   
