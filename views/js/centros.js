@@ -154,13 +154,13 @@ $(document).ready(function(){
 
 	})
 
-	$("#formu-editar-cliente").submit(function (e) {
+	$("#formu-editar-centro").submit(function (e) {
 		e.preventDefault()
 	
 		var datos = new FormData($(this)[0])
 	
 		$.ajax({
-			url: 'ajax/ajaxCliente.php',
+			url: 'ajax/ajaxCentro.php',
 			type: 'POST',
 			data: datos,
 			processData: false,
