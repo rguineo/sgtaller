@@ -31,12 +31,13 @@ $(document).ready(function() {
       })
 
     $("#e1").select2();
-        $('#empresaSelect').select2({
-         // minimumInputLength: 2,
-         theme: 'bootstrap',
-         placeholder: "Seleccione Empresa",
-         allowClear: true
-        })
+})
+
+$('#empresaSelect').select2({
+    // minimumInputLength: 2,
+    theme: 'bootstrap',
+    placeholder: "Seleccione Empresa",
+    allowClear: true
 })
 
  
