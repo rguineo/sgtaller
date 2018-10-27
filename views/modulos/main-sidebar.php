@@ -36,14 +36,29 @@
   <li class="active"><a href="centros"><i class="fa fa-building"></i><span>Centros</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   
-  <li class="active"><a href="productos"><i class="fa fa-television"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="stock"><i class="fa fa-television"></i><span>Stock</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="productos"><i class="fa fa-beer"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="stock"><i class="fa fa-cubes"></i><span>Stock</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   
   
   
   <li class="active"><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="bodega"><i class="fa fa-building"></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <!-- <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="bodega"><i class="fa fa-bank "></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li> -->
+  <li class="active"><a href="#"><i class="fa fa-edit"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="active"><a href="#"><i class="fa fa-magnet"></i><span>Recepción de Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+
+  <li class="treeview"><a href="#"><i class="fa fa-cogs"></i> <span>Mantenedores</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+    <ul class="treeview-menu">
+      <li><a href="#"><i class="fa fa-circle-o"></i> País</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Región</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Ciudad</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Comuna</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Marca</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Modelo</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Bodega</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Taller</a></li>
+    </ul>
+  </li>
   <!-- <li class="active"><a href="#"><i class="fa fa-user-secret"></i><span>Administrativo</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="#"><i class="fa fa-file-word-o"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="#"><i class="fa fa-gear"></i><span>Configuración</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li> -->
