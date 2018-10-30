@@ -9,7 +9,13 @@ $(document).ready(function() {
                     text: 'RUT incorrecto, intente nuevamente'
                     }).then((result) => {
                     if (result.value) {
-                        location.reload()
+                        document.getElementById("rut-cliente").focus()
+
+                        document.getElementsByName("rutCliente")[0].value="";
+                        document.getElementsByName("rutCliente")[0].placeholder="11.111.111-1";
+        
+                        $("#rut-cliente").get(0).setSelectionRange(0,0)
+ 
                     }
                     })
             },

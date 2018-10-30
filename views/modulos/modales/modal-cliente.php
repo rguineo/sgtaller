@@ -28,21 +28,21 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre / Razon</label>
                     <div class="col-sm-8">
-                        <input type="text" id="razon-cliente" class="form-control" placeholder="InterCom Corp"  required name="razonCliente">
+                        <input type="text" id="razon-cliente" class="form-control" placeholder="InterCom Corp"  required name="razonCliente" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Dirección</label>
                     <div class="col-sm-8">
-                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="direccionCliente">
+                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="direccionCliente" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Giro Comercial</label>
                     <div class="col-sm-8">
-                        <input type="text" id="giro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="giroCliente">
+                        <input type="text" id="giro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="giroCliente" maxlength='40' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div> 
 
@@ -96,14 +96,14 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputCity">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="tel" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
+                        <input type="number" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
                     </div>
                 </div>     
 
                 <input type="hidden" name="tipoOperacion" value="nuevoCliente">
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" id="cerrar-cliente" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
             </form>
@@ -136,21 +136,21 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre / Razon</label>
                     <div class="col-sm-8">
-                        <input type="text" id="Erazon-cliente" class="form-control" placeholder="InterCom Corp"  required name="ErazonCliente">
+                        <input type="text" id="Erazon-cliente" class="form-control" placeholder="InterCom Corp"  required name="ErazonCliente" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Dirección</label>
                     <div class="col-sm-8">
-                        <input type="text" id="Edireccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="EdireccionCliente">
+                        <input type="text" id="Edireccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="EdireccionCliente" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Giro Comercial</label>
                     <div class="col-sm-8">
-                        <input type="text" id="Egiro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="EgiroCliente">
+                        <input type="text" id="Egiro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="EgiroCliente" maxlength='40' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div> 
 
@@ -204,7 +204,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputCity">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="tel" class="form-control" id="Etelefono" name="Etelefono" placeholder= "+56 9" required>
+                        <input type="number" class="form-control" id="Etelefono" name="Etelefono" placeholder= "+56 9" required>
                     </div>
                 </div>     
 
@@ -213,7 +213,7 @@
                 
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" id="cerrar-Ecliente" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
             </form>

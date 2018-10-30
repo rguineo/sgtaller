@@ -56,7 +56,10 @@ Class ctrCentros {
 
     public function ctrActualizarCentro(){
         $tabla = "centros";
-        
+        $datos = $this->getDatos();
+        $actualizaCentro = (new mdlCentros);
+        $respuesta = $actualizaCentro->mdlActualizarCentro($tabla, $datos);
+        return $respuesta;
     }
 
 

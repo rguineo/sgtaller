@@ -102,12 +102,82 @@ $(document).ready(function(){
 				$('#formu-editar-cliente input[name="Econtacto"]').val(valor.contacto)
 				$('#formu-editar-cliente input[name="Etelefono"]').val(valor.nfono)
 				$('#formu-editar-cliente input[name="EidCliente"]').val(valor.id_empresa)
+
+				$("#EinputPais option[value="+ valor.id_pais +"]").attr("selected",true);
+
+				$("#EinputRegion").prop("disabled", false);
+
+				var id_pais = valor.id_pais
+	
+				$.ajax({
+						url: 'ajax/ajaxZonas.php',
+						data: {id_pais: id_pais},
+						type: 'POST',
+						success: function (data)
+						{
+								$("#EinputRegion").html(data)
+								$("#EinputRegion option[value="+ valor.id_region +"]").attr("selected",true);
+						}
+				})
+
+				
+
+				$("#EinputCiudad").prop("disabled", false);
+				var id_region= valor.id_region;
+
+				$.ajax({
+						url: 'ajax/ajaxZonas.php',
+						data: {id_region: id_region},
+						type: 'POST',
+						success: function (data)
+						{
+								$("#EinputCiudad").html(data)
+								$("#EinputCiudad option[value="+ valor.id_ciudad +"]").attr("selected",true);
+						}
+				})		
+				
+				$("#EinputComuna").prop("disabled", false);
+				var id_ciudad= valor.id_ciudad
+
+				$.ajax({
+						url: 'ajax/ajaxZonas.php',
+						data: {id_ciudad: id_ciudad},
+						type: 'POST',
+						success: function (data)
+						{
+								$("#EinputComuna").html(data)
+								$("#EinputComuna option[value="+ valor.id_comuna +"]").attr("selected",true);
+						}
+				})
+
+
 				
 			}
 
 		})
 
 	})
+
+
+
+	$("#cerrar-cliente").on('click', function(){
+
+		$("#formu-nuevo-cliente")[0].reset()
+		$("#inputRegion").prop("disabled", true);
+		$("#inputCiudad").prop("disabled", true);
+		$("#inputComuna").prop("disabled", true);
+
+	})
+
+	$("#cerrar-Ecliente").on('click', function(){
+
+		$("#formu-editar-cliente")[0].reset()
+		$("#EinputRegion").prop("disabled", true);
+		$("#EinputCiudad").prop("disabled", true);
+		$("#EinputComuna").prop("disabled", true);
+
+	})
+
 
 	$("#formu-editar-cliente").submit(function (e) {
 		e.preventDefault()

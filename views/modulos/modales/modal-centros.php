@@ -24,7 +24,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre</label>
                     <div class="col-sm-8">
-                        <input type="text" id="nombre-centro" class="form-control" placeholder="Piscicultura Los Notros" onkeyup=""  required name="nombreCentro">
+                        <input type="text" id="nombre-centro" class="form-control" placeholder="Piscicultura ..." onkeyup=""  required name="nombreCentro" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
@@ -32,14 +32,15 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Dirección</label>
                     <div class="col-sm-8">
-                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="direccionCentro">
+                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz ..."  required name="direccionCentro" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label">Ubicación</label>
+                    <label class="col-sm-4 col-form-label">Ubicación <a href="http://maps.google.com" target="_blank"><i class="fas fa-globe-americas"></i></a></label> 
                     <div class="col-sm-8">
+                    
                         <input type="text" id="ubicacion-cliente" class="form-control" placeholder="Ubicación Googel Maps"  required name="ubicacionCentro">
                     </div>
                 </div>
@@ -108,7 +109,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputCity">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="tel" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
+                        <input type="number" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
                     </div>
                 </div>     
 
@@ -116,7 +117,7 @@
                 
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" id="cerrar-centro" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
             </form>
@@ -142,7 +143,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre</label>
                     <div class="col-sm-8">
-                        <input type="text" id="nombre-centro" class="form-control" placeholder="Piscicultura Los Notros" onkeyup=""  required name="EnombreCentro">
+                        <input type="text" id="nombre-centro" class="form-control" placeholder="Piscicultura Los Notros" onkeyup=""  required name="EnombreCentro" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
@@ -150,7 +151,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Dirección</label>
                     <div class="col-sm-8">
-                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="EdireccionCentro">
+                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="EdireccionCentro" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
@@ -158,7 +159,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Ubicación</label>
                     <div class="col-sm-8">
-                        <input type="text" id="ubicacion-cliente" class="form-control" placeholder="Ubicación Googel Maps"  required name="EubicacionCentro">
+                        <input type="text" id="ubicacion-cliente" class="form-control" placeholder="Ubicación Googel Maps"  required name="EubicacionCentro" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
@@ -224,7 +225,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="EinputFono">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="tel" class="form-control" id="EinputFono" name="Etelefono" placeholder= "+56 9" required>
+                        <input type="number" class="form-control" id="EinputFono" name="Etelefono" placeholder= "+56 9" required>
                     </div>
                 </div>     
 

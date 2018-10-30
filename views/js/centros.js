@@ -184,5 +184,13 @@ $(document).ready(function(){
 		})
 	})
 
+	$("#cerrar-centro").on('click', function(){
+
+		$("#formu-nuevo-centro")[0].reset()
+		$("#inputRegion").prop("disabled", true);
+		$("#inputCiudad").prop("disabled", true);
+		$("#inputComuna").prop("disabled", true);
+
+	})
 
 })
