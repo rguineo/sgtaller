@@ -49,13 +49,10 @@ $respuesta = $usuario->ctrMostrarUsuario();
                             echo "<td>".$value["apellido"]."</td>";
                             echo "<td>".$value["rol"]."</td>";
                             echo "<td><center><img src='".$value["avatar"]."' width='50'></center></td>";
-                            echo "<td>"; 
-                            echo "<center>";
-                            echo "<button type='button' idUsuario='".$value["id_usuario"]."' class='btn btn-primary btnEditarUsuario' href='#' data-toggle='modal' data-target='#modal-editar-usuario' title='Editar'><i class='fa fa-edit'></i></button>";
-                            echo "<button type='button' idUsuario='".$value["id_usuario"]."' class='btn btn-danger btnEliminarUsuario' href='#' title='Eliminar'>
-                            <i class='fa fa-trash''></i></button>";
-                            echo "</center>";
-                            echo "</td>";
+                            echo "<td><center>";
+                            echo "<button href='#' type='button' class='btnEditarUsuario btn btn-sm btn-primary' data-toggle='modal' data-target='#modal-editar-usuario' title='Editar' idUsuario=".$value["id_usuario"]." ><i class='fa fa-edit'></i></button>";
+                            echo "<button href='#' type='button' class='btnEliminarUsuario btn btn-sm btn-danger' id=".$value["id_usuario"]." title='Eliminar'><i class='fa fa-trash'></i></button>";
+                            echo "</center></td>";
                           echo "</tr>";
                           }
                         ?> 

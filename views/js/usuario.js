@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	$("#formu-nuevo-usuario").submit(function (e) {
 		e.preventDefault()
 
@@ -86,13 +87,13 @@ $(document).ready(function(){
 	})
 
 	$("body .table-dark").on("click", ".btnEliminarUsuario", function(){
-		var id_usuario = $(this).attr("idUsuario")
+		var id = $(this).attr("id")
 		// var rutaImagen = $(this).attr("rutaImagen")
 		var datos = new FormData()
-		datos.append("id_usuario", idUsuario)
+		datos.append("id", id)
 		datos.append("tipoOperacion", "eliminarUsuario")
 		// datos.append("avatar_admin", rutaImagen)
-    console.log(id_usuario)
+
 		swal({
 		  title: '¿Estás seguro de eliminar?',
 		  text: "Los cambios no son reversibles!",

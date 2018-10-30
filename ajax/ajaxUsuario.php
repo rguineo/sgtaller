@@ -9,7 +9,7 @@ Class ajaxUsuario{
     private $_apellido;
     private $_rol;
     private $_avatar;
-    private $_id_usuario;
+    private $_idUsuario;
 
     public function setUser($user){
         $this->_user = $user;
@@ -53,12 +53,12 @@ Class ajaxUsuario{
     public function getAvatar(){
         return $this->_avatar;
     }
-    public function setId_usuario($id_usuario){
-        $this->_id_usuario = $id_usuario;
+    public function setIdUsuario($id){
+        $this->_idUsuario = $id;
     }
 
-    public function getId_usuario(){
-        return $this->_id_usuario;
+    public function getIdUsuario(){
+        return $this->_idUsuario;
     }
     
     public function crearUsuario(){
@@ -102,9 +102,9 @@ Class ajaxUsuario{
 	}
 
     public function eliminarUsuario(){
-        $id_usuario = $this->getId_usuario();
+        $id = $this->getId_usuario();
         $eliminar = new ctrUsuario();
-        $eliminar -> setIdUsuario($id_usuario);
+        $eliminar -> setIdUsuario($id);
         $respuesta = $eliminar -> ctrEliminarUsuario();
         echo $respuesta;
 		// $ruta = $this->avatar_admin;
@@ -146,7 +146,7 @@ Class ajaxUsuario{
     }
     if ($tipoOperacion == "eliminarUsuario") {
         $eliminarUsuario = new ajaxUsuario();
-        $eliminarUsuario -> setId_usuario($_POST["id_usuario"]);
+        $eliminarUsuario -> setIdUsuario($_POST["id"]);
         $eliminarUsuario -> eliminarUsuario();
     }
     
