@@ -132,6 +132,34 @@ class mdlCentros {
         return $sql->fetch();
     }
 
+    public function mdlActualizarCentro($tabla, $datos){
+
+    $sql =(new Conexion)->conectar()->prepare("UPDATE $tabla 
+    SET razon_social = :razon, giro = :giro, direccion = :direccion, 
+    id_pais = :pais, id_region = :region, id_ciudad = :ciudad, id_comuna = :comuna, 
+    contacto = :contacto, nfono = :telefono
+    WHERE rut = :rut");
+
+    $sql->bindParam(":rut", $datos["rut"], PDO::PARAM_STR);
+    $sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+    $sql->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+    $sql->bindParam(":id_pais", $datos["pais"], PDO::PARAM_INT);
+    $sql->bindParam(":id_region", $datos["region"], PDO::PARAM_INT);
+    $sql->bindParam(":id_ciudad", $datos["ciudad"], PDO::PARAM_INT);
+    $sql->bindParam(":id_comuna", $datos["comuna"], PDO::PARAM_INT);
+    $sql->bindParam(":id_empresa", $datos["empresa"], PDO::PARAM_INT);
+    $sql->bindParam(":ubicacion", $datos["ubicacion"], PDO::PARAM_STR); 
+    $sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
+    $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+
+    if ($sql->execute()){
+        return "ok";
+    } else {
+        return "error";
+    }
+
+
+    }
 }
 
 ?>      
