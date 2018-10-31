@@ -166,8 +166,7 @@ $(document).ready(function(){
 			processData: false,
 			contentType: false,
 			success: function(respuesta) {
-				var cadena = respuesta.substr(0,2)
-				console.log(cadena)
+				var cadena = $.trim(respuesta)
 				if (cadena == "ok") {
 					swal({
 					  type: 'success',

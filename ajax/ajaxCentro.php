@@ -148,6 +148,8 @@ Class ajaxCentro{
                         "region"=>$this->getRegion(),                       
                         "ciudad"=>$this->getCiudad(),
                         "comuna"=>$this->getComuna(),
+                        "empresa"=>$this->getIdEmpresa(),
+                        "ubicacion"=>$this->getUbicacion(),
                         "contacto"=>$this->getContacto(),
                         "telefono"=>$this->getTelefono(),
                         "id_Centro"=>$this->getIdCentro());
