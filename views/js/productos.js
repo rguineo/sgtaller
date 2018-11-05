@@ -107,6 +107,7 @@ $(document).ready(function(){
 		  confirmButtonColor: '#3085d6',
 		  cancelButtonColor: '#d33',
 		  confirmButtonText: 'Si, Elimina!'
+		  
 		}).then(function() {
 
 		  	$.ajax({

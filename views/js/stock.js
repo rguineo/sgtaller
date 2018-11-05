@@ -117,7 +117,7 @@ $(document).ready(function(){
 				title: 'Atencion',
 				text: 'No puedes sacar mas de lo que hay registrado en stock'
 			}).then((value) => {
-				window.location = "home"
+				window.location = "stock"
 			})
 
 		} else {
@@ -140,7 +140,7 @@ $(document).ready(function(){
 							title: 'Excelente',
 							text: 'Stock actualizado con exito'
 						}).then((value) => {
-							window.location = "home"
+							window.location = "stock"
 						})
 					} 
 
