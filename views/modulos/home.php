@@ -6,8 +6,8 @@
         <small>Datos del comercio</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li class="active">Aquí</li>
       </ol>
     </section>
 
@@ -72,7 +72,10 @@
         </div>
         <!-- /.col -->
       </div>
-
+        <div><br>
+          <a href="terrenos" class="btn btn-danger"><i class="fa fa-car"> Terreno</i></a>
+          <br><br>
+        </div>
         <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Estado Equipos</h3>

@@ -46,4 +46,17 @@ $('#empresaSelect').select2({
     allowClear: true
 })
 
+$('#centroSelect').select2({
+    // minimumInputLength: 2,
+    theme: 'bootstrap',
+    placeholder: "Seleccione Centro",
+    allowClear: true
+})
+ 
+$('#equipoSelect').select2({
+    // minimumInputLength: 2,
+    theme: 'bootstrap',
+    placeholder: "Seleccione Equipo",
+    allowClear: true
+})
  
