@@ -66,22 +66,22 @@
                 </div>   
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Trabajo realizado</label>
+                    <label class="col-sm-4 col-form-label" for="trabajo">Trabajo realizado</label>
                     <div class="col-sm-8">
-                        <textarea name="" id="" class="form-control" cols="10" rows="3"></textarea>
+                        <textarea name="trabajo" id="trabajo" class="form-control" cols="10" rows="3"></textarea>
                     </div>
                 </div>     
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Recomendaciones</label>
+                    <label class="col-sm-4 col-form-label" for="recomendaciones">Recomendaciones</label>
                     <div class="col-sm-8">
-                        <textarea name="" id="" class="form-control" cols="10" rows="3"></textarea>
+                        <textarea name="recomendaciones" id="recomendaciones" class="form-control" cols="10" rows="3"></textarea>
                     </div>
                 </div>  
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Repuestos reemplazados</label>
+                    <label class="col-sm-4 col-form-label" for="repuestos">Repuestos reemplazados</label>
                     <div class="col-sm-8">
-                        <textarea name="" id="" class="form-control" cols="10" rows="3"></textarea>
+                        <textarea name="repuestos" id="repuestos" class="form-control" cols="10" rows="3"></textarea>
                 </div>
                 </div>        
                 <input type="hidden" name="tipoOperacion" value="nuevoCliente">
