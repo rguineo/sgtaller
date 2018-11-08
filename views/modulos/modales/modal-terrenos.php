@@ -66,12 +66,24 @@
                 </div>   
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="inputCity">Teléfono</label>
+                    <label class="col-sm-4 col-form-label" for="inputCity">Trabajo realizado</label>
                     <div class="col-sm-8">
-                        <input type="number" class="form-control" id="inputFono" name="telefono" placeholder= "+56 9" required>
+                        <textarea name="" id="" class="form-control" cols="10" rows="3"></textarea>
                     </div>
                 </div>     
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="inputCity">Recomendaciones</label>
+                    <div class="col-sm-8">
+                        <textarea name="" id="" class="form-control" cols="10" rows="3"></textarea>
+                    </div>
+                </div>  
 
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="inputCity">Repuestos reemplazados</label>
+                    <div class="col-sm-8">
+                        <textarea name="" id="" class="form-control" cols="10" rows="3"></textarea>
+                </div>
+                </div>        
                 <input type="hidden" name="tipoOperacion" value="nuevoCliente">
 
             <div class="modal-footer">
