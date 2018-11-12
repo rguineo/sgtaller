@@ -18,7 +18,7 @@
           <div class="form-group row">
             <label class="col-sm-4 col-form-label">Detalle</label>
             <div class="col-sm-8">
-            <textarea class="form-control textDescript" name="detalle" id="detalle_producto" cols="30" rows="3"></textarea>
+            <textarea class="form-control textDescript txtArea" name="detalle" id="detalle_producto" cols="30" rows="3"></textarea>
             </div>
           </div>
 
