@@ -13,37 +13,48 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Correo</label>
                     <div class="col-sm-8">
-                        <input type="text" id="correo" class="form-control" placeholder="xxxxx@xxx" required name="correoUsuario">
+                        <input type="email" id="correo" class="form-control" placeholder="usuario@ejemplo.cl" required name="correoUsuario">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Password</label>
+                    <div class="col-sm-8">
+                        <input type="password" id="clave" class="form-control" placeholder="****" required name="passUsuario">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre</label>
                     <div class="col-sm-8">
-                        <input type="text" id="nombre" class="form-control" placeholder="xxxxx"  required name="nombreUsuario">
+                        <input type="text" id="nombre" class="form-control" placeholder="Juan"  required name="nombreUsuario">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Apellido</label>
                     <div class="col-sm-8">
-                        <input type="text" id="apellido" class="form-control" placeholder="xxxx"  required name="apellidoUsuario">
+                        <input type="text" id="apellido" class="form-control" placeholder="Perez"  required name="apellidoUsuario">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Rol</label>
                     <div class="col-sm-8">
-                        <input type="text" id="rol" class="form-control" placeholder="0 o 1"  required name="rolUsuario">
+                    <select name="" id="" class="form-control">
+                        <option value="0">Administrador</option>
+                        <option value="1">Usuario</option>
+                    </select>
+
                     </div>
                 </div> 
 
-                <div class="form-group row">
+                <!-- <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Avatar</label>
                     <div class="col-sm-8">
-                        <input type="text" id="avatar" class="form-control" required name="avatarUsuario">
+                        <input type="file" id="avatar" class="form-control" required name="avatarUsuario">
                     </div>
-                </div>
+                </div> -->
    
 
                 <input type="hidden" name="tipoOperacion" value="nuevoUsuario">

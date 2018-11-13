@@ -90,6 +90,7 @@ Class mdlProductos{
 
 	public function mdlEliminarProducto($tabla, $id){
 		$sql = (new Conexion)->conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
+		
 		$sql->bindParam(":id", $id, PDO::PARAM_INT);
 		
 		if ($sql -> execute()){

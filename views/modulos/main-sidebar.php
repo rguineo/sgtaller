@@ -41,7 +41,7 @@
       <li><a href="#"><i class="fa fa-circle-o"></i> Región</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Ciudad</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Comuna</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Marca</a></li>
+      <li><a href="marca"><i class="fa fa-circle-o"></i> Marca</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Modelo</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Bodega</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Taller</a></li>

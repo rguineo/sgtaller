@@ -15,6 +15,7 @@ class ControllerEnrutamiento {
 			$ruta == "ingresoTaller" ||
 			$ruta == "terrenos" ||
 			$ruta == "equipos" ||
+			$ruta == "marca" ||
 			$ruta == "stock" ||
 			$ruta == "productos" ||
 			$ruta == "nuevoTaller" ||
