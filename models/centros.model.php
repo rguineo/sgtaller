@@ -137,7 +137,7 @@ class mdlCentros {
     $sql =(new Conexion)->conectar()->prepare("UPDATE $tabla 
     SET nombre = :nombre, direccion = :direccion, id_pais = :pais, id_region = :region, 
     id_ciudad = :ciudad, id_comuna = :comuna, id_empresa = :empresa, url_ubicacion =:ubicacion, 
-    contacto = :contacto, telefonoT3c = :telefono
+    contacto = :contacto, telefono = :telefono
     WHERE id_centro = :idCentro");
 
     $sql->bindParam(":idCentro", $datos["idCentro"], PDO::PARAM_INT);
