@@ -3,8 +3,8 @@ include_once ("../controllers/equipo.controller.php");
 include_once ("../models/equipo.model.php");
 
 Class Equipo{
-    private $_idEquipo;
-
+    public $_idEquipo;
+    
     public function setIdEquipo($id){
         $this->_idEquipo = $id;
     }
@@ -28,7 +28,10 @@ if ($tipoOperacion == "eliminarEquipo"){
     $eliminarEquipo = new Equipo();
     $eliminarEquipo -> setIdEquipo($_POST["id"]);
     $eliminarEquipo -> eliminarEquipo();
-
   }
 
+if ($tipoOperacion == "nuevoEquipo"){
+    $nuevoEquipo = new Equipo();
+    $nuevoEquipo -> _nSerie = $_POST["nSerie"];
+}
 ?>

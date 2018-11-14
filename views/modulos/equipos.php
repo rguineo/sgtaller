@@ -24,7 +24,7 @@
           <div class='row'>
             <div class='col-lg-offset-1 col-lg-10'>
               <div class='table-responsive table_equipos'>
-                <table class='table table-striped table-bordered table-hover tabla-equipos' id='dataTables-example'>
+                <table class='table table-striped table-bordered table-hover tabla-equipos table-dark' id='dataTables-example'>
 
                   <thead style='text-align: center; background: #eaeaea;'>
                       <tr>
@@ -33,7 +33,6 @@
                           <th style='text-align: center;'> Marca Equipo</th>
                           <th style='text-align: center;'> Modelo Equipo </th>	
                           <th style='text-align: center;'> Empresa </th>
-                          <th style='text-align: center;'> Fecha Ingreso </th>
                           <th style='text-align: center;'> Accion </th>
                       </tr>
                   </thead>
@@ -41,8 +40,11 @@
                    <?php
                     foreach ($respuesta as $key => $value) {
                      echo "<tr>";
-                       echo "<td>".$value['numero_serie']."</td>";
-                       echo "<td>".$value['nombre_equipo']."</td>"; 
+                       echo "<td>".$value['nSerie']."</td>";
+                       echo "<td>".$value['nomEquipo']."</td>"; 
+                       echo "<td>".$value['marca']."</td>"; 
+                       echo "<td>".$value['modelo']."</td>"; 
+                       echo "<td>".$value['razon_social']."</td>"; 
                        echo "<td><center>"; 
                          echo "<button href='#' type='button' class='btnEditarEquipo btn btn-sm btn-primary' data-toggle='modal' data-target='#modal-editar-equipo' title='Editar' idEquipo=".$value["id_equipo"]." ><i class='fa fa-edit'></i></button>";
                          echo "<button href='#' type='button' class='btnEliminarEquipo btn btn-sm btn-danger' id=".$value["id_equipo"]." title='Eliminar'><i class='fa fa-trash'></i></button>";

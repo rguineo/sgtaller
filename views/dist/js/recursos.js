@@ -26,7 +26,7 @@ $(document).ready(function() {
     // Tablas Dinamicas
     $('#dataTables-example').DataTable( {
         "scrollX": false
-    } )
+    })
 
     $(function () {
         $('input').iCheck({
@@ -34,29 +34,30 @@ $(document).ready(function() {
           radioClass: 'iradio_square-blue',
           increaseArea: '20%' /* optional */
         })
-      })
+    })
 
-    $("#e1").select2();
+
+    $('#empresaSelect').select2({
+        theme: 'bootstrap',
+        placeholder: "Seleccione Empresa",
+        allowClear: true
+    }) 
+    
+    $('#centroSelect').select2({
+        // minimumInputLength: 2,
+        theme: 'bootstrap',
+        placeholder: "Seleccione Centro",
+        allowClear: true
+    })
+     
+    $('#equipoSelect').select2({
+        // minimumInputLength: 2,
+        theme: 'bootstrap',
+        placeholder: "Seleccione Equipo",
+        allowClear: true
+    })
+
 })
 
-$('#empresaSelect').select2({
-    // minimumInputLength: 2,
-    theme: 'bootstrap',
-    placeholder: "Seleccione Empresa",
-    allowClear: true
-})
 
-$('#centroSelect').select2({
-    // minimumInputLength: 2,
-    theme: 'bootstrap',
-    placeholder: "Seleccione Centro",
-    allowClear: true
-})
- 
-$('#equipoSelect').select2({
-    // minimumInputLength: 2,
-    theme: 'bootstrap',
-    placeholder: "Seleccione Equipo",
-    allowClear: true
-})
  

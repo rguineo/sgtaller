@@ -42,7 +42,18 @@ class mdlEquipo {
 
     public function mdlMostrarEquipo() {
         $tabla = $this->getTabla();
-        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla");
+
+        $sql = (new Conexion)->conectar()->prepare("SELECT equipo.id_equipo, equipo.nSerie, 
+        equipo.nomEquipo, marca.marca, modelo.modelo, empresa.razon_social 
+        FROM equipo
+        INNER JOIN marca
+        ON equipo.id_marca = marca.id_marca
+        INNER JOIN modelo
+        ON equipo.id_modelo = modelo.id_modelo
+        INNER JOIN empresa
+        ON equipo.id_empresa = empresa.id_empresa
+        ORDER BY equipo.nomEquipo");
+
         $sql -> execute();
         return $sql->fetchAll();
 

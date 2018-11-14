@@ -12,6 +12,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+
+  <!-- <link rel="stylesheet" href="views/dist/css/bootstrap.min.css"> -->
+
   <!-- <link rel="stylesheet" href="views/bower_components/font-awesome/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
   <!-- <link rel="stylesheet" href="views/dist/css/AdminLTE.min.css"> -->
@@ -19,7 +23,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="views/dist/plugins/iCheck/square/blue.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  
+  <!-- <link rel="stylesheet" href="views/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="views/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -34,7 +39,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link href='views/dist/css/dataTables.responsive.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="views/dist/css/select2.css">
-  <link rel="stylesheet" href="views/dist/css/select2-bootstrap.min.css">
+  <link rel="stylesheet" href="views/dist/css/select2-bootstrap.css">
 
   <link rel="stylesheet" href="views/dist/css/estilos.css">
   
@@ -61,7 +66,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         include "modulos/login.php";
     }
   ?>
-<script src="views/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- <script src="views/bower_components/jquery/dist/jquery.min.js"></script> -->
+<script src="views/dist/js/jquery-3.3.1.min.js"></script>
+
+<!-- <script src="views/dist/js/bootstrap.min.js"></script> -->
 <script src="views/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="views/dist/js/adminlte.min.js"></script>
 <script src="views/dist/plugins/iCheck/icheck.min.js"></script>
@@ -75,6 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/js/zonas.js"></script>
 <script src="views/js/clientes.js"></script>
 <script src="views/js/centros.js"></script>
+<script src="views/js/equipos.js"></script>
 <script src="views/js/usuario.js"></script>
 <script src="views/js/productos.js"></script>
 <script src="views/js/stock.js"></script>

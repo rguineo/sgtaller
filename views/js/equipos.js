@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     $("body .table-dark").on("click", ".btnEliminarEquipo", function(){
+			console.log("Hola")
 		var id = $(this).attr("id")
 		var datos = new FormData()
 		datos.append("id", id)
@@ -41,5 +42,45 @@ $(document).ready(function(){
 		  }
 		})	
 	})
+
+
+		$("#formu-nuevo-equipo").submit(function (e) {
+			e.preventDefault()
+	
+			var datos = new FormData($(this)[0])
+	
+			$.ajax({
+				url: 'ajax/ajaxEquipo.php',
+				type: 'POST',
+				data: datos,
+				processData: false,
+				contentType: false,
+				success: function(respuesta) {
+					cadena = $.trim(respuesta)
+					if (cadena == "ok") {
+						swal({
+							type: 'success',
+							title: 'Excelente',
+												text: 'Equipo guardado con éxito'
+						}).then((result) => {
+							if (result.value) {
+								window.location = "equipos"
+							}
+						})
+					}else if (cadena == "error"){
+						swal({
+							type: 'warning',
+							title: 'Malas Noticias',
+												text: 'El Equipo ya existe, Intente Nuevamente'
+						}).then((result) => {
+							if (result.value) {
+								window.location = "equipos"
+							}
+						})					
+					}
+				}
+			})
+		})
+
 
 })
