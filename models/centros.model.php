@@ -160,6 +160,15 @@ class mdlCentros {
 
 
     }
+
+    public function mdlBuscarCentros($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_empresa = :id");
+        $sql->bindParam(":ciudad", $id, PDO::PARAM_INT);
+        $sql->execute();
+        return $sql->fetchAll();
+    }
+
+
 }
 
 ?>      

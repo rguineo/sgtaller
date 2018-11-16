@@ -62,7 +62,12 @@ Class ctrCentros {
         return $respuesta;
     }
 
-
+    public function ctrBuscarCentros($id){
+        $tabla = "centros";
+        $buscaCentros = (new mdlCentros);
+        $respuesta = $buscaCentros->mdlBuscarCentros($tabla, $id);
+        return $respuesta;
+    }
 }
 
 ?>
