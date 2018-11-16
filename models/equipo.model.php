@@ -71,6 +71,52 @@ class mdlEquipo {
             return "error";
         }
     }
+
+    public function mdlVerificaEquipo($tabla, $nSerie, $nomEq){
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla 
+        WHERE nSerie = $nSerie AND nomEquipo = $nomEq");
+
+        if ( $sql->fetch() ){
+            return "existe";
+        } else {
+            return "vacio";
+        }
+    }
+
+
+    public function mdlAgregarEquipo($tabla, $datos){
+        $nSerie = $datos["nSerie"];
+        $nomEq = $datos["nomEquipo"];
+        
+        $verifica = $this-> mdlVerificaEquipo($tabla, $nSerie, $nomEq);
+
+        if ($verifica == "vacio"){
+            $sql = (new Conexion)->conectar()->prepare("INSERT INTO $tabla() 
+            VALUES (NULL, :nSerie, :nomEq, :marEq, :modEq, :empEq)");
+
+            $sql->bindParam(":nSerie", $datos["nSerie"], PDO::PARAM_STR);
+            $sql->bindParam(":nomEq", $datos["nomEquipo"], PDO::PARAM_STR);
+            $sql->bindParam(":marEq", $datos["marcaEquipo"], PDO::PARAM_INT);
+            $sql->bindParam(":modEq", $datos["modeloEquipo"], PDO::PARAM_INT);
+            $sql->bindParam(":empEq", $datos["empresaEquipo"], PDO::PARAM_INT);
+            
+            if ( $sql -> execute() ){
+                return "ok";
+            } else {
+                return "error";
+            }
+        } else {
+            return "error";
+        }
+
+    }
+
+    public function mdlBuscarEquipo($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_equipo = :id");
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+        $sql -> execute();
+        return $sql->fetch();
+    }
 }
 
 ?>

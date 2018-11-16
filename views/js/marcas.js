@@ -21,3 +21,19 @@ $("#marca").on("change", function(){
     })
 
 })
+
+$("#Emarca").on("change", function(){
+    $("#Emodelo").prop("disabled", false);
+    var id_marca=$("#Emarca").val();
+	console.log(id_marca)
+    $.ajax({
+        url: 'ajax/ajaxModelo.php',
+        data: {id_marca: id_marca},
+        type: 'POST',
+        success: function (data)
+        {
+            $("#Emodelo").html(data);
+        }
+    })
+
+})

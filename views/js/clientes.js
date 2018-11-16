@@ -94,7 +94,7 @@ $(document).ready(function(){
 			contentType: false,
 			success: function(respuesta) {
 				var valor = JSON.parse(respuesta)
-					
+					console.log(valor.razon_social)
 				$('#formu-editar-cliente input[name="ErutCliente"]').val(valor.rut)
 				$('#formu-editar-cliente input[name="ErazonCliente"]').val(valor.razon_social)
 				$('#formu-editar-cliente input[name="EdireccionCliente"]').val(valor.direccion)

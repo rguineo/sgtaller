@@ -57,6 +57,7 @@ $(document).ready(function(){
 				contentType: false,
 				success: function(respuesta) {
 					cadena = $.trim(respuesta)
+					console.log(cadena)
 					if (cadena == "ok") {
 						swal({
 							type: 'success',
@@ -81,6 +82,48 @@ $(document).ready(function(){
 				}
 			})
 		})
+
+		$("body .table-dark").on("click", ".btnEditarEquipo", function(){
+			var idEquipo = $(this).attr("idEquipo")
+			var datos = new FormData()
+			datos.append("id_equipo", idEquipo)
+			datos.append("tipoOperacion", "editarEquipo")
+	
+			$.ajax({
+				url: 'ajax/ajaxEquipo.php',
+				type: 'POST',
+				data: datos,
+				processData: false,
+				contentType: false,
+				success: function(respuesta) {
+					var valor = JSON.parse(respuesta) 
+		
+					$('#formu-editar-equipo input[name="EnSerie"]').val(valor.nSerie)
+					$('#formu-editar-equipo input[name="EnombreEquipo"]').val(valor.nomEquipo)
+
+						$('#Emarca option[value='+ valor.id_marca +']').attr("selected",true);
+
+						var id_marca = valor.id_marca
+	
+						$.ajax({
+								url: 'ajax/ajaxModelo.php',
+								data: {id_marca: id_marca},
+								type: 'POST',
+								success: function (data)
+								{
+										$("#Emodelo").html(data)
+										$("#Emodelo option[value="+ valor.id_marca +"]").attr("selected",true);
+								}
+						})
+
+						$('#Eempresa option[value='+ valor.id_empresa +']').attr("selected",true);
+
+				}
+	
+			})
+	
+		})
+
 
 
 })
