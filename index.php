@@ -13,6 +13,8 @@ require_once "controllers/bodega.controller.php";
 require_once "controllers/productos.controller.php";
 require_once "controllers/stock.controller.php";
 require_once "controllers/marcas.controller.php";
+require_once "controllers/modelo.controller.php";
+require_once "controllers/pais.controller.php";
 
 
 
@@ -28,6 +30,9 @@ require_once "models/bodega.model.php";
 require_once "models/productos.modelo.php";
 require_once "models/stock.modelo.php";
 require_once "models/marcas.model.php";
+require_once "models/modelo.model.php";
+require_once "models/pais.model.php";
+
 
 
 error_reporting(0);

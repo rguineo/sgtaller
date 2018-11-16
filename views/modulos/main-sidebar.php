@@ -37,14 +37,14 @@
   <li class="active"><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="treeview"><a href="#"><i class="fa fa-cogs"></i> <span>Mantenedores</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
     <ul class="treeview-menu">
-      <li><a href="#"><i class="fa fa-circle-o"></i> País</a></li>
+      <li><a href="pais"><i class="fa fa-circle-o"></i> País</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Región</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Ciudad</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Comuna</a></li>
       <li><a href="marca"><i class="fa fa-circle-o"></i> Marca</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Modelo</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Bodega</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Taller</a></li>
+      <li><a href="modelo"><i class="fa fa-circle-o"></i> Modelo</a></li>
+      <li><a href="bodega"><i class="fa fa-circle-o"></i> Bodega</a></li>
+      <li><a href="taller"><i class="fa fa-circle-o"></i> Taller</a></li>
     </ul>
   </li>
   <li class="active"><a href="productos"><i class="fa fa-beer"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
