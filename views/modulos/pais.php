@@ -19,7 +19,7 @@
     <section class="content container-fluid">
       <div id='page-wrapper'> 
         <div class='container-fluid'>
-        <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nueva-marca">
+        <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-pais">
         <i class="fa fa-plus"></i>  Agregar Pais</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>

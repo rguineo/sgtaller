@@ -22,6 +22,16 @@ Class ctrPais{
         $this->_Pais = $pais;
     }
 
+    public function ctrNuevoPais(){
+        $tabla = "pais";
+        $datas = $this->getDatos();
+        $pais = new mdlPais();
+        $pais->setDatos($datas);
+        $pais->setTabla($tabla);
+        $respuesta = $pais->mdlNuevoPais();
+        return $respuesta;
+    }
+
     public function ctrMostrarPais(){
         $tabla = "pais";
         $pais = (new mdlPais);
