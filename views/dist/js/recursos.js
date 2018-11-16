@@ -43,6 +43,12 @@ $(document).ready(function() {
         allowClear: true
     }) 
     
+    $('#EempresaSelect').select2({
+        theme: 'bootstrap',
+        placeholder: "Seleccione Empresa",
+        allowClear: true
+    }) 
+
     $('#centroSelect').select2({
         // minimumInputLength: 2,
         theme: 'bootstrap',

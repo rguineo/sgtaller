@@ -160,6 +160,18 @@ Class ajaxCentro{
         $respuesta = $NewCentro->ctrActualizarCentro();
         echo $respuesta;
     }
+
+    public function BuscarCentros(){
+        $id = $this->getIdEmpresa();
+        $buscarCentros = (new ctrCentros);
+        $respuesta = $buscarCentros->ctrBuscarCentros($id);
+        
+        $lista = "<option value=''>Elija Centro</option>";
+        foreach ($respuesta as $key => $value) {
+            $lista .= "<option value=".$value["id_centro"].">".$value["nombre"]."</option>";
+        }
+        printf($lista);
+    }
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
@@ -206,5 +218,11 @@ if ($tipoOperacion == "eliminarCentro"){
     $modificarCentro->setContacto($_POST["Econtacto"]);
     $modificarCentro->setTelefono($_POST["Etelefono"]);
     $modificarCentro->ActualizarCentro();
+}
+
+if ($tipoOperacion == "buscarCentros") {
+    $buscarCentros = (new ajaxCentro);
+    $buscarCentros -> setIdEmpresa($_POST["id"]);
+    $buscarCentros -> BuscarCentros();
 }
 ?>

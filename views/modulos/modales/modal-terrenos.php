@@ -2,6 +2,8 @@
 
   $pais = new ControllerZonas();
   $resPais = $pais->ctrMostrarPais();
+
+  $empresa = (new ctrCliente)->ctrTodosClientes();
   
 ?>
 
@@ -29,10 +31,15 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Empresa</label>
                     <div class="col-sm-8">
-                        <select class="custom-select" name="empresaSelect" id="empresaSelect">
-                            <option value="0"></option>
-                            <option value="1"></option>
-                            <option value="2"></option>
+                        <select class="form-control" name="empresaTerreno" id="empresaTerreno">
+                            <option value="">Elija empresa</option>
+                        <?php
+                            
+                            foreach ($empresa as $key => $value) {
+                                echo "<option value='".$value["id_empresa"]."'>".$value["razon_social"]."</option>";
+                            }
+
+                        ?>
                         </select>                    
                     </div>
                 </div>
@@ -40,10 +47,8 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Centro</label>
                     <div class="col-sm-8">
-                    <select class="custom-select" name="centroSelect" id="centroSelect">
-                            <option value="0"></option>
-                            <option value="1"></option>
-                            <option value="2"></option>
+                    <select class="form-control" name="centroTerreno" id="centroTerreno">
+
                     </select>                    
                     </div>
                 </div>
@@ -58,7 +63,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputCity">Equipo</label>
                     <div class="col-sm-8">
-                    <select class="custom-select" name="equipoSelect" id="equipoSelect">
+                    <select class="form-control" name="equipo" id="equipo">
                             <option value="0"></option>
                             <option value="1"></option>
                             <option value="2"></option>

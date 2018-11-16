@@ -37,6 +37,27 @@ Class ctrEquipo{
         $respuesta = $eliminar -> mdlEliminarEquipo($tabla, $id);
         return $respuesta;
     }
+
+    public function ctrAgregarEquipo($datos){
+        $tabla = "equipo";
+        $agregarEquipo = (new mdlEquipo);
+        $respuesta = $agregarEquipo->mdlAgregarEquipo($tabla, $datos);
+        return $respuesta;
+    }
+
+    public function ctrBuscarEquipo($id){
+        $tabla = "equipo";
+        $editarEq = (new mdlEquipo);
+        $respuesta = $editarEq -> mdlBuscarEquipo($tabla, $id);
+        return $respuesta; 
+    }
+
+    public function ctrActualizarEquipo($datos){
+        $tabla = "equipo";
+        $actualizar = (new mdlEquipo);
+        $respuesta = $actualizar->mdlActualizarEquipo($tabla, $datos);
+        return $respuesta;
+    }
 }
 
 ?>
