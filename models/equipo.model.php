@@ -117,6 +117,27 @@ class mdlEquipo {
         $sql -> execute();
         return $sql->fetch();
     }
+
+    public function mdlActualizarEquipo($tabla, $datos){
+        $sql = (new Conexion)->conectar()->prepare("UPDATE $tabla 
+                SET nSerie = :nSerie, nomEquipo = :nomEq, id_marca = :marEq, id_modelo = :modEq, 
+                id_empresa = :empEq
+                WHERE id_equipo = :id");
+
+        $sql->bindParam(":id", $datos["id_equipo"], PDO::PARAM_INT);
+        $sql->bindParam(":nSerie", $datos["nSerie"], PDO::PARAM_STR);
+        $sql->bindParam(":nomEq", $datos["nomEquipo"], PDO::PARAM_STR);
+        $sql->bindParam(":marEq", $datos["marcaEquipo"], PDO::PARAM_INT);
+        $sql->bindParam(":modEq", $datos["modeloEquipo"], PDO::PARAM_INT);
+        $sql->bindParam(":empEq", $datos["empresaEquipo"], PDO::PARAM_INT);
+
+        if ( $sql -> execute() ){
+            return "ok";
+        } else {
+            return "error";
+        }
+
+    }
 }
 
 ?>

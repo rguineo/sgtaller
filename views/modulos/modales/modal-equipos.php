@@ -134,7 +134,7 @@ $marca = (new ctrMarcas)->ctrMostrarMarcas();
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Modelo Equipo</label>
                     <div class="col-sm-8">
-                        <select class="form-control" name="Emodelo" id="Emodelo" disabled>
+                        <select class="form-control" name="Emodelo" id="Emodelo">
                                                         
                         </select>
                     </div>
@@ -157,7 +157,9 @@ $marca = (new ctrMarcas)->ctrMostrarMarcas();
                     </div>
                 </div>
 
-                <input type="hidden" name="tipoOperacion" value="nuevoEquipo">
+                <input type="hidden" name="tipoOperacion" value="actualizarEquipo">
+                <input type="hidden" name="idEquipo" value="">
+                
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

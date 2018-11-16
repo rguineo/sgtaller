@@ -51,6 +51,13 @@ Class ctrEquipo{
         $respuesta = $editarEq -> mdlBuscarEquipo($tabla, $id);
         return $respuesta; 
     }
+
+    public function ctrActualizarEquipo($datos){
+        $tabla = "equipo";
+        $actualizar = (new mdlEquipo);
+        $respuesta = $actualizar->mdlActualizarEquipo($tabla, $datos);
+        return $respuesta;
+    }
 }
 
 ?>
