@@ -1,6 +1,6 @@
 <?php
-require_once "../controllers/modelos.controller.php";
-require_once "../models/modelos.model.php";
+require_once "../controllers/modelo.controller.php";
+require_once "../models/modelo.model.php";
 
 Class ajaxMarca{
     public $_idModelo;
@@ -8,7 +8,7 @@ Class ajaxMarca{
     public function ajaxMostrarModelo(){
         $id = $this->_idModelo;
 
-        $modelos = (new ctrModelos);
+        $modelos = (new ctrModelo);
         $respuesta = $modelos -> ctrMostrarModelos($id);
 
         $listaModelos = "<option> Elija una opcion</option>";

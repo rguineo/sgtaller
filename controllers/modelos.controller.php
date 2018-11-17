@@ -8,7 +8,6 @@ Class ctrModelos{
         $respuesta = $modelos -> mdlMostrarModelos($tabla, $id);
         return $respuesta;
     }
-
 }
 
 ?>

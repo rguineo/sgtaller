@@ -30,6 +30,8 @@
                               <tr>
                                   <th style='text-align: center;'> #</th>
                                   <th style='text-align: center;'> Modelo</th>
+                                  <th style='text-align: center;'> Marca</th>
+                                  
                                   <th style='text-align: center;'> Acciones</th>
                                   
                               </tr>
@@ -42,6 +44,9 @@
                             echo "<tr>";
                               echo "<td style='text-align: center;'>".$value['id_modelo']."</td>";
                               echo "<td>".$value['modelo']."</td>";
+                              echo "<td>".$value['marca']."</td>";
+
+
                               echo "<td>"; 
                               echo "<center>";
                                 echo "<button type='button' idModelo='".$value["id_modelo"]."' class='btn btn-sm btn-primary btnEditarModelo' href='#' data-toggle='modal' data-target='#modal-editar-marca' title='Editar'><i class='fa fa-edit'></i></button>";

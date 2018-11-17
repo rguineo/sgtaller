@@ -25,11 +25,16 @@ Class ctrModelo{
     public function ctrMostrarModelo(){
         $tabla = "modelo";
         $modelo = (new mdlModelo);
-        $respuesta = $pais->mdlMostrarModelo($tabla);
+        $respuesta = $modelo->mdlMostrarModelo($tabla);
         return $respuesta;
     }
 
-
+    public function ctrMostrarModelos($id_marca){
+        $tabla = "modelo";
+        $modelos = (new mdlModelo);
+        $respuesta = $modelos -> mdlMostrarModelos($tabla, $id_marca);
+        return $respuesta;
+    }
 }
 
 

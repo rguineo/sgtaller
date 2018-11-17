@@ -2,9 +2,8 @@ $(document).ready(function(){
 
     $("#empresaTerreno").on("change", function(){
         var id_empresa = $("#empresaTerreno").val()
-        console.log(id_empresa)
-        var datos = new FormData($(this)[0])
-
+        
+        var datos = new FormData()
         datos.append("id", id_empresa)
         datos.append("tipoOperacion", "buscarCentros")
 

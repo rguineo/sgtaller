@@ -34,11 +34,9 @@
                         <select class="form-control" name="empresaTerreno" id="empresaTerreno">
                             <option value="">Elija empresa</option>
                         <?php
-                            
                             foreach ($empresa as $key => $value) {
                                 echo "<option value='".$value["id_empresa"]."'>".$value["razon_social"]."</option>";
                             }
-
                         ?>
                         </select>                    
                     </div>
