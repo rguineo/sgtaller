@@ -4,6 +4,7 @@ include_once ("../models/equipo.model.php");
 
 Class Equipo{
     public $_idEquipo;
+    public $_idEmpresa;
     public $_nSerie;
     public $_nomEquipo;
     public $_marcaEquipo;
@@ -59,17 +60,26 @@ Class Equipo{
     }
 
     public function ajaxBuscarEquipo(){
-        $id = $this->_idEquipo;
+        $id = $this->_idEmpresa;
 
         $buscar = (new ctrEquipo);
         $respuesta = $buscar->ctrBuscarEquipoEmpresa($id);
-        
-        $buscarOption = "<option value=''>Elija el Equipo </option>";   
+    
+        $buscarOption = "<option>Elija el Equipo </option>";   
         foreach ($respuesta as $key => $value) {
             $buscarOption .= "<option value=".$value["id_equipo"].">".$value["nSerie"]." | ".$value["nomEquipo"]."</option>"; 
         }
         printf ($buscarOption);
     }
+
+    public function ajaxEncontrarEquipo(){
+        $id = $this->_idEquipo;
+
+        $econtrarEquipo = (new ctrEquipo);
+        $respuesta = $econtrarEquipo -> ctrBuscarEquipo($id);
+        return $respuesta;
+    }
+
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
@@ -109,7 +119,7 @@ if ($tipoOperacion == "actualizarEquipo"){
 
 if ( $tipoOperacion == "buscarEquipo"){
     $buscarEquipo = (new Equipo);
-    $buscarEquipo -> _idEquipo = $_POST["id"];
+    $buscarEquipo -> _idEmpresa = $_POST["id"];
     $buscarEquipo -> ajaxBuscarEquipo();
 }
 

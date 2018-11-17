@@ -23,10 +23,10 @@ $(document).ready(function(){
 
     $("#empresaTerreno").on("change", function(){
 
-        var id_equipo = $("#empresaTerreno").val()
+        var id_empresa = $("#empresaTerreno").val()
         
         var datos = new FormData
-        datos.append("id", id_equipo)
+        datos.append("id", id_empresa)
         datos.append("tipoOperacion", "buscarEquipo")
      
         $.ajax({
@@ -70,4 +70,73 @@ $(document).ready(function(){
             }
         })
     })
+
+    $("body .table-dark").on("click", ".btnEditarTerreno", function(){
+        var idTerreno = $(this).attr("idTerreno")
+        var datos = new FormData()
+        datos.append("id_terreno", idTerreno)
+        datos.append("tipoOperacion", "editarTerreno")
+
+        $.ajax({
+            url: 'ajax/ajaxTerreno.php',
+            type: 'POST',
+            data: datos,
+            processData: false,
+            contentType: false,
+            success: function(respuesta) {
+                var valor = JSON.parse(respuesta) 
+               
+                $('#formu-edit-terreno input[name="EfechaTerreno"]').val(valor.fechaTerreno)
+                $('#formu-edit-terreno input[name="Eresponsable"]').val(valor.responsable)
+                $('#formu-edit-terreno textarea[name="Etrabajo"]').val(valor.trabajo)
+                $('#formu-edit-terreno textarea[name="Erecomendaciones"]').val(valor.recomendaciones)
+                $('#formu-edit-terreno textarea[name="Erepuestos"]').val(valor.repuestos)
+                
+                $('#EempresaTerreno option[value='+ valor.id_empresa +']').attr("selected",true);
+
+                    var id_empresa = valor.id_empresa
+                    var datosCentro = new FormData
+                    datosCentro.append("id", id_empresa)
+                    datosCentro.append("tipoOperacion", "buscarCentros")
+                    $.ajax({
+                            url: 'ajax/ajaxCentro.php',
+                            data: datosCentro,
+                            type: 'POST',
+                            processData: false,
+                            contentType: false,
+                            success: function (data)
+                            {
+                                    $("#EcentroTerreno").html(data)
+                                    $('#EcentroTerreno option[value='+ valor.id_centro +']').attr("selected",true);
+                            }
+                    })
+
+                    var id_empresa = valor.id_empresa
+                    var datosEquipo = new FormData
+                    datosEquipo.append("id", id_empresa)
+                    datosEquipo.append("tipoOperacion", "buscarEquipo")
+
+                    $.ajax({
+                            url: 'ajax/ajaxEquipo.php',
+                            data: datosEquipo,
+                            type: 'POST',
+                            processData: false,
+                            contentType: false,
+                            success: function (data)
+
+                            {
+                                console.log(data)
+                                $("#EequipoTerreno").html(data)
+                                $('#EequipoTerreno option[value='+ valor.id_equipo +']').attr("selected",true);
+                            }
+                    })
+
+            }
+
+        })
+
+    })
+
+
+
 })

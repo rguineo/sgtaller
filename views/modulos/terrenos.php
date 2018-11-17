@@ -1,7 +1,8 @@
 <?php 
 
- $todosClientes = new ctrCliente(); 
- $respuesta =  $todosClientes->ctrTodosClientes();
+$terreno = (new ctrTerrenos);
+$respTerreno = $terreno -> mostrarTerrenos();
+
 
 ?>
 
@@ -30,9 +31,11 @@
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
                                   <th style='text-align: center;'> Fecha</th>
-                                  <th style='text-align: center;'> Cliente</th>
+                                  <th style='text-align: center;'> Empresa</th>
                                   <th style='text-align: center;'> Centro</th>
-                                  <th style='text-align: center;'> Equipo </th>	
+                                  <th style='text-align: center;'> Equipo </th>
+                                  <th style='text-align: center;'> N° Serie </th>
+                                  
                                   <th style='text-align: center;'> Accion </th>
                               </tr>
                           </thead>
@@ -40,15 +43,17 @@
                           <tbody>
                           <?php 
                            
-                           foreach ($respuesta as $key => $value) {
+                           foreach ($respTerreno as $key => $value) {
                             echo "<tr>";
-                              echo "<td>".$value['rut']."</td>";
+                              echo "<td>".$value['fechaTerreno']."</td>";
                               echo "<td>".$value['razon_social']."</td>";
-                              echo "<td>".$value['giro']."</td>";
-                              echo "<td>".$value['direccion']."</td>"; 
+                              echo "<td>".$value['nombre']."</td>";
+                              echo "<td>".$value['nomEquipo']."</td>"; 
+                              echo "<td>".$value['nSerie']."</td>"; 
+                              
                               echo "<td><center>"; 
-                                echo "<button href='#' type='button' class='btnEditarCliente btn btn-sm btn-primary' data-toggle='modal' data-target='#modal-editar-cliente' title='Editar' idCliente=".$value["id_empresa"]." ><i class='fa fa-edit'></i></button>";
-                                echo "<button href='#' type='button' class='btnEliminarCliente btn btn-sm btn-danger' id=".$value["id_empresa"]." title='Eliminar'><i class='fa fa-trash'></i></button>";
+                                echo "<button href='#' type='button' class='btnEditarTerreno btn btn-sm btn-primary' data-toggle='modal' data-target='#modal-editar-terreno' title='Editar Terreno' idTerreno=".$value["id_terreno"]." ><i class='fa fa-edit'></i></button>";
+                                echo "<button href='#' type='button' class='btnVerTerreno btn btn-sm btn-success' id=".$value["id_terreno"]." title='Ver Terreno'><i class='fa fa-search'></i></button>";
                               echo "</center></td>";
                             echo "</tr>";
                             }
