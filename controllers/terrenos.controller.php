@@ -24,6 +24,13 @@ Class ctrTerrenos{
         $respuesta = $buscarTerreno -> mdlBuscarTerreno($tabla, $idTerreno);
         return $respuesta;
     }
+
+    public function ctrActualizarTerreno($datos){
+        $tabla = "terreno";
+        $buscarTerreno = (new mdlTerrenos);
+        $respuesta = $buscarTerreno -> mdlActualizarTerreno($tabla, $datos);
+        return $respuesta;
+    }
 }
 
 ?>

@@ -49,6 +49,32 @@ Class mdlTerrenos{
         return $sql->fetch();
 
     }
+
+    public function mdlActualizarTerreno($tabla, $datos){
+
+        $sql = (new Conexion)->conectar()->prepare("UPDATE $tabla 
+        SET fechaTerreno = :fecha, id_empresa = :empresa, id_centro = :centro, 
+        responsable = :responsable, id_equipo = :equipo, trabajo = :trabajo, recomendaciones = :recomendaciones, 
+        repuestos = :repuestos 
+        WHERE id_terreno = :idTerreno");
+        
+        $sql->bindParam(":idTerreno", $datos["idTerreno"], PDO::PARAM_INT);
+        $sql->bindParam(":fecha", $datos["fecha"], PDO::PARAM_STR);
+        $sql->bindParam(":empresa", $datos["idEmpresa"], PDO::PARAM_INT);
+        $sql->bindParam(":centro", $datos["idCentro"], PDO::PARAM_INT);
+        $sql->bindParam(":responsable", $datos["responsable"], PDO::PARAM_STR);
+        $sql->bindParam(":equipo", $datos["idEquipo"], PDO::PARAM_INT);
+        $sql->bindParam(":trabajo", $datos["trabajo"], PDO::PARAM_STR);
+        $sql->bindParam(":recomendaciones", $datos["recomendaciones"], PDO::PARAM_STR);
+        $sql->bindParam(":repuestos", $datos["repuestos"], PDO::PARAM_STR);
+        
+        if ( $sql -> execute() ){
+            return "ok";
+        } else {
+            return "error";
+        }
+        
+    }
 }
 
 ?>

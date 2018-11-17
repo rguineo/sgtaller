@@ -107,7 +107,7 @@
         </button>
       </div>
       <div class="modal-body">
-            <form id="formu-edit-terreno">
+            <form id="formu-editar-terreno">
 
                 <div class="form-group row">
                     <div class="col-sm-6"></div>
@@ -175,6 +175,8 @@
                 </div>
                 </div>        
                 <input type="hidden" name="tipoOperacion" value="actualizarTerreno">
+                <input type="hidden" name="idTerreno" value="">
+                
 
             <div class="modal-footer">
                 <button type="button" id="cerrar-cliente" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

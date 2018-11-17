@@ -85,13 +85,14 @@ $(document).ready(function(){
             contentType: false,
             success: function(respuesta) {
                 var valor = JSON.parse(respuesta) 
-               
-                $('#formu-edit-terreno input[name="EfechaTerreno"]').val(valor.fechaTerreno)
-                $('#formu-edit-terreno input[name="Eresponsable"]').val(valor.responsable)
-                $('#formu-edit-terreno textarea[name="Etrabajo"]').val(valor.trabajo)
-                $('#formu-edit-terreno textarea[name="Erecomendaciones"]').val(valor.recomendaciones)
-                $('#formu-edit-terreno textarea[name="Erepuestos"]').val(valor.repuestos)
-                
+               console.log(valor)
+                $('#formu-editar-terreno input[name="EfechaTerreno"]').val(valor.fechaTerreno)
+                $('#formu-editar-terreno input[name="Eresponsable"]').val(valor.responsable)
+                $('#formu-editar-terreno textarea[name="Etrabajo"]').val(valor.trabajo)
+                $('#formu-editar-terreno textarea[name="Erecomendaciones"]').val(valor.recomendaciones)
+                $('#formu-editar-terreno textarea[name="Erepuestos"]').val(valor.repuestos)
+                $('#formu-editar-terreno input[name="idTerreno"]').val(valor.id_terreno)
+
                 $('#EempresaTerreno option[value='+ valor.id_empresa +']').attr("selected",true);
 
                     var id_empresa = valor.id_empresa
@@ -137,6 +138,32 @@ $(document).ready(function(){
 
     })
 
+    $("#formu-editar-terreno").submit(function (e) {
+        e.preventDefault()
+        var datos = new FormData($(this)[0])
 
+        $.ajax({
+            url: 'ajax/ajaxTerreno.php',
+            type: 'POST',
+            data: datos,
+            processData: false,
+            contentType: false,
+            success: function(respuesta) {
+                cadena = $.trim(respuesta)
+
+                if (cadena == "ok") {
+                    swal({
+                        type: 'success',
+                        title: 'Excelente',
+                        text: 'Actividad actualizada con éxito'
+                    }).then((result) => {
+                        if (result.value) {
+                            window.location = "terrenos"
+                        }
+                    })
+                }
+            }
+        })
+    })
 
 })
