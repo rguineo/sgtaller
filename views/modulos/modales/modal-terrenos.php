@@ -3,10 +3,8 @@
   $pais = new ControllerZonas();
   $resPais = $pais->ctrMostrarPais();
 
-  $empresa = (new ctrCliente)->ctrTodosClientes();
-  
+  $empresa = (new ctrCliente)->ctrTodosClientes();  
 ?>
-
 
 <div class="modal fade" id="modal-nuevo-terreno"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -24,7 +22,7 @@
                     <div class="col-sm-6"></div>
                     <label class="col-sm-2 col-form-label">Fecha</label>
                     <div class="col-sm-4">
-                        <input type="date" id="fecha" class="form-control"  onkeyup=""  required name="rutCliente">
+                        <input type="date" id="fechaTerreno" class="form-control"  onkeyup=""  required name="fechaTerreno">
                     </div>
                 </div>
 
@@ -54,24 +52,23 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Responsable</label>
                     <div class="col-sm-8">
-                        <input type="text" id="contacto-cliente" class="form-control" placeholder="José Pérez"  required name="giroCliente" maxlength='40' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
+                        <input type="text" id="contacto-cliente" class="form-control" placeholder="José Pérez" required name="giroCliente" maxlength='40' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div> 
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="inputCity">Equipo</label>
                     <div class="col-sm-8">
-                    <select class="form-control" name="equipo" id="equipo">
-                            <option value="0"></option>
-                            <option value="1"></option>
-                            <option value="2"></option>
-                    </select>                       </div>
+                        <select class="form-control" name="equipoTerreno" id="equipoTerreno">
+
+                        </select>                       
+                    </div>
                 </div>   
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label" for="trabajo">Trabajo realizado</label>
                     <div class="col-sm-8">
-                        <textarea name="trabajo" id="trabajo" class="form-control txtArea" cols="10" rows="2"></textarea>
+                        <textarea name="trabajo" id="trabajo" class="form-control txtArea" cols="10" rows="2" required></textarea>
                     </div>
                 </div>     
                 <div class="form-group row">
@@ -87,7 +84,7 @@
                         <textarea name="repuestos" id="repuestos" class="form-control txtArea" cols="10" rows="2"></textarea>
                 </div>
                 </div>        
-                <input type="hidden" name="tipoOperacion" value="nuevoCliente">
+                <input type="hidden" name="tipoOperacion" value="nuevoTerreno">
 
             <div class="modal-footer">
                 <button type="button" id="cerrar-cliente" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

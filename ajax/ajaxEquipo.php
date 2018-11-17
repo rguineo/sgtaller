@@ -57,6 +57,19 @@ Class Equipo{
         $respuesta = $agregarEquipo -> ctrActualizarEquipo($datos);
         echo $respuesta;
     }
+
+    public function ajaxBuscarEquipo(){
+        $id = $this->_idEquipo;
+
+        $buscar = (new ctrEquipo);
+        $respuesta = $buscar->ctrBuscarEquipoEmpresa($id);
+        
+        $buscarOption = "<option value=''>Elija el Equipo </option>";   
+        foreach ($respuesta as $key => $value) {
+            $buscarOption .= "<option value=".$value["id_equipo"].">".$value["nSerie"]." | ".$value["nomEquipo"]."</option>"; 
+        }
+        printf ($buscarOption);
+    }
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
@@ -93,4 +106,11 @@ if ($tipoOperacion == "actualizarEquipo"){
     $actualizarEquipo -> _empresaEquipo = $_POST["Eempresa"];
     $actualizarEquipo -> actualizarEquipo();
 }
+
+if ( $tipoOperacion == "buscarEquipo"){
+    $buscarEquipo = (new Equipo);
+    $buscarEquipo -> _idEquipo = $_POST["id"];
+    $buscarEquipo -> ajaxBuscarEquipo();
+}
+
 ?>

@@ -138,6 +138,14 @@ class mdlEquipo {
         }
 
     }
+
+    public function ctrBuscarEqEmpresa($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_empresa = :idEm");
+
+        $sql->bindParam(":idEm", $id, PDO::PARAM_INT);
+        $sql -> execute();
+        return ($sql-> fetchAll());
+    }
 }
 
 ?>
