@@ -37,3 +37,42 @@ $("#Emarca").on("change", function(){
     })
 
 })
+
+
+$("#formu-nueva-marca").submit(function (e) {
+    e.preventDefault()
+
+    var datos = new FormData($(this)[0])
+
+    $.ajax({
+        url: 'ajax/ajaxMarca.php',
+        type: 'POST',
+        data: datos,
+        processData: false,
+        contentType: false,
+        success: function(respuesta) {
+            if (respuesta == "ok") {
+                swal({
+                  type: 'success',
+                  title: 'Excelente',
+                  text: 'Marca guardada con éxito'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = "marca"
+                  }
+                })
+            }else if (respuesta == "error"){
+                swal({
+                  type: 'warning',
+                  title: 'Malas Noticias',
+                  text: 'Marca ya existe, Intente Nuevamente'
+                }).then((result) => {
+                  if (result.value) {
+                    window.location = "marca"
+                  }
+                })					
+            }
+        }
+
+    })
+})

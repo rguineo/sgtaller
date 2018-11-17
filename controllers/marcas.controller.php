@@ -29,7 +29,12 @@ Class ctrMarcas{
         return $respuesta;
     }
 
-
+    public function ctrNuevaMarca($nMarca){
+        $tabla = "marca";
+        $nuevaMarca = (new mdlMarca);
+        $respuesta = $nuevaMarca -> mdlNuevaMarca($tabla, $nMarca);
+        echo $respuesta;
+    }
 }
 
 

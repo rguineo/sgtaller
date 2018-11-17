@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="formu-marca">
+        <form id="formu-nueva-marca">
         <table class="table table-striped table-bordered table-hover">
             <thead>
                 <th>Marca</th>        
@@ -19,7 +19,8 @@
                 </tr>
             </tbody>
         </table>
-        <input type="hidden" tipoOperacion="nuevaMarca">
+        <input type="hidden" name="tipoOperacion" value="nuevaMarca">
+
     </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" onClick="cerrarModalMarca()">Cerrar</button>
