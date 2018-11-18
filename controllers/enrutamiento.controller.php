@@ -14,6 +14,7 @@ class ControllerEnrutamiento {
 			$ruta == "nuevoEquipo" ||
 			$ruta == "ingresoTaller" ||
 			$ruta == "terrenos" ||
+			$ruta == "ordenes" ||
 			//Mantenedores
 			$ruta == "pais" ||
 			$ruta == "modelo" ||

@@ -75,6 +75,8 @@
         <div><br>
           <a href="terrenos" class="btn btn-danger"><i class="fa fa-car"> Terreno</i></a>
           <a href="ingresoTaller" class="btn btn-success"><i class="fa fa-plus"> Ingreso Taller</i></a>
+          <a href="ordenes" class="btn btn-success"><i class="fa fa-play"> Ordenes Trabajo</i></a>
+          
           <br><br>
         </div>
         <div class="box box-info">

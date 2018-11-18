@@ -2,7 +2,8 @@ $(document).ready(function(){
 
     $("#formu-nuevo-ingresoTaller").submit(function (e) {
         e.preventDefault()
-        var id_recepcion = $(this).attr("idTerreno")
+        var id_recepcion = $("#recepcion").attr("idRecepcion")
+
         var datos = new FormData($(this)[0])
         datos.append("idRecepcion", id_recepcion)
 

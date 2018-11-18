@@ -9,5 +9,11 @@ Class ctrActa{
         return $respuesta;
     }
 
+    public function ctrUltimaActa(){
+        $tabla = "actaRecepcion";
+        $ultimaActa = (new mdlActa);
+        $respuesta = $ultimaActa -> mdlUltimaActa($tabla);
+        return $respuesta;
+    }
 }
 ?>

@@ -1,6 +1,9 @@
 <?php
 require_once "../controllers/acta.controller.php";
 require_once "../models/acta.model.php";
+require_once "../controllers/ordenTrabajo.controller.php";
+require_once "../models/ordenTrabajo.model.php";
+
 
 Class ajaxTaller{
     public $_idIngreso;
@@ -28,6 +31,16 @@ Class ajaxTaller{
                         "accesorios"=>$this->_accesoriosIngreso);
         $nuevaActa = (new ctrActa);
         $respuesta = $nuevaActa -> ctrGuardaNuevaActa($datos);
+
+        // Trae el numero de la ultima acta ingresada
+        $ultimaActa = (new ctrActa);
+        $lastActa = $ultimaActa -> ctrUltimaActa();
+
+        $last = $lastActa["id_acta"];
+        // // Inserta y crea la Orden de trabajo
+        $nuevaOTrabajo = (new ctrOrdenTrabajo);
+        $resp = $nuevaOTrabajo -> ctrNuevaOrdenTrabajo($datos, $last);
+
         echo $respuesta;
     }
 
@@ -48,8 +61,6 @@ if ( $tipoOperacion == "nuevoIngresoTaller"){
     $nuevoIngreso -> _observacionIngreso = $_POST["observacion"];
     $nuevoIngreso -> _accesoriosIngreso = $_POST["accesorios"];
     $nuevoIngreso -> ajaxNuevaActa();
-
 }
-
 
 ?>

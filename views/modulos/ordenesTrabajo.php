@@ -2,26 +2,29 @@
  date_default_timezone_set("America/Santiago");
  $fecha = date("d-m-Y");
 
- $empresa = (new ctrCliente)->ctrTodosClientes();  
+ $ordenes = (new ctrOrdenTrabajo);
+ $respuesta = $ordenes->ctrTodasOrdenes();
+ 
+ $tecnicos = (new ctrTecnicos)->ctrTodosTecnicos();
 
- $folio = (new ctrActa)->ctrUltimaActa();
+//  $folio = (new ctrActa)->ctrUltimaActa();
 
- if( $folio["folio"] == NULL ){
-     $nfolio = 0;
- } else if ($folio["folio"] == 99 ){
-     $nfolio = 0;
- }else {
-     $nfolio = (int)$folio["folio"] + 1;
- }
+//  if( $folio["folio"] == NULL ){
+//      $nfolio = 0;
+//  } else if ($folio["folio"] == 99 ){
+//      $nfolio = 0;
+//  }else {
+//      $nfolio = (int)$folio["folio"] + 1;
+//  }
 ?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Ingreso a Taller</h1>
+      <h1>Ordenes de trabajo</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Ingreso Taller</li>
+        <li class="active">Ordenes Trabajo</li>
       </ol> 
       <hr>
     </section>
@@ -29,23 +32,32 @@
     <section class="content container-fluid">
       <div id='page-wrapper'>
         <div class='container-fluid'>
-        <form id="formu-nuevo-ingresoTaller">
+        <form id="formu-nuevo-OrdenTrabajo">
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Folio OT</label>
             <div class="col-sm-3">
-              <input type="number" id="folio" class="form-control form-inline folio" name="folio" value="<?php echo $nfolio; ?>" readonly>
+              <input type="number" id="folio" class="form-control form-inline folio" name="folio" value="<?php echo  $respuesta["folio"]; ?>" readonly>
             </div>
         </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Fecha</label>
+            <label class="col-sm-2 col-form-label">Fecha Ingreso</label>
             <div class="col-sm-3">
-              <input type="date" id="fecha" class="form-control form-inline" required name="fecha" value="<?php echo $fecha; ?>">
+              <input type="date" id="fecha" class="form-control form-inline"  name="fechaOrden" value="<?php echo $respuesta["fecha_orden"] ?>" readonly>
             </div>
 
             <label class="col-sm-2 col-form-label">Recepcionado por</label>
             <div class="col-sm-3">
-              <input type="text" id="recepcion" class="form-control form-inline readOnly" readonly name="recepcion" idRecepcion="<?php echo $_SESSION["id"]; ?>" value="<?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?>">
+              <select name="tecnico" id="tecnico">
+                  <option value="0">Seleccione Tecnico</option>
+                  <?php
+                      foreach ($tecnicos as $key => $value) {
+                        echo "<option value='".$value["id_tecnico"]."'>".$value["nomTecnico"]."</option>";
+                      }
+                  ?>
+              
+              </select>
+
             </div>
           </div>
           

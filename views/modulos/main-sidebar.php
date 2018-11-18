@@ -45,6 +45,7 @@
       <li><a href="modelo"><i class="fa fa-circle-o"></i> Modelo</a></li>
       <li><a href="bodega"><i class="fa fa-circle-o"></i> Bodega</a></li>
       <li><a href="taller"><i class="fa fa-circle-o"></i> Taller</a></li>
+      <li><a href="taller"><i class="fa fa-circle-o"></i> Tecnico</a></li>
     </ul>
   </li>
   <li class="active"><a href="productos"><i class="fa fa-beer"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>

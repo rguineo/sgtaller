@@ -26,8 +26,12 @@ Class mdlActa{
         } else {
             return "error";
         }
+    }
 
-
+    public function mdlUltimaActa($tabla){
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla ORDER BY id_acta DESC LIMIT 1");
+        $sql -> execute();
+        return $sql->fetch();
     }
 }
 
