@@ -19,6 +19,8 @@ require_once "controllers/marcas.controller.php";
 require_once "controllers/terrenos.controller.php";
 require_once "controllers/acta.controller.php";
 require_once "controllers/ordenTrabajo.controller.php";
+require_once "controllers/tecnicos.controller.php";
+
 
 require_once "models/equipo.model.php";
 require_once "models/sesion.modelo.php";
@@ -37,6 +39,7 @@ require_once "models/marcas.model.php";
 require_once "models/terrenos.model.php";
 require_once "models/acta.model.php";
 require_once "models/ordenTrabajo.model.php";
+require_once "models/tecnicos.model.php";
 
 error_reporting(0);
 $template = new ControllerTemplate();

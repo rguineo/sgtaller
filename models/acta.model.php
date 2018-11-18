@@ -7,9 +7,10 @@ Class mdlActa{
     public function mdlGuardaNuevaActa($tabla, $datos){
         $sql = (new Conexion)->conectar()->prepare("INSERT INTO $tabla() 
         VALUES (NULL, :folio, :fechaActa, :idEmpresa, :idCentro, :idEquipo, :idUsuario, :guia, :transporte, :obs,
-        :acc, NOW())");
+        :acc, NOW(), :idTecnico)");
 
         $sql->bindParam(":folio", $datos["folio"], PDO::PARAM_INT);
+        $sql->bindParam(":idTecnico", $datos["idTecnico"], PDO::PARAM_INT);
         $sql->bindParam(":fechaActa", $datos["fechaIng"], PDO::PARAM_STR);
         $sql->bindParam(":idEmpresa", $datos["idEmpresa"], PDO::PARAM_INT);
         $sql->bindParam(":idCentro", $datos["idCentro"], PDO::PARAM_INT);

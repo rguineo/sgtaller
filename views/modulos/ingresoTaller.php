@@ -3,16 +3,16 @@
  $fecha = date("d-m-Y");
 
  $empresa = (new ctrCliente)->ctrTodosClientes();  
-
  $folio = (new ctrActa)->ctrUltimaActa();
 
+
  if( $folio["folio"] == NULL ){
-     $nfolio = 0;
- } else if ($folio["folio"] == 99 ){
-     $nfolio = 0;
- }else {
-     $nfolio = (int)$folio["folio"] + 1;
+     $nfolio = 1;
+ } else {
+    $nfolio = $folio["folio"] + 1;
  }
+
+$tecnico = (new ctrTecnicos)->ctrTodosTecnicos();
 ?>
 
 <div class="content-wrapper">
@@ -35,18 +35,32 @@
             <div class="col-sm-3">
               <input type="number" id="folio" class="form-control form-inline folio" name="folio" value="<?php echo $nfolio; ?>" readonly>
             </div>
+            
+            <label class="col-sm-2 col-form-label">Recepcionado por</label>
+            <div class="col-sm-3">
+              <input type="text" id="recepcion" class="form-control form-inline readOnly" readonly name="recepcion" idRecepcion="<?php echo $_SESSION["id"]; ?>" value="<?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?>">
+            </div>
+
         </div>
 
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Fecha</label>
             <div class="col-sm-3">
-              <input type="date" id="fecha" class="form-control form-inline" required name="fecha" value="<?php echo $fecha; ?>">
+              <input type="date" id="fecha" class="form-control form-inline" required name="fecha" value="<?php echo $folio["fecha_orden"]; ?>">
+            </div>
+            <label class="col-sm-2 col-form-label">Tecnico Asignado</label>
+            <div class="col-sm-3">
+                <select class="form-control" name="tecnicoTaller" id="tecnicoTaller">
+                  <?php
+                    echo "<option value='0'>Elija Tecnico</option>";
+                    foreach ($tecnico as $key => $value) {
+                        echo "<option value=".$value["id_tecnico"].">".$value["nomTecnico"]."</option>";
+                    }
+
+                  ?>
+                </select>
             </div>
 
-            <label class="col-sm-2 col-form-label">Recepcionado por</label>
-            <div class="col-sm-3">
-              <input type="text" id="recepcion" class="form-control form-inline readOnly" readonly name="recepcion" idRecepcion="<?php echo $_SESSION["id"]; ?>" value="<?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?>">
-            </div>
           </div>
           
           <div class="form-group row">

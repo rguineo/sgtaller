@@ -57,16 +57,19 @@ $respuesta = $ordenes->ctrTodasOrdenes();
                                 case '':
                                   echo "<td style='color: red;'>Nueva Orden</td>";
                                   break;
-                                case '0':
+                                case '1':
                                   echo "<td style='color: orange;'>Diagnostico</td>";
                                   break;
-                                case '1':
+                                case '2':
                                   echo "<td style='color: black;'>Reparacion</td>";
                                   break;
-                                case '2':
-                                  echo "<td style='color: green;'>Despacho</td>";
+                                case '3':
+                                  echo "<td style='color: green;'>Finalizado</td>";
                                   break;
 
+                                case '4':
+                                  echo "<td style='color: blue;'>Despachado</td>";
+                                  break;
                                 default:
   
                                   break;
@@ -74,8 +77,8 @@ $respuesta = $ordenes->ctrTodasOrdenes();
                              
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-sm btn-primary btnEditarCentro' href='#' data-toggle='modal' data-target='#modal-editar-centro' title='Editar'><i class='fa fa-edit'></i></button>";
-                                echo "<button type='button' idCentro='".$value["id_centro"]."' class='btn btn-sm btn-success btnEliminarCentro' href='#' title='Ver Orden'>
+                                echo "<button type='button' idOrden='".$value["id_orden"]."' class='btn btn-sm btn-primary btnEditarOrden' href='#' data-toggle='modal' data-target='#modal-editar-orden' title='Editar'><i class='fa fa-edit'></i></button>";
+                                echo "<button type='button' idOrden='".$value["id_orden"]."' class='btn btn-sm btn-success btnVerOrden' href='#' title='Ver Orden'>
                                 <i class='fa fa-search''></i></button>";
                               echo "</center>";
                               echo "</td>";

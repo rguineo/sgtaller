@@ -16,6 +16,13 @@ Class ctrOrdenTrabajo{
         return $respuesta;
     }
 
+    public function ctrBuscarOrden($id){
+        $tabla = "ordenTrabajo";
+        $buscarOrden = (new mdlOrdenTrabajo);
+        $respuesta = $buscarOrden -> mdlBuscarOrden($tabla, $id);
+        return $respuesta;
+    }
+
 
 }
 
