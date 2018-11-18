@@ -146,6 +146,21 @@ class mdlEquipo {
         $sql -> execute();
         return ($sql-> fetchAll());
     }
+
+    public function mdlEncontrarEquipo($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("SELECT equipo.id_equipo, equipo.nSerie, equipo.nomEquipo,
+        marca.marca, modelo.modelo  
+        FROM $tabla 
+        INNER JOIN marca
+        ON equipo.id_marca = marca.id_marca
+        INNER JOIN modelo
+        ON equipo.id_modelo = modelo.id_modelo
+        WHERE id_equipo = :id");
+        
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+        $sql -> execute();
+        return $sql->fetch();
+    }
 }
 
 ?>

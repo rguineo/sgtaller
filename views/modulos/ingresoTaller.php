@@ -1,7 +1,8 @@
 <?php 
+ date_default_timezone_set("America/Santiago");
+ $fecha = date("d-m-Y");
 
- $todoBodega = new ctrBodega(); 
- $respuesta =  $todoBodega->ctrTodoBodega();
+ $empresa = (new ctrCliente)->ctrTodosClientes();  
 
 ?>
 
@@ -13,135 +14,105 @@
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <li class="active">Ingreso Taller</li>
-      </ol>
+      </ol> 
+      <hr>
     </section>
-
+   
     <section class="content container-fluid">
       <div id='page-wrapper'>
         <div class='container-fluid'>
-        <form id="formu-nuevo-producto">
+        <form id="formu-nuevo-ingresoTaller">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Folio OT</label>
+            <div class="col-sm-3">
+              <input type="number" id="folio" class="form-control form-inline folio" name="folio" value="00021" readonly>
+            </div>
+        </div>
+
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Fecha</label>
             <div class="col-sm-3">
-              <input type="date" id="fecha" class="form-inline" placeholder="fecha" required name="hora">
+              <input type="date" id="fecha" class="form-control form-inline" required name="fecha" value="<?php echo $fecha; ?>">
             </div>
 
-            <label class="col-sm-2 col-form-label">Tecnico Recepcion</label>
+            <label class="col-sm-2 col-form-label">Recepcionado por</label>
             <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="Recibido por" required name="hora">
+              <input type="text" id="recepcion" class="form-control form-inline readOnly" readonly name="recepcion" idRecepcion="<?php echo $_SESSION["id"]; ?>" value="<?php echo $_SESSION["nombre"]." ".$_SESSION["apellido"]; ?>">
             </div>
           </div>
           
-
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Hora</label>
+            <label class="col-sm-2 col-form-label">Empresa</label>
             <div class="col-sm-3">
-              <input type="time" id="hora" class="form-inline" placeholder="hora" required name="hora">
-            </div>
-          </div>
+                <select class="form-control" name="empresaTaller" id="empresaTaller">
+                  <?php
+                    echo "<option value='0'>Elija Empresa</option>";
+                    foreach ($empresa as $key => $value) {
+                        echo "<option value=".$value["id_empresa"].">".$value["razon_social"]."</option>";
+                    }
 
-          <div class="form-group row">
+                  ?>
+                </select>
+            </div>
+
             <label class="col-sm-2 col-form-label">Equipo</label>
             <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="equipo" required name="hora">
-            </div>
-
-            <label class="col-sm-2 col-form-label">Marca</label>
-            <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="marca" required name="hora">
+              <select class="form-control" name="equipoTaller" id="equipoTaller">
+                
+              </select>            
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Serie</label>
+            <label class="col-sm-2 col-form-label">Centro</label>
             <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="serie" required name="hora">
+              <select class="form-control" name="centroTaller" id="centroTaller">
+                
+              </select>           
             </div>
         
+            <label class="col-sm-2 col-form-label">Marca</label>
+            <div class="col-sm-3">
+              <input type="text" id="marca" class="form-control form-inline readOnly" readonly name="marca">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Guia Despacho</label>
+            <div class="col-sm-3">
+              <input type="number" id="guia" class="form-control form-inline" placeholder="guia despacho" required name="guia">
+            </div>
+          
             <label class="col-sm-2 col-form-label">Modelo</label>
             <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="modelo" required name="hora">
+              <input type="text" id="modelo" class="form-control form-inline readOnly" readonly name="modelo">
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Cliente</label>
+            <label class="col-sm-2 col-form-label">Nombre Transportista</label>
             <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="cliente" required name="hora">
-            </div>
-          
-            <label class="col-sm-2 col-form-label">Contacto</label>
-            <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="contacto" required name="hora">
+              <input type="text" id="transporte" class="form-control form-inline" placeholder="Transportista" required name="transporte">
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Centro Origen</label>
+            <label class="col-sm-2 col-form-label">Observación</label>
             <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="origen" required name="hora">
-            </div>
-          
-            <label class="col-sm-2 col-form-label">Transportista</label>
-            <div class="col-sm-3">
-              <input type="text" id="hora" class="form-inline" placeholder="transportado por" required name="hora">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Diagnostico</label>
-            <div class="col-sm-3">
-            <textarea class="form-control textDescript" name="detalle" id="detalle_producto" cols="30" rows="4"></textarea>
+              <textarea class="form-control textDescript" name="observacion" id="observacion" cols="30" rows="3"></textarea>
             </div>
 
             <label class="col-sm-2 col-form-label">Accesorios</label>
             <div class="col-sm-3">
-            <textarea class="form-control textDescript" name="detalle" id="detalle_producto" cols="30" rows="4"></textarea>
+              <textarea class="form-control textDescript" name="accesorios" id="accesorios" cols="30" rows="3"></textarea>
             </div>
           </div>
 
-          <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Estado</label>
-            <div class="col-sm-3">
-              <input type="text" id="estado" class="form-inline" placeholder="estado" required name="estado">
-            </div>
-
-            <label class="col-sm-2 col-form-label">Repuestos</label>
-            <div class="col-sm-3">
-            <textarea class="form-control textDescript" name="detalle" id="detalle_producto" cols="30" rows="4"></textarea>
-            </div>
-          </div>
-
-          
-
-          <!-- <div class="form-group row">
-            <label class="col-sm-4 col-form-label">U-Medida</label>
-            <div class="col-sm-4">
-              <select name="unidad" id="" class="form-control">
-                <option value="Unidad">Unidad</option>
-                <option value="Kilos">Kilos</option>
-                <option value="Litros">Litros</option>
-              </select>
-            </div>
-
-            <div class="col-sm-4 row">
-              <input type="text" class="form-control" placeholder="Precio" name="precio">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-form-label col-sm-4">Codigo Barra (opcional)</label>
-            <div class="col-sm-8">
-              <input class="form-control" type="text" name="barcode">  
-            </div>
-             
-          </div> -->
-
-          <input type="hidden" name="tipoOperacion" value="nuevoProducto">
+          <input type="hidden" name="tipoOperacion" value="nuevoIngresoTaller">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary"><i class="fa fa-print"></i> Imprimir</button>
+        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Guardar</button>
         </form>
 
         </div>

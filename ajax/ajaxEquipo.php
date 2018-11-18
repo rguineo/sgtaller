@@ -11,7 +11,6 @@ Class Equipo{
     public $_modeloEquipo;
     public $_empresaEquipo;
 
-
     public function setIdEquipo($id){
         $this->_idEquipo = $id;
     }
@@ -65,7 +64,7 @@ Class Equipo{
         $buscar = (new ctrEquipo);
         $respuesta = $buscar->ctrBuscarEquipoEmpresa($id);
     
-        $buscarOption = "<option>Elija el Equipo </option>";   
+        $buscarOption = "<option value='0'>Elija el Equipo </option>";   
         foreach ($respuesta as $key => $value) {
             $buscarOption .= "<option value=".$value["id_equipo"].">".$value["nSerie"]." | ".$value["nomEquipo"]."</option>"; 
         }
@@ -75,9 +74,9 @@ Class Equipo{
     public function ajaxEncontrarEquipo(){
         $id = $this->_idEquipo;
 
-        $econtrarEquipo = (new ctrEquipo);
-        $respuesta = $econtrarEquipo -> ctrBuscarEquipo($id);
-        return $respuesta;
+        $encontrarEquipo = (new ctrEquipo);
+        $respuesta = $encontrarEquipo -> ctrEncontrarEquipo($id);
+        echo json_encode($respuesta);
     }
 
 }
@@ -123,4 +122,9 @@ if ( $tipoOperacion == "buscarEquipo"){
     $buscarEquipo -> ajaxBuscarEquipo();
 }
 
+if ( $tipoOperacion == "encontrarEquipo"){
+    $encontrarEquipo = (new Equipo);
+    $encontrarEquipo -> _idEquipo = $_POST["id"];
+    $encontrarEquipo -> ajaxEncontrarEquipo();
+}
 ?>

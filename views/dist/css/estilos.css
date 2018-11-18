@@ -36,3 +36,19 @@ input[type=number] {
 .txtArea {
     resize: none;
 }
+
+.readOnly {
+    background-color: beige;
+}
+
+textarea {
+    resize: none;
+}
+
+.folio {
+    text-align: right;
+    color: brown;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: beige;
+}

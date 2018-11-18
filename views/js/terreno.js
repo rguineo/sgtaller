@@ -85,7 +85,7 @@ $(document).ready(function(){
             contentType: false,
             success: function(respuesta) {
                 var valor = JSON.parse(respuesta) 
-               console.log(valor)
+
                 $('#formu-editar-terreno input[name="EfechaTerreno"]').val(valor.fechaTerreno)
                 $('#formu-editar-terreno input[name="Eresponsable"]').val(valor.responsable)
                 $('#formu-editar-terreno textarea[name="Etrabajo"]').val(valor.trabajo)

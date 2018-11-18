@@ -166,7 +166,7 @@ Class ajaxCentro{
         $buscarCentros = (new ctrCentros);
         $respuesta = $buscarCentros->ctrBuscarCentros($id);
         
-        $lista = "<option value=''>Elija Centro</option>";
+        $lista = "<option value='0'>Elija Centro</option>";
         foreach ($respuesta as $key => $value) {
             $lista .= "<option value=".$value["id_centro"].">".$value["nombre"]."</option>";
         }
