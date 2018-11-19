@@ -38,7 +38,7 @@ Class mdlOrdenTrabajo{
     public function mdlBuscarOrden($tabla, $id){
         $sql = (new Conexion)->conectar()->prepare("SELECT ordenTrabajo.id_orden, ordenTrabajo.folio, 
         ordenTrabajo.fecha_orden, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordenTrabajo.estado, 
-        tecnicos.nomTecnico, tecnicos.id_tecnico
+        tecnicos.nomTecnico, tecnicos.id_tecnico, ordenTrabajo.diagnostico, ordenTrabajo.repuestos, ordenTrabajo.estado
         FROM $tabla
         INNER JOIN equipo
         ON $tabla.id_equipo = equipo.id_equipo
@@ -50,7 +50,24 @@ Class mdlOrdenTrabajo{
 
         $sql -> execute();
         return $sql -> fetch();
+    }
 
+    public function mdlActualizarOrden($tabla, $datos){
+        $sql = (new Conexion)->conectar()->prepare("UPDATE $tabla 
+        SET id_tecnico = :tecnico, diagnostico = :diag, repuestos = :rep, estado = :estado
+        WHERE id_orden = :id");
+
+        $sql->bindParam(":id", $datos["idOrden"], PDO::PARAM_INT);
+        $sql->bindParam(":tecnico", $datos["tecnico"], PDO::PARAM_INT);
+        $sql->bindParam(":diag", $datos["diagnostico"], PDO::PARAM_STR);
+        $sql->bindParam(":rep", $datos["repuestos"], PDO::PARAM_STR);
+        $sql->bindParam(":estado", $datos["estado"], PDO::PARAM_INT);
+
+        if ( $sql -> execute() ){
+            return "ok";
+        } else {
+            return "error";
+        }
     }
 }
 

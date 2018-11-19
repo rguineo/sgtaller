@@ -61,15 +61,20 @@ $respuesta = $ordenes->ctrTodasOrdenes();
                                   echo "<td style='color: orange;'>Diagnostico</td>";
                                   break;
                                 case '2':
-                                  echo "<td style='color: black;'>Reparacion</td>";
+                                  echo "<td style='color: black;'>Espera Aprobacion</td>";
                                   break;
                                 case '3':
-                                  echo "<td style='color: green;'>Finalizado</td>";
+                                  echo "<td style='color: green;'>Reparacion</td>";
                                   break;
 
                                 case '4':
-                                  echo "<td style='color: blue;'>Despachado</td>";
+                                  echo "<td style='color: blue;'>Finalizado</td>";
                                   break;
+                                
+                                case '5':
+                                  echo "<td style='color: blue;'>Finalizado</td>";
+                                  break;
+
                                 default:
   
                                   break;

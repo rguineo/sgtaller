@@ -23,6 +23,12 @@ Class ctrOrdenTrabajo{
         return $respuesta;
     }
 
+    public function ctrActualizarOrden($datos){
+        $tabla = "ordenTrabajo";
+        $actualizarOrden = (new mdlOrdenTrabajo);
+        $respuesta = $actualizarOrden -> mdlActualizarOrden($tabla, $datos);
+        return $respuesta;
+    }
 
 }
 

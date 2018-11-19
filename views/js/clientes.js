@@ -61,7 +61,7 @@ $(document).ready(function(){
 				processData: false,
 				contentType: false,
 				success: function(respuesta) {
-					var cadena = respuesta.substr(0,2)
+					var cadena = $.trim(respuesta)
 					if ( cadena == "ok") {
 						swal(
 					      'Eliminado!',
@@ -94,7 +94,7 @@ $(document).ready(function(){
 			contentType: false,
 			success: function(respuesta) {
 				var valor = JSON.parse(respuesta)
-					console.log(valor.razon_social)
+
 				$('#formu-editar-cliente input[name="ErutCliente"]').val(valor.rut)
 				$('#formu-editar-cliente input[name="ErazonCliente"]').val(valor.razon_social)
 				$('#formu-editar-cliente input[name="EdireccionCliente"]').val(valor.direccion)
@@ -191,8 +191,7 @@ $(document).ready(function(){
 			processData: false,
 			contentType: false,
 			success: function(respuesta) {
-				var cadena = respuesta.substr(0,2)
-				console.log(cadena)
+				var cadena = $.trim(respuesta)
 				if (cadena == "ok") {
 					swal({
 					  type: 'success',
@@ -208,8 +207,4 @@ $(document).ready(function(){
 	
 		})
 	})
-
-
-
-
 })
