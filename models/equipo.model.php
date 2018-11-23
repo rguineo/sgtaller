@@ -161,6 +161,18 @@ class mdlEquipo {
         $sql -> execute();
         return $sql->fetch();
     }
+
+    public function mdlEncontrarEmEq($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("SELECT empresa.razon_social 
+        FROM empresa 
+        INNER JOIN $tabla
+        ON empresa.id_empresa = $tabla.id_empresa
+        WHERE equipo.id_equipo = $id");
+
+        $sql -> execute();
+        return $sql->fetch();
+
+    }
 }
 
 ?>

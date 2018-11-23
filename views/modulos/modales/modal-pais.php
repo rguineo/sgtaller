@@ -1,7 +1,7 @@
-<div class="modal fade bd-example-modal-lg" id="modal-nuevo-pais"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-small" role="document">
+<div class="modal fade" id="modal-nuevo-pais"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header tituloModal">
         <h5 class="modal-title" id="exampleModalLabel">Nueva Pais</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -15,11 +15,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input class="form-control" name="pais" type="text" maxlength='100' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></td>
+                    <td><input class="form-control" name="pais" type="text"></td>
                 </tr>
             </tbody>
         </table>
-        <input type="hidden" tipoOperacion="nuevoPais">
+        <input type="hidden" name="tipoOperacion" value="nuevoPais">
     </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" onClick="cerrarModalPais()">Cerrar</button>
@@ -29,3 +29,4 @@
     </div>
   </div>
 </div>
+

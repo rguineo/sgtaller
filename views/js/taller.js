@@ -26,6 +26,17 @@ $(document).ready(function(){
                             window.location = "ingresoTaller"
                         }
                     })
+                } else {
+                    swal({
+                        type: 'warning',
+                        title: 'Malas Noticias',
+                        text: 'El equipo debe ser despachado antes de ingresar nuevo OT'
+                    }).then((result) => {
+                        if (result.value) {
+                            window.location = "despacho"
+                        }
+                    })
+
                 }
             }
         })

@@ -4,7 +4,7 @@ require_once "../models/ordenTrabajo.model.php";
 
 Class ajaxOrden{
     public $_idOrden;
-    public $_tecnico;
+    public $_idTecnico;
     public $_diagnostico;
     public $_repuestos;
     public $_estado;
@@ -18,7 +18,7 @@ Class ajaxOrden{
 
     public function ajaxActualizarOrden(){
         $datos = array( "idOrden"=>$this->_idOrden,
-                        "tecnico"=>$this->_tecnico,
+                        "tecnico"=>$this->_idTecnico,
                         "diagnostico"=>$this->_diagnostico,
                         "repuestos"=>$this->_repuestos,
                         "estado"=>$this->_estado);

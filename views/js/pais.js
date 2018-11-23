@@ -1,5 +1,46 @@
 $(document).ready(function(){
 
+  $("#formu-pais").submit(function (e) {
+    e.preventDefault()
+
+    var datos = new FormData($(this)[0])
+
+    $.ajax({
+        url: 'ajax/ajaxPais.php',
+        type: 'POST',
+        data: datos,
+        processData: false,
+        contentType: false,
+        success: function(respuesta) {
+            cadena = $.trim(respuesta)
+
+            if (cadena == "ok") {
+                swal({
+                    type: 'success',
+                    title: 'Excelente',
+                    text: 'Pais guardado con éxito'
+                }).then((result) => {
+                    if (result.value) {
+                        window.location = "pais"
+                    }
+                })
+            } else {
+              swal({
+                type: 'warning',
+                title: 'Malas Noticias',
+                text: 'Pais ya existe'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = "pais"
+                }
+            })            }
+        }
+    })
+})
+
+
+
+
     $("body .table-dark").on("click", ".btnEliminarPais", function(){
         var id = $(this).attr("id")
         var datos = new FormData()

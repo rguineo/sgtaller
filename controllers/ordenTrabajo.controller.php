@@ -30,6 +30,27 @@ Class ctrOrdenTrabajo{
         return $respuesta;
     }
 
+    public function ctrContarEq(){
+        $tabla = "ordenTrabajo";
+        $contarEquipos = (new mdlOrdenTrabajo);
+        $respuesta = $contarEquipos -> mdlContarOrden($tabla);
+        return $respuesta;
+    }
+
+    public function ctrTodosDespachos(){
+        $tabla = "ordenTrabajo";
+        $todasOrdenes = (new mdlOrdenTrabajo);
+        $respuesta = $todasOrdenes -> mdlTodosDespachos($tabla);
+        return $respuesta;
+    }
+    
+    public function ctrTodosFinalizados(){
+        $tabla = "ordenTrabajo";
+        $todasOrdenes = (new mdlOrdenTrabajo);
+        $respuesta = $todasOrdenes -> mdlTodosFinalizados($tabla);
+        return $respuesta;
+    }
+
 }
 
 ?>

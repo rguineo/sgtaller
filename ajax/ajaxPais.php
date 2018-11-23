@@ -2,9 +2,9 @@
 include_once ("../controllers/pais.controller.php");
 include_once ("../models/pais.model.php");
 
-Class Equipo{
+Class ajaxPais{
     public $_idPais;
-    public $_nombre_pais;
+    public $_nombrePais;
 
     public function setIdPais($id){
         $this->_idPais = $id;
@@ -15,17 +15,17 @@ Class Equipo{
     }
 
     public function setNomPais($nomPais){
-        $this->_nombre_pais = $$nomPais;
+        $this->_nombrePais = $nomPais;
     }
 
     public function getNomPais(){
-        return $this->_nombre_pais;
+        return $this->_nombrePais;
     }
 
     public function agregarPais(){
-        $datos = array("nombre_pais"=>$this->nomPais);
+        $nombrePais = $this->_nombrePais;
         $agregarPais = (new ctrPais);
-        $respuesta = $agregarPais -> ctrAgregarPais($datos);
+        $respuesta = $agregarPais -> ctrAgregarPais($nombrePais);
         echo $respuesta;
     }
 
@@ -35,27 +35,19 @@ Class Equipo{
         $eliminar -> setIdPais($id);
         $respuesta = $eliminar -> ctrEliminarPais();
         echo $respuesta;
-		// $ruta = $this->avatar_admin;
-
-		// $respuesta = ControllerUsuario::ctrEliminarUsuario($id_admin, $ruta);
-
-		// echo $respuesta;
-
 	}
-
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
 
 if($tipoOperacion == "nuevoPais") {
-    
-    $NuevoPais = new Pais();
-    $NuevoCliente->setNomPais($_POST["nombre_pais"]);
-    $NuevoPais->GuardarPais();
+    $NuevoPais = (new ajaxPais);
+    $NuevoPais->_nombrePais = $_POST["pais"];
+    $NuevoPais->agregarPais();
 }
 
 if ($tipoOperacion == "eliminarPais") {
-    $eliminarPais = new ajaxPais();
+    $eliminarPais = (new ajaxPais);
     $eliminarPais -> getIdPais($_POST["id"]);
     $eliminarPais -> eliminarPais();
 }

@@ -22,13 +22,10 @@ Class ctrPais{
         $this->_Pais = $pais;
     }
 
-    public function ctrNuevoPais(){
+    public function ctrAgregarPais($nomPais){
         $tabla = "pais";
-        $datas = $this->getDatos();
-        $pais = new mdlPais();
-        $pais->setDatos($datas);
-        $pais->setTabla($tabla);
-        $respuesta = $pais->mdlNuevoPais();
+        $pais = (new mdlPais);
+        $respuesta = $pais->mdlNuevoPais($tabla, $nomPais);
         return $respuesta;
     }
 

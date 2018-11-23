@@ -79,6 +79,13 @@ Class Equipo{
         echo json_encode($respuesta);
     }
 
+    public function ajaxEncontrarEmEq(){
+        $id = $this->_idEquipo;
+        $encontrarEquipo = (new ctrEquipo);
+        $respuesta = $encontrarEquipo -> ctrEncontrarEmEq($id);
+        echo json_encode($respuesta);
+    }
+
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
@@ -127,4 +134,12 @@ if ( $tipoOperacion == "encontrarEquipo"){
     $encontrarEquipo -> _idEquipo = $_POST["id"];
     $encontrarEquipo -> ajaxEncontrarEquipo();
 }
+
+if ( $tipoOperacion == "buscarEmpEq"){
+    $encontrarEquipo = (new Equipo);
+    $encontrarEquipo -> _idEquipo = $_POST["id_equipo"];
+    $encontrarEquipo -> ajaxEncontrarEmEq();
+}
+
+
 ?>

@@ -39,17 +39,28 @@ Class mdlPais{
         return $this->_idPais;
     }
 
-    public function mdlNuevoPais() {
-        $tabla = $this->getTabla();
-        $datos = $this->getDatos();
+    public function consultaPais($nomPais){
+        $paisNombre = strtoupper($nomPais);
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM pais WHERE nombre_pais = :pais");
+        $sql->bindParam(":pais", $paisNombre, PDO::PARAM_STR);
+        $sql -> execute();
+        if ( $sql->fetch()){
+            return "error";
+        } else {
+            return "vacio";
+        }
 
-        $this->consultaPais();
+    }
 
-        if ($this->getResultado() == "vacio"){
+    public function mdlNuevoPais($tabla, $nomPais) {
+        $resp = $this->consultaPais($nomPais);
+        $paisNombre = strtoupper($nomPais);
+
+        if ( $resp == "vacio"){
             $sql = (new Conexion)->conectar()->prepare("INSERT INTO $tabla() 
-            VALUES (NULL, :pais)");
+            VALUES (NULL, :pais)"); 
 
-            $sql->bindParam(":nombre", $datos["nombre_pais"], PDO::PARAM_STR);
+            $sql->bindParam(":pais", $paisNombre, PDO::PARAM_STR);
 
             if( $sql -> execute() ) {
                 return "ok";

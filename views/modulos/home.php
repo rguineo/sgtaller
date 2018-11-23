@@ -1,9 +1,15 @@
+<?php 
+  $ordenes = (new ctrOrdenTrabajo);
+  $respuesta = $ordenes->ctrTodasOrdenes();
+
+  $entaller = (new ctrOrdenTrabajo);
+  $countEq = $entaller->ctrContarEq();
+?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
         Gestor de administración
-        <small>Datos del comercio</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
@@ -21,7 +27,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Equipos en Taller</span>
-              <span class="info-box-number">10<small></small></span>
+              <span class="info-box-number"><?php echo $countEq[0]; ?><small></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -72,12 +78,14 @@
         </div>
         <!-- /.col -->
       </div>
-        <div><br>
-          <a href="terrenos" class="btn btn-danger"><i class="fa fa-car"> Terreno</i></a>
+        <div><br> <center>
+          <a href="terrenos" class="btn btn-primary"><i class="fa fa-car"> Terreno</i></a>
           <a href="ingresoTaller" class="btn btn-success"><i class="fa fa-plus"> Ingreso Taller</i></a>
-          <a href="ordenes" class="btn btn-success"><i class="fa fa-play"> Ordenes Trabajo</i></a>
+          <a href="ordenes" class="btn btn-warning"><i class="fa fa-play"> Ordenes Trabajo</i></a>
+          <a href="despacho" class="btn btn-success"><i class="fa fa-truck"> Despacho</i></a>
           
           <br><br>
+          </center>
         </div>
         <div class="box box-info">
             <div class="box-header with-border">
@@ -96,68 +104,56 @@
                   <thead>
                   <tr>
                     <th>Order ID</th>
+                    <th>Fecha</th>
+                    <th>Numero Serie</th>
                     <th>Equipos</th>
+                    <th>Empresa</th>
                     <th>Estado</th>
-                    <th>Popularity</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Equipo 1</td>
-                    <td><span class="label label-success">Entregado</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Equipo 2</td>
-                    <td><span class="label label-warning">Pendiente</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Equipo 3</td>
-                    <td><span class="label label-danger">En Taller</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Equipo 4</td>
-                    <td><span class="label label-info">En Taller</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Equipo 5</td>
-                    <td><span class="label label-warning">Pendiente</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Equipo 7</td>
-                    <td><span class="label label-danger">Entregado</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Equipo 8</td>
-                    <td><span class="label label-success">Entregado</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
+                    <?php
+                        foreach ($respuesta as $key => $value) {
+                          echo '<tr>
+                                <td>'.$value["folio"].'</td>
+                                <td>'.$value["fecha_orden"].'</td>
+                                <td>'.$value["nSerie"].'</td>
+                                <td>'.$value["nomEquipo"].'</td>
+                                <td>'.$value["razon_social"].'</td>
+                                ';
+
+                          switch ($value['estado']) {
+                            case '':
+                              echo "<td><span class='label label-danger'>Nueva Orden</span></td>";
+                              break;
+                            case '1':
+                              echo "<td><span class='label label-secondary'>Diagnostico</span></td>";
+                              break;
+                            case '2':
+                              echo "<td><span class='label label-warning'>Espera OT</span></td>";
+                              break;
+                            case '3':
+                              echo "<td><span class='label label-primary'>Reparacion</span></td>";
+                              break;
+
+                            case '4':
+                              echo "<td><span class='label label-success'>Finalizado</span></td>";
+                              break;
+                            
+                            case '5':
+                              echo "<td><span class='label label-success'>Entregado</span></td>";
+                              break;
+
+                            default:
+
+                              break;
+                          }
+                          echo '<tr>';
+                        }
+
+
+                    ?>
+
                   </tbody>
                 </table>
               </div>

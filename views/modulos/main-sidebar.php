@@ -38,7 +38,7 @@
   <li class="treeview"><a href="#"><i class="fa fa-cogs"></i> <span>Mantenedores</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
     <ul class="treeview-menu">
       <li><a href="pais"><i class="fa fa-circle-o"></i> País</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Región</a></li>
+      <li><a href="region"><i class="fa fa-circle-o"></i> Región</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Ciudad</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Comuna</a></li>
       <li><a href="marca"><i class="fa fa-circle-o"></i> Marca</a></li>

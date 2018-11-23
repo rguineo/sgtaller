@@ -92,6 +92,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/js/terreno.js"></script>
 <script src="views/js/taller.js"></script>
 <script src="views/js/ordenes.js"></script>
+<script src="views/js/pais.js"></script>
+<script src="views/js/region.js"></script>
+<script src="views/js/despacho.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script>
 </body>
