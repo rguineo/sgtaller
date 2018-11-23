@@ -102,9 +102,19 @@ Class mdlOrdenTrabajo{
         ON $tabla.id_equipo = equipo.id_equipo
         INNER JOIN empresa
         ON $tabla.id_empresa = empresa.id_empresa
-        WHERE ordenTrabajo.estado = 4");
+        WHERE ordenTrabajo.estado = 4 AND ordenTrabajo.cerrado = 0");
         $sql -> execute();
         return $sql -> fetchAll();
+    }
+
+    public function mdlDespacharEquipo($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("UPDATE $tabla SET cerrado = 1 WHERE id_equipo = $id");
+
+        if ($sql -> execute()){
+            return "ok";
+        } else {
+            return "error";
+        }
     }
 }
 

@@ -51,6 +51,13 @@ Class ctrOrdenTrabajo{
         return $respuesta;
     }
 
+    public function crtDespacharEquipo($id){
+        $tabla = "ordenTrabajo";
+        $despachar = (new mdlOrdenTrabajo);
+        $respuesta = $despachar -> mdlDespacharEquipo($tabla, $id);
+        return $respuesta;
+    }
+
 }
 
 ?>

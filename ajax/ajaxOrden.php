@@ -8,6 +8,7 @@ Class ajaxOrden{
     public $_diagnostico;
     public $_repuestos;
     public $_estado;
+    public $_idEquipo;
     
     public function ajaxBuscarOrden(){
         $id = $this->_idOrden;
@@ -24,6 +25,13 @@ Class ajaxOrden{
                         "estado"=>$this->_estado);
         $actualizarOrden = (new ctrOrdenTrabajo);
         $respuesta = $actualizarOrden -> ctrActualizarOrden($datos);
+        echo $respuesta;
+    }
+
+    public function ajaxDespacharEquipo(){
+        $id = $this->_idEquipo;
+        $despachar = (new ctrOrdenTrabajo);
+        $respuesta = $despachar -> crtDespacharEquipo($id);
         echo $respuesta;
     }
 }
@@ -44,6 +52,12 @@ if ( $tipoOperacion == "actualizarOrden"){
     $actualizarOrden -> _repuestos = $_POST["repuestos"];
     $actualizarOrden -> _estado = $_POST["estado"];
     $actualizarOrden -> ajaxActualizarOrden();
+}
+
+if ( $tipoOperacion == "nuevoDespacho"){
+    $despacho = (new ajaxOrden);
+    $despacho -> _idEquipo = $_POST["equipoDespacho"];
+    $despacho -> ajaxDespacharEquipo();
 }
 
 ?>

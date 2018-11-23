@@ -34,16 +34,20 @@ Class ajaxTaller{
         $nuevaActa = (new ctrActa);
         $respuesta = $nuevaActa -> ctrGuardaNuevaActa($datos);
 
-        // Trae el numero de la ultima acta ingresada
-        $ultimaActa = (new ctrActa);
-        $lastActa = $ultimaActa -> ctrUltimaActa();
+        if ($respuesta = "error"){
+            return "error";
+        } else {
+            // Trae el numero de la ultima acta ingresada
+            $ultimaActa = (new ctrActa);
+            $lastActa = $ultimaActa -> ctrUltimaActa();
 
-        $last = $lastActa["id_acta"];
-        // // Inserta y crea la Orden de trabajo
-        $nuevaOTrabajo = (new ctrOrdenTrabajo);
-        $resp = $nuevaOTrabajo -> ctrNuevaOrdenTrabajo($datos, $last);
+            $last = $lastActa["id_acta"];
+            // // Inserta y crea la Orden de trabajo
+            $nuevaOTrabajo = (new ctrOrdenTrabajo);
+            $resp = $nuevaOTrabajo -> ctrNuevaOrdenTrabajo($datos, $last);
 
-        echo $respuesta;
+            echo $respuesta;
+        }
     }
 
 }
