@@ -50,9 +50,9 @@
       <li><a href="#"><i class="fa fa-circle-o"></i> Comuna</a></li>
       <li><a href="marca"><i class="fa fa-circle-o"></i> Marca</a></li>
       <li><a href="#"><i class="fa fa-circle-o"></i> Modelo</a></li>
-      <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Bodega</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Taller</a></li> -->
-      <!-- <li><a href="taller"><i class="fa fa-circle-o"></i> Tecnico</a></li> -->
+      <li><a href="#"><i class="fa fa-circle-o"></i> Bodega</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Taller</a></li>
+      <li><a href="taller"><i class="fa fa-circle-o"></i> Tecnico</a></li>
     </ul>
   </li> -->
   <li class=""><a href="productos"><i class="fa fa-beer"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
