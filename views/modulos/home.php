@@ -35,7 +35,7 @@
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-aqua"><a href="terrenos"><i class="fa fa-car"></i></a></span>
+          <a href="terrenos"><span class="info-box-icon bg-aqua"><i class="fa fa-car"></i></a></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Activiades Terreno</span>
@@ -46,7 +46,7 @@
   
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-green"><a href="ingresoTaller"><i class="fa fa-plus"></i></a></span>
+          <a href="ingresoTaller"><span class="info-box-icon bg-green"><i class="fa fa-plus"></i></a></span>
 
             <div class="info-box-content">
               <span class="info-box-text"> Ingreso Taller</span>
@@ -57,7 +57,7 @@
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-orange"><a href="ordenes"><i class="fa fa-play"></i></a></span>
+          <a href="ordenes"> <span class="info-box-icon bg-orange"><i class="fa fa-play"></i></a></span>
 
             <div class="info-box-content">
               <span class="info-box-text"> Ordenes Trabajo</span>
@@ -68,7 +68,7 @@
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-red"><a href="despacho"><i class="fa fa-truck"></i></a></span>
+          <a href="despacho"><span class="info-box-icon bg-red"><i class="fa fa-truck"></i></a></span>
 
             <div class="info-box-content">
               <span class="info-box-text"> Despacho</span>
@@ -126,7 +126,7 @@
                               echo "<td><span class='label label-danger'>Nueva Orden</span></td>";
                               break;
                             case '1':
-                              echo "<td><span class='label label-secondary'>Diagnostico</span></td>";
+                              echo "<td><span class='label label-info'>Diagnostico</span></td>";
                               break;
                             case '2':
                               echo "<td><span class='label label-warning'>Espera OT</span></td>";
