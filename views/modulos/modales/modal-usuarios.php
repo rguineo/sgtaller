@@ -43,7 +43,6 @@
                     <div class="col-sm-8">
                     <select name="" id="" class="form-control">
                         <option value="0">Administrador</option>
-                        <option value="1">Usuario</option>
                     </select>
 
                     </div>

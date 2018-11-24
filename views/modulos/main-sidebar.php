@@ -36,7 +36,7 @@
  
   <ul class="treeview-menu">
       <li><a href="cliente"><i class="fa fa-user"></i> Empresas</a></li>
-      <li><a href="usrCliente"><i class="fa fa-user"></i> Usuario Cliente</a></li>
+      <li><a href="usrCliente"><i class="fa fa-user"></i> Usuario Empresa</a></li>
   </ul>
   </li>
  
