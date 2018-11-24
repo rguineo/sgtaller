@@ -63,7 +63,13 @@
   <li class=""><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <!-- <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="bodega"><i class="fa fa-bank "></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li> -->
-  <li class=""><a href="#"><i class="fa fa-edit"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <!-- <li class=""><a href="#"><i class="fa fa-edit"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li> -->
+  <li class="treeview"><a href="#"><i class="fa fa-cogs"></i> <span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+    <ul class="treeview-menu">
+      <li><a href="informe-equipos"><i class="fa fa-circle-o"></i> Informe Equipos</a></li>
+    </ul>
+  </li>
+  
   <li class=""><a href="ingresoTaller"><i class="fa fa-magnet"></i><span>Recepción de Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
 
 

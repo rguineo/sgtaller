@@ -18,7 +18,7 @@ Class mdlStock{
         VALUES (NULL, :idP, :stock, :ncritico, NULL, :idU)");
 
         $sql -> bindParam(":idP", $datos["idProducto"], PDO::PARAM_INT);
-        $sql -> bindParam(":stock", $datos["stock"], PDO::PARAM_INT);
+        $sql -> bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
         $sql -> bindParam(":ncritico", $datos["nCritico"], PDO::PARAM_INT);
         $sql -> bindParam(":idU", $datos["nSession"], PDO::PARAM_STR);
         
@@ -36,7 +36,7 @@ Class mdlStock{
 
         $sql -> bindParam(":idS", $datos["idStock"], PDO::PARAM_INT);
         $sql -> bindParam(":idP", $datos["idProducto"], PDO::PARAM_INT);
-        $sql -> bindParam(":stock", $datos["stock"], PDO::PARAM_INT);
+        $sql -> bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
         $sql -> bindParam(":ncritico", $datos["nCritico"], PDO::PARAM_INT);
         $sql -> bindParam(":idU", $datos["nSession"], PDO::PARAM_STR);
 
@@ -64,7 +64,7 @@ Class mdlStock{
         $sql = (new Conexion)->conectar()->prepare("UPDATE $tabla SET cantidad = :stock, id_usuario = :idU WHERE id = :idS");
 
         $sql -> bindParam(":idS", $id, PDO::PARAM_INT);
-        $sql -> bindParam(":stock", $egreso, PDO::PARAM_INT);
+        $sql -> bindParam(":stock", $egreso, PDO::PARAM_STR);
         $sql -> bindParam(":idU", $idSession, PDO::PARAM_STR);
         
         if ($sql -> execute()){

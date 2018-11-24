@@ -23,7 +23,7 @@
                     <td><input name="precio" type="number" readonly maxlength='7' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
                     <td><input name="stock" type="number" readonly maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
                     <td><input name="critico" type="number" maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
-                    <td><input name="cantidad" type="number" maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
+                    <td><input name="cantidad" type="number" step="0.01" maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
                 </tr>
             </tbody>
         </table>
@@ -67,7 +67,7 @@
                     <td><input name="precio" type="number" readonly maxlength='7' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
                     <td><input name="stock" id="stockEgreso" type="number" readonly maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
                     <td><input name="critico" type="number" readonly maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center;'></td>
-                    <td><input name="cantidad" id="cantidadEgreso" type="number" maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center; background-color: #F5DA81;' autofocus></td>
+                    <td><input name="cantidad" id="cantidadEgreso" type="number" step="0.01" maxlength='4' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' style='width: 100px; text-align: center; background-color: #F5DA81;' autofocus></td>
                 </tr>
             </tbody>
         </table>

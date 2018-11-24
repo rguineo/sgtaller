@@ -1,4 +1,6 @@
 <?php
+require_once "controllers/productos.controller.php";
+require_once "models/productos.modelo.php";
 require_once "views/modulos/modales/modal-stock.php";
 
 $respuesta = (new crtProductos)->ctrListarTodosProductos();
@@ -32,12 +34,13 @@ $respuesta = (new crtProductos)->ctrListarTodosProductos();
                             <thead>
                               <tr>
                                 <th>+ Stock</th>
-                                <th width="35%">Producto</th>
+                                <th width="30%">Producto</th>
                                 <th width="35%">Descripci&oacute;n</th>
                                 <th>Unidad</th>
                                 <th>BarCode</th>
                                 <th>$ Precio</th>
                                 <th>Acci&oacute;n</th>
+                              </tr>
                             </thead>
                             <tbody>
 

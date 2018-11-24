@@ -28,6 +28,7 @@ class ControllerEnrutamiento {
 			$ruta == "usrCliente" ||
 			$ruta == "usuarios" ||
 			$ruta == "taller" ||
+			$ruta == "informe-equipos" ||
 			$ruta == "bodega" ||
 			$ruta == "salir") {
 

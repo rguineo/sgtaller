@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 				if (cadena == "ok") {
 					swal({				
-						type: 'success',
+						icon: 'success',
 						title: 'Excelente',
 						text: 'Producto creado con exito'
 					}).then((value) => {
@@ -24,7 +24,7 @@ $(document).ready(function(){
 					})
 				} else if (cadena == "error"){
                     swal({
-                        type: 'warning',
+                        icon: 'warning',
                         title: 'Malas Noticias',
                         text: 'El Producto ya existe. Intente Nuevamente'
 					}).then(function() {
@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 				if (cadena == "ok") {
 					swal({				
-						type: 'success',
+						icon: 'success',
 						title: 'Excelente',
 						text: 'Producto actualizado con exito'
 					}).then((value) => {
@@ -107,7 +107,6 @@ $(document).ready(function(){
 		  confirmButtonColor: '#3085d6',
 		  cancelButtonColor: '#d33',
 		  confirmButtonText: 'Si, Elimina!'
-		  
 		}).then(function() {
 
 		  	$.ajax({
@@ -122,7 +121,7 @@ $(document).ready(function(){
 						swal({
 					      title: 'Eliminado!',
 					      text: 'Su Producto ha sido eliminado.',
-					      type: 'success'
+					      icon: 'success'
 					    }).then(function() {
 						    window.location = "productos"
 						})

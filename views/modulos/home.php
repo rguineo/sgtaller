@@ -21,7 +21,7 @@
     <section class="content container-fluid">
 
     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
@@ -29,56 +29,55 @@
               <span class="info-box-text">Equipos en Taller</span>
               <span class="info-box-number"><?php echo $countEq[0]; ?><small></small></span>
             </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">X-Force</span>
-              <span class="info-box-number">4</span>
-            </div>
-            <!-- /.info-box-content -->
           </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
+         </div> -->
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+            <span class="info-box-icon bg-aqua"><a href="terrenos"><i class="fa fa-car"></i></a></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Equipos Entregados</span>
-              <span class="info-box-number">760</span>
+              <span class="info-box-text">Activiades Terreno</span>
+              <span class="info-box-number"><small></small></span>
             </div>
-            <!-- /.info-box-content -->
           </div>
-          <!-- /.info-box -->
         </div>
-        <!-- /.col -->
+  
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+            <span class="info-box-icon bg-green"><a href="ingresoTaller"><i class="fa fa-plus"></i></a></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Clientes</span>
-              <span class="info-box-number">2.000</span>
+              <span class="info-box-text"> Ingreso Taller</span>
+              <span class="info-box-number"><small></small></span>
             </div>
-            <!-- /.info-box-content -->
           </div>
-          <!-- /.info-box -->
         </div>
-        <!-- /.col -->
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-orange"><a href="ordenes"><i class="fa fa-play"></i></a></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text"> Ordenes Trabajo</span>
+              <span class="info-box-number"><small></small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><a href="despacho"><i class="fa fa-truck"></i></a></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text"> Despacho</span>
+              <span class="info-box-number"><small></small></span>
+            </div>
+          </div>
+        </div>
       </div>
-        <div><br> <center>
+        <!-- <div><br> <center>
           <a href="terrenos" class="btn btn-primary"><i class="fa fa-car"> Terreno</i></a>
           <a href="ingresoTaller" class="btn btn-success"><i class="fa fa-plus"> Ingreso Taller</i></a>
           <a href="ordenes" class="btn btn-warning"><i class="fa fa-play"> Ordenes Trabajo</i></a>
@@ -86,7 +85,7 @@
           
           <br><br>
           </center>
-        </div>
+        </div> -->
         <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Estado Equipos en Taller</h3>

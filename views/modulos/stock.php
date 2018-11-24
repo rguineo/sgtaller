@@ -1,8 +1,9 @@
 <?php
+require_once "controllers/productos.controller.php";
+require_once "models/productos.modelo.php";
+require_once "modales/modal-stock.php";
 
 $respuesta = (new crtProductos)->ctrListarProductos();
-// $grafico = (new ControllerProducto)->ctrCantidadProducto();
-
 ?>
 
 
@@ -54,10 +55,10 @@ $respuesta = (new crtProductos)->ctrListarProductos();
 
                                     <td width="100">
                                       <button class="btn btn-sm btn-info btnEgreso" idStock="'.$value["id"].'" data-toggle="modal" data-target="#modal-egreso-stock" title="Egreso Stock">
-                                        <i class="fa fa-sign-out fa-2x"></i>
+                                        <i class="fa fa-sign-out"></i>
                                       </button>';
                                       if ($value["cantidad"] <= $value["ncritico"]){
-                                        echo '<i class="fa fa-eye fa-2x" style="color: red; margin-left: 10px;"></i>';
+                                        echo '<i class="fa fa-eye" style="color: red; margin-left: 10px;"></i>';
                                       }
 
                                     echo '
