@@ -30,8 +30,8 @@
                       <tr>
                           <th style='text-align: center;' width='10%'> N° Serie</th>
                           <th style='text-aling: center;'> Nombre Equipo </th>
-                          <th style='text-align: center;' width='20%'> Marca Equipo</th>
-                          <th style='text-align: center;'width='10%'> Modelo Equipo </th>	
+                          <th style='text-align: center;' width='15%'> Marca Equipo</th>
+                          <th style='text-align: center;'width='20%'> Modelo Equipo </th>	
                           <th style='text-align: center;'> Empresa </th>
                           <th style='text-align: center;'width='15%'> Accion </th>
                       </tr>

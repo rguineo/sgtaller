@@ -16,7 +16,7 @@
       </div>
 
       <!-- search form (Optional) -->
-      <form action="#" method="get" class="sidebar-form">
+      <!-- <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Buscar...">
           <span class="input-group-btn">
@@ -24,14 +24,14 @@
               </button>
             </span>
         </div>
-      </form>
+      </form> -->
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
 <ul class="sidebar-menu" data-widget="tree">
   <li class="header">Menú</li>
     <!-- Optionally, you can add icons to the links -->
-  <li class="active"><a href="home"><i class="fa fa-home"></i><span>Inicio</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="home"><i class="fa fa-home"></i><span>Inicio</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="treeview"><a href="#"><i class="fa fa-suitcase"></i><span>Empresas</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
  
   <ul class="treeview-menu">
@@ -40,8 +40,8 @@
   </ul>
   </li>
  
-  <li class="active"><a href="centros"><i class="fa fa-building"></i><span>Centros</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="centros"><i class="fa fa-building"></i><span>Centros</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="treeview"><a href="#"><i class="fa fa-cogs"></i> <span>Mantenedores</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
     <ul class="treeview-menu">
       <li><a href="pais"><i class="fa fa-circle-o"></i> País</a></li>
@@ -55,16 +55,16 @@
       <li><a href="taller"><i class="fa fa-circle-o"></i> Tecnico</a></li>
     </ul>
   </li>
-  <li class="active"><a href="productos"><i class="fa fa-beer"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="stock"><i class="fa fa-cubes"></i><span>Stock</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="productos"><i class="fa fa-beer"></i><span>Productos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="stock"><i class="fa fa-cubes"></i><span>Stock</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   
   
   
-  <li class="active"><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="usuarios"><i class="fa fa-users"></i><span>Usuarios</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <!-- <li class="active"><a href="taller"><i class="fa fa-wrench"></i><span>Taller</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="bodega"><i class="fa fa-bank "></i><span>Bodega</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li> -->
-  <li class="active"><a href="#"><i class="fa fa-edit"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="ingresoTaller"><i class="fa fa-magnet"></i><span>Recepción de Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="#"><i class="fa fa-edit"></i><span>Informes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class=""><a href="ingresoTaller"><i class="fa fa-magnet"></i><span>Recepción de Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
 
 
   <!-- <li class="active"><a href="#"><i class="fa fa-user-secret"></i><span>Administrativo</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
