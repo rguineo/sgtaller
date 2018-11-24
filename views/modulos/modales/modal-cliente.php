@@ -10,7 +10,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header tituloModal">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Nueva Empresa</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -21,7 +21,7 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">RUT</label>
                     <div class="col-sm-8">
-                        <input type="text" id="rut-cliente" class="form-control" placeholder="11.111.111-1" onkeyup=""  required name="rutCliente">
+                        <input type="text" id="rut-cliente" class="form-control" placeholder="11.111.111-1" onkeyup=""  required name="rutCliente" maxlength='12' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
