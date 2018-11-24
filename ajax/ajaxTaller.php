@@ -33,15 +33,16 @@ Class ajaxTaller{
                         "accesorios"=>$this->_accesoriosIngreso);
         $nuevaActa = (new ctrActa);
         $respuesta = $nuevaActa -> ctrGuardaNuevaActa($datos);
-
-        if ($respuesta = "error"){
-            return "error";
+        
+        if ($respuesta == "error"){
+            return $respuesta;
         } else {
             // Trae el numero de la ultima acta ingresada
             $ultimaActa = (new ctrActa);
             $lastActa = $ultimaActa -> ctrUltimaActa();
 
             $last = $lastActa["id_acta"];
+ 
             // // Inserta y crea la Orden de trabajo
             $nuevaOTrabajo = (new ctrOrdenTrabajo);
             $resp = $nuevaOTrabajo -> ctrNuevaOrdenTrabajo($datos, $last);

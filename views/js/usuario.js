@@ -16,7 +16,7 @@ $(document).ready(function(){
 					swal({
 					  type: 'success',
 					  title: 'Excelente',
-					  text: 'Usuario creada con éxito'
+					  text: 'Usuario creado con éxito'
 					}).then((result) => {
 					  if (result.value) {
 					    window.location = "usuarios"
@@ -71,7 +71,6 @@ $(document).ready(function(){
 			contentType: false,
 			success: function(respuesta) {
 				var valor = JSON.parse(respuesta) 
-				console.log(valor)
 
 				$('#formu-editar-usuario input[name="nombre_admin"]').val(valor.nombre_admin)
 				$('#formu-editar-usuario input[name="correo_admin"]').val(valor.correo_admin)

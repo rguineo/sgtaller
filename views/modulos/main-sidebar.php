@@ -32,7 +32,14 @@
   <li class="header">Menú</li>
     <!-- Optionally, you can add icons to the links -->
   <li class="active"><a href="home"><i class="fa fa-home"></i><span>Inicio</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
-  <li class="active"><a href="cliente"><i class="fa fa-suitcase"></i><span>Cliente</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
+  <li class="treeview"><a href="#"><i class="fa fa-suitcase"></i><span>Empresas</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+ 
+  <ul class="treeview-menu">
+      <li><a href="cliente"><i class="fa fa-user"></i> Empresas</a></li>
+      <li><a href="usrCliente"><i class="fa fa-user"></i> Usuario Cliente</a></li>
+  </ul>
+  </li>
+ 
   <li class="active"><a href="centros"><i class="fa fa-building"></i><span>Centros</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="active"><a href="equipos"><i class="fa fa-television"></i><span>Equipos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a></li>
   <li class="treeview"><a href="#"><i class="fa fa-cogs"></i> <span>Mantenedores</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>

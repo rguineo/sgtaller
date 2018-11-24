@@ -31,14 +31,13 @@ $respuesta = $ordenes->ctrTodasOrdenes();
 
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
-                                  <th style='text-align: center;'> Folio</th>
-                                  <th style='text-align: center;'> Fecha</th>
+                                  <th style='text-align: center;' width='8%'> Folio</th>
+                                  <th style='text-align: center;' width='8%'> Fecha</th>
                                   <th style='text-align: center;'> Equipo</th>
-                                  <th style='text-align: center;'> N° Serie </th>	
-                                  <th style='text-align: center;'> Empresa </th>
-                                  <th style='text-align: center;'> Estado </th>
-                          
-                                  <th style='text-align: center;'> Acciones </th>
+                                  <th style='text-align: center;' width='10%'> N° Serie </th>	
+                                  <th style='text-align: center;' width='20%'> Empresa </th>
+                                  <th style='text-align: center;' width='15%'> Estado </th>
+                                  <th style='text-align: center;' width='15%'> Acciones </th>
                               </tr>
                           </thead>
 
@@ -47,7 +46,7 @@ $respuesta = $ordenes->ctrTodasOrdenes();
                            
                            foreach ($respuesta as $key => $value) {
                             echo "<tr>";
-                              echo "<td>".$value['folio']."</td>";
+                              echo "<td style='text-align: center;'>".$value['folio']."</td>";
                               echo "<td>".$value['fecha_orden']."</td>";
                               echo "<td>".$value['nomEquipo']."</td>";
                               echo "<td>".$value['nSerie']."</td>";
@@ -55,24 +54,24 @@ $respuesta = $ordenes->ctrTodasOrdenes();
 
                               switch ($value['estado']) {
                                 case '':
-                                  echo "<td style='color: red;'>Nueva Orden</td>";
+                                  echo "<td style='text-align: center;color: red;'>Nueva Orden</td>";
                                   break;
                                 case '1':
-                                  echo "<td style='color: orange;'>Diagnostico</td>";
+                                  echo "<td style='text-align: center;color: orange;'>Diagnostico</td>";
                                   break;
                                 case '2':
-                                  echo "<td style='color: black;'>Espera Aprobacion</td>";
+                                  echo "<td style='text-align: center;color: black;'>Espera Aprobacion</td>";
                                   break;
                                 case '3':
-                                  echo "<td style='color: green;'>Reparacion</td>";
+                                  echo "<td style='text-align: center;color: green;'>Reparacion</td>";
                                   break;
 
                                 case '4':
-                                  echo "<td style='color: blue;'>Finalizado</td>";
+                                  echo "<td style='text-align: center;color: blue;'>Finalizado</td>";
                                   break;
                                 
                                 case '5':
-                                  echo "<td style='color: blue;'>Entregado</td>";
+                                  echo "<td style='text-align: center;color: blue;'>Entregado</td>";
                                   break;
 
                                 default:

@@ -15,7 +15,7 @@ $(document).ready(function(){
             contentType: false,
             success: function(respuesta) {
                 cadena = $.trim(respuesta)
-
+                console.log("id: "+cadena)
                 if (cadena == "ok") {
                     swal({
                         type: 'success',

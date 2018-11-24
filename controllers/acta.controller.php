@@ -10,7 +10,7 @@ Class ctrActa{
     }
 
     public function ctrUltimaActa(){
-        $tabla = "actaRecepcion";
+        $tabla = "actarecepcion";
         $ultimaActa = (new mdlActa);
         $respuesta = $ultimaActa -> mdlUltimaActa($tabla);
         return $respuesta;
