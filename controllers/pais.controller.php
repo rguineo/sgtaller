@@ -36,6 +36,26 @@ Class ctrPais{
         return $respuesta;
     }
 
+    public function ctrEliminarPais($id){
+        $tabla = "pais";
+        $pais = (new mdlPais);
+        $respuesta = $pais->mdlEliminarPais($tabla, $id);
+        return $respuesta;
+    }
+
+    public function ctrBuscarPais($id){
+        $tabla = "pais";
+        $pais = (new mdlPais);
+        $respuesta = $pais -> ctrBuscarPais($tabla, $id);
+        return $respuesta;
+    }
+
+    public function ctrActualizaPais($datos){
+        $tabla = "pais";
+        $pais = (new mdlPais);
+        $respuesta = $pais -> mdlActualizaPais($tabla, $datos);
+        return $respuesta;
+    }
 
 }
 

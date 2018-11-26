@@ -30,12 +30,26 @@ Class ajaxPais{
     }
 
     public function eliminarPais(){
-        $id = $this->getIdPais();
+        $id = $this->_idPais;
         $eliminar = new ctrPais();
-        $eliminar -> setIdPais($id);
-        $respuesta = $eliminar -> ctrEliminarPais();
+        $respuesta = $eliminar -> ctrEliminarPais($id);
         echo $respuesta;
-	}
+    }
+    
+    public function editarPais(){
+        $id = $this->_idPais;
+        $editar = (new ctrPais);
+        $respuesta = $editar -> ctrBuscarPais($id);
+        echo json_encode($respuesta);
+    }
+
+    public function actualizarPais(){
+        $datos = array ("idPais"=>$this->_idPais,
+                        "nombrePais"=>$this->_nombrePais);
+        $actualiza = (new ctrPais);
+        $respuesta = $actualiza -> ctrActualizaPais($datos);
+        echo $respuesta;
+    } 
 }
 
 $tipoOperacion = $_POST["tipoOperacion"];
@@ -48,8 +62,21 @@ if($tipoOperacion == "nuevoPais") {
 
 if ($tipoOperacion == "eliminarPais") {
     $eliminarPais = (new ajaxPais);
-    $eliminarPais -> getIdPais($_POST["id"]);
+    $eliminarPais -> _idPais = $_POST["id"];
     $eliminarPais -> eliminarPais();
+}
+
+if ( $tipoOperacion == "editarPais"){
+    $editarPais = (new ajaxPais);
+    $editarPais -> _idPais = $_POST["id_pais"];
+    $editarPais -> editarPais();
+}
+
+if ( $tipoOperacion == "actualizarPais"){
+    $actualizarPais = (new ajaxPais);
+    $actualizarPais ->_idPais = $_POST["idPais"];
+    $actualizarPais ->_nombrePais = $_POST["Epais"];
+    $actualizarPais -> actualizarPais();
 }
 
 ?>

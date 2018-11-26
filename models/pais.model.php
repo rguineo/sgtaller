@@ -77,6 +77,40 @@ Class mdlPais{
         $sql -> execute();
         return $sql->fetchAll();
     }
+
+    public function mdlEliminarPais($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("DELETE FROM $tabla WHERE id_pais = :id");
+
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+
+        if ( $sql -> execute() ){
+            return "ok";
+        } else {
+            return "error";
+        }
+    }
+
+    public function ctrBuscarPais($tabla, $id){
+        $sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_pais = :id");
+        $sql->bindParam(":id", $id, PDO::PARAM_INT);
+        $sql -> execute();
+
+        return $sql->fetch();
+    }
+
+    public function mdlActualizaPais($tabla, $datos){
+        $nomPais = strtoupper($datos["nombrePais"]);
+        $sql = (new Conexion)->conectar()->prepare("UPDATE $tabla SET nombre_pais = :pais 
+                                                    WHERE id_pais = :id");
+        $sql->bindParam(":id", $datos["idPais"], PDO::PARAM_INT);
+        $sql->bindParam(":pais", $nomPais, PDO::PARAM_STR);
+
+        if ( $sql -> execute() ){
+            return "ok";
+        } else {
+            return "error";
+        }
+    }
 }
 
 

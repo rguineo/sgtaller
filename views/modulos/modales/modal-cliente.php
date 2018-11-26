@@ -28,21 +28,21 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nombre / Razon</label>
                     <div class="col-sm-8">
-                        <input type="text" id="razon-cliente" class="form-control" placeholder="InterCom Corp"  required name="razonCliente" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
+                        <input type="text" id="razon-cliente" class="form-control" placeholder="InterCom Corp"  required name="razonCliente" maxlength='40' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Dirección</label>
                     <div class="col-sm-8">
-                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="direccionCliente" maxlength='30' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
+                        <input type="text" id="direccion-cliente" class="form-control" placeholder="Av. La Cruz"  required name="direccionCliente" maxlength='70' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Giro Comercial</label>
                     <div class="col-sm-8">
-                        <input type="text" id="giro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="giroCliente" maxlength='40' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
+                        <input type="text" id="giro-cliente" class="form-control" placeholder="Industria Acuícola"  required name="giroCliente" maxlength='70' oninput='if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'>
                     </div>
                 </div> 
 
