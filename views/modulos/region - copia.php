@@ -10,7 +10,7 @@
       <h1>Administrar Regiones </h1>
       <ol class="breadcrumb">
         <li><a href="home"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Region</li>
+        <li class="active">admRegion</li>
       </ol>
     </section>
 

@@ -120,8 +120,6 @@ $(document).ready(function(){
 						}
 				})
 
-				
-
 				$("#EinputCiudad").prop("disabled", false);
 				var id_region= valor.id_region;
 

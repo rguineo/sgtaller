@@ -16,6 +16,8 @@ require_once "controllers/marcas.controller.php";
 require_once "controllers/modelo.controller.php";
 require_once "controllers/pais.controller.php";
 require_once "controllers/region.controller.php";
+require_once "controllers/ciudad.controller.php";
+
 require_once "controllers/marcas.controller.php";
 require_once "controllers/terrenos.controller.php";
 require_once "controllers/acta.controller.php";
@@ -39,6 +41,8 @@ require_once "models/marcas.model.php";
 require_once "models/modelo.model.php";
 require_once "models/pais.model.php";
 require_once "models/region.model.php";
+require_once "models/ciudad.model.php";
+
 require_once "models/marcas.model.php";
 require_once "models/terrenos.model.php";
 require_once "models/acta.model.php";

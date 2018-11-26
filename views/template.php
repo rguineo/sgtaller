@@ -93,6 +93,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/js/ordenes.js"></script>
 <script src="views/js/pais.js"></script>
 <script src="views/js/region.js"></script>
+<script src="views/js/ciudad.js"></script>
+
 <script src="views/js/despacho.js"></script>
 <script src="views/js/usrCliente.js"></script>
 

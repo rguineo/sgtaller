@@ -19,6 +19,7 @@ class ControllerEnrutamiento {
 			//Mantenedores
 			$ruta == "pais" ||
 			$ruta == "region" ||
+			$ruta == "ciudad" ||
 			$ruta == "modelo" ||
 			$ruta == "equipos" ||
 			$ruta == "marca" ||

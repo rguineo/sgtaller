@@ -1,6 +1,6 @@
 <?php 
 
- $respuesta = (new ctrPais)->ctrMostrarPais();
+  $respuesta = (new ctrCiudad)->ctrMostrarCiudades();
 
 ?>
 
@@ -8,10 +8,10 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Administrar Paises     </h1>
+      <h1>Administrar Ciudades</h1>
       <ol class="breadcrumb">
         <li><a href="home"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">admPais</li>
+        <li class="active">Ciudad</li>
       </ol>
     </section>
 
@@ -19,8 +19,8 @@
     <section class="content container-fluid">
       <div id='page-wrapper'> 
         <div class='container-fluid'>
-        <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nuevo-pais">
-        <i class="fa fa-plus"></i>  Agregar Pais</button>
+        <button type="button" class="btn bg-purple margin" data-toggle="modal" data-target="#modal-nueva-ciudad">
+        <i class="fa fa-plus"></i>  Agregar Ciudad</button>
             <div class='row'>
                 <div class='col-lg-offset-1 col-lg-10'>
                     <div class='table-responsive'>
@@ -29,6 +29,8 @@
                           <thead style='text-align: center; background: #eaeaea;'>
                               <tr>
                                   <th style='text-align: center;'> #</th>
+                                  <th style='text-align: center;'> Ciudad</th>
+                                  <th style='text-align: center;'> Region</th>
                                   <th style='text-align: center;'> Pais</th>
                                   <th style='text-align: center;'> Acciones</th>
                                   
@@ -40,12 +42,14 @@
                            
                            foreach ($respuesta as $key => $value) {
                             echo "<tr>";
-                              echo "<td style='text-align: center;'>".$value['id_pais']."</td>";
-                              echo "<td>".$value['nombre_pais']."</td>";
+                              echo "<td style='text-align: center;'>".$value['id_ciudad']."</td>";
+                              echo "<td>".$value['nombre_ciudad']."</td>";
+                              echo "<td>".$value['nombre_region']."</td>";
+                              echo "<td>".$value['nombre_pais']."</td>";                         
                               echo "<td>"; 
                               echo "<center>";
-                                echo "<button type='button' idPais='".$value["id_pais"]."' class='btn btn-sm btn-primary btnEditarPais' href='#' data-toggle='modal' data-target='#modal-editar-pais' title='Editar'><i class='fa fa-edit'></i></button>";
-                                echo "<button type='button' idPais='".$value["id_pais"]."' class='btn btn-sm btn-danger btnEliminarPais' href='#' title='Eliminar'>
+                                echo "<button type='button' idCiudad='".$value["id_ciudad"]."' class='btn btn-sm btn-primary btnEditarCiudad' href='#' data-toggle='modal' data-target='#modal-editar-ciudad' title='Editar'><i class='fa fa-edit'></i></button>";
+                                echo "<button type='button' idCiudad='".$value["id_ciudad"]."' class='btn btn-sm btn-danger btnEliminarCiudad' href='#' title='Eliminar'>
                                 <i class='fa fa-trash''></i></button>";
                               echo "</center>";
                               echo "</td>";
