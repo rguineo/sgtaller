@@ -40,12 +40,7 @@ class mdlUsuario {
 		return $this->_idUsuario;
 	}
 
-	public function consultaUsuario(){
-
-		$datos = $this->getDatos();
-		$user = $datos["user"];
-
-		$tabla = $this->getTabla();
+	public function consultaUsuario($tabla, $user){
 		$sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE user = '$user'");
 		$sql -> execute();
 
@@ -60,23 +55,21 @@ class mdlUsuario {
         }
 	}
 
-	public function mdlGuardarUsuario() {
-		$tabla = $this->getTabla();
-		$datos = $this->getDatos();
+	public function mdlNuevoUsuario($tabla, $datos) {
+		$user = $datos["emlUsuario"];
 
-		$this->consultaUsuario();
+		$this->consultaUsuario($tabla, $user);
 		
 		if ($this->getResultado() == "vacio"){
 			$sql = (new Conexion)->conectar()->prepare("INSERT INTO $tabla() 
-			VALUES (NULL, :user, :pass, :nombre, :apellido, :avatar, NOW())");
+			VALUES (NULL, :user, :pass, :nombre, :apellido, :rol, NULL)");
 		
-			$sql->bindParam(":user", $datos["user"], PDO::PARAM_STR);
-			$sql->bindParam(":pass", $datos["password"], PDO::PARAM_STR);
-			$sql->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-			$sql->bindParam(":apellido", $datos["apellido"], PDO::PARAM_STR);
-			$sql->bindParam(":rol", $datos["rol"], PDO::PARAM_STR);
-			$sql->bindParam(":avatar", $rutaImagen, PDO::PARAM_STR);
-
+			$sql->bindParam(":user", $datos["emlUsuario"], PDO::PARAM_STR);
+			$sql->bindParam(":pass", $datos["pasUsuario"], PDO::PARAM_STR);
+			$sql->bindParam(":nombre", $datos["nomUsuario"], PDO::PARAM_STR);
+			$sql->bindParam(":apellido", $datos["apeUsuario"], PDO::PARAM_STR);
+			$sql->bindParam(":rol", $datos["rolUsuario"], PDO::PARAM_INT);
+		
 			if( $sql -> execute() ) {
 				return "ok";
 			} else {
@@ -109,6 +102,31 @@ class mdlUsuario {
 
 	}
 
+	public function mdlBuscarUsuario($tabla, $id){
+		$sql = (new Conexion)->conectar()->prepare("SELECT * FROM $tabla WHERE id_usuario = $id");
+		$sql -> execute();
+		return $sql->fetch();
+	}
+
+	public function mdlActualizarUsuario($tabla, $datos){
+		$user = strtolower($datos["emlUsuario"]);
+		$sql = (new Conexion)->conectar()->prepare("UPDATE $tabla 
+		SET user = :user, password = :pass, nombre = :nombre, apellido = :apellido, rol = :rol
+		WHERE id_usuario = :id");
+	
+		$sql->bindParam(":id", $datos["idUsuario"], PDO::PARAM_INT);
+		$sql->bindParam(":user", $user, PDO::PARAM_STR);
+		$sql->bindParam(":pass", $datos["pasUsuario"], PDO::PARAM_STR);
+		$sql->bindParam(":nombre", $datos["nomUsuario"], PDO::PARAM_STR);
+		$sql->bindParam(":apellido", $datos["apeUsuario"], PDO::PARAM_STR);
+		$sql->bindParam(":rol", $datos["rolUsuario"], PDO::PARAM_INT);
+	
+		if( $sql -> execute() ) {
+			return "ok";
+		} else {
+			return "error";
+		}
+	}
 }
 
 ?>

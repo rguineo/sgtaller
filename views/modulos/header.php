@@ -23,12 +23,11 @@
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="<?php echo $_SESSION["avatar"]; ?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $_SESSION["nombre"]; ?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
-                <img src="<?php echo $_SESSION["avatar"]; ?>" class="img-circle" alt="User Image">
+                <i class="fa fa-user fa-5x" style="color: white;"></i>
                 <p>
                   <?php echo $_SESSION["nombre"]; ?>
                 </p>

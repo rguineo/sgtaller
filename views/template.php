@@ -48,8 +48,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <?php
 
     if (isset($_SESSION["autenticar"]) && $_SESSION["autenticar"] == "ok") {
-      include "modulos/header.php";
-      include "modulos/main-sidebar.php";
+      if ( $_SESSION["rol"] == 0 ){
+        include "modulos/header.php";
+        include "modulos/main-sidebar.php";
+      } else if ( $_SESSION["rol"] == 1 ){
+        include "modulos/header.php";
+        include "modulos/main-sidebar-usuario.php";
+      }
+
 
       if( isset($_GET["ruta"])) {
         

@@ -29,11 +29,10 @@ $respuesta = $usuario->ctrMostrarUsuario();
                     <thead style='text-align: center; background: #eaeaea;'>
                       <tr>
                           <th scope="col">#</th>
-                          <th scope="col">Correo</th>
                           <th scope="col">Nombre</th>
                           <th scope="col">Apellido</th>
+                          <th scope="col">Correo</th>
                           <th scope="col">Rol</th>
-                          <th scope="col">Avatar</th>
                           <th scope="col">Acciones</th>
                       </tr>
                     </thead>
@@ -42,13 +41,24 @@ $respuesta = $usuario->ctrMostrarUsuario();
                     <?php 
 
                       foreach ($respuesta as $key => $value) {
-                        echo "<tr style='text-align: center'>";
+                        echo "<tr>";
                             echo "<td>".$value["id_usuario"]."</td>";
-                            echo "<td>".$value["user"]."</td>";
                             echo "<td>".$value["nombre"]."</td>";
                             echo "<td>".$value["apellido"]."</td>";
-                            echo "<td>".$value["rol"]."</td>";
-                            echo "<td><center><img src='".$value["avatar"]."' width='50'></center></td>";
+                            echo "<td>".$value["user"]."</td>";
+                            switch ($value["rol"]) {
+                              case '0':
+                                echo "<td>Administrador</td>";
+                                break;
+                              case '1':
+                                echo "<td>Usuario</td>";
+                                break;
+
+                              default:
+                                
+                                break;
+                            }
+                          
                             echo "<td><center>";
                             echo "<button href='#' type='button' class='btnEditarUsuario btn btn-sm btn-primary' data-toggle='modal' data-target='#modal-editar-usuario' title='Editar' idUsuario=".$value["id_usuario"]." ><i class='fa fa-edit'></i></button>";
                             echo "<button href='#' type='button' class='btnEliminarUsuario btn btn-sm btn-danger' id=".$value["id_usuario"]." title='Eliminar'><i class='fa fa-trash'></i></button>";

@@ -57,10 +57,10 @@ $(document).ready(function(){
 		})
 	})
 
-	$("body .table-dark").on("click", ".btnEditarUsuario", function(){
+	$("body .tabla-usuario").on("click", ".btnEditarUsuario", function(){
 		var idUsuario = $(this).attr("idUsuario")
 		var datos = new FormData()
-		datos.append("id_admin", idUsuario)
+		datos.append("id_usuario", idUsuario)
 		datos.append("tipoOperacion", "editarUsuario")
 
 		$.ajax({
@@ -72,13 +72,12 @@ $(document).ready(function(){
 			success: function(respuesta) {
 				var valor = JSON.parse(respuesta) 
 
-				$('#formu-editar-usuario input[name="nombre_admin"]').val(valor.nombre_admin)
-				$('#formu-editar-usuario input[name="correo_admin"]').val(valor.correo_admin)
-				$('#formu-editar-usuario textarea[name="password_admin"]').val(valor.password_admin)
-				$('#formu-editar-usuario #avatar_admin').attr("src", valor.avatar_admin)
-				$('#formu-editar-usuario input[name="id_admin"]').val(valor.id_admin)
-				$('#formu-editar-usuario input[name="rutaActual"]').val(valor.avatar_admin)
-
+				$('#formu-editar-usuario input[name="correoUsuario"]').val(valor.user)
+				$('#formu-editar-usuario input[name="passUsuario"]').val(valor.password)
+				$('#formu-editar-usuario input[name="nombreUsuario"]').val(valor.nombre)
+				$('#formu-editar-usuario input[name="apellidoUsuario"]').val(valor.apellido)
+				$('#formu-editar-usuario input[name="idUsuario"]').val(valor.id_usuario)
+				$("#ErolUsuario option[value="+ valor.rol +"]").attr("selected",true);
 			}
 
 		})
