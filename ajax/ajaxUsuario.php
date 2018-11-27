@@ -67,7 +67,7 @@ Class ajaxUsuario{
                         "password_admin"=>$this->_password_admin,
                         "avatar_admin"=>$this->_avatar_admin);
 
-		$respuesta = (new ControllerUsuario)->ctrCrearUsuario($datos);
+		$respuesta = (new ctrUsuario)->ctrCrearUsuario($datos);
 
 		echo $respuesta;
 	}

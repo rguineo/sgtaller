@@ -152,13 +152,11 @@ class mdlCentros {
     $sql->bindParam(":contacto", $datos["contacto"], PDO::PARAM_STR);
     $sql->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
 
-    if ( $sql->execute() ){
-        return "ok";
-    } else {
-        return "error";
-    }
-
-
+        if ( $sql->execute() ){
+            return "ok";
+        } else {
+            return "error";
+        }
     }
 
     public function mdlBuscarCentros($tabla, $id){
@@ -167,8 +165,6 @@ class mdlCentros {
         $sql->execute();
         return $sql->fetchAll();
     }
-
-
 }
 
 ?>      

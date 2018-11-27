@@ -21,6 +21,7 @@ class ControllerEnrutamiento {
 			$ruta == "region" ||
 			$ruta == "ciudad" ||
 			$ruta == "modelo" ||
+			$ruta == "tecnico" ||
 			$ruta == "equipos" ||
 			$ruta == "marca" ||
 			$ruta == "stock" ||

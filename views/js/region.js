@@ -16,7 +16,7 @@ $(document).ready(function(){
             processData: false,
             contentType: false,
             success: function(respuesta) {
-                cadena = $.trim(respuesta)
+                var cadena = $.trim(respuesta)
     
                 if (cadena == "ok") {
                     swal({

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -45,8 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 <body class="hold-transition skin-purple sidebar-mini login-page">
   <?php
-    session_start();
-    
+
     if (isset($_SESSION["autenticar"]) && $_SESSION["autenticar"] == "ok") {
       include "modulos/header.php";
       include "modulos/main-sidebar.php";
@@ -61,6 +61,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         include "modulos/home.php";
       }
         include "modulos/footer.php";
+        
     } else {
         include "modulos/login.php";
     }
@@ -94,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="views/js/pais.js"></script>
 <script src="views/js/region.js"></script>
 <script src="views/js/ciudad.js"></script>
-
+<script src="views/js/tecnico.js"></script>
 <script src="views/js/despacho.js"></script>
 <script src="views/js/usrCliente.js"></script>
 

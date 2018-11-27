@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 require_once "controllers/template.controller.php";
 require_once "controllers/enrutamiento.controller.php";
 require_once "controllers/sesion.controller.php";
@@ -24,8 +26,6 @@ require_once "controllers/acta.controller.php";
 require_once "controllers/ordenTrabajo.controller.php";
 require_once "controllers/tecnicos.controller.php";
 require_once "controllers/usrCliente.controller.php";
-
-
 
 require_once "models/equipo.model.php";
 require_once "models/sesion.modelo.php";

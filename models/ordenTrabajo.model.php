@@ -2,9 +2,9 @@
 
 require_once "conexion.php";
 
-Class mdlOrdenTrabajo{
+Class mdlordentrabajo{
 
-    public function mdlNuevaOrdenTrabajo($tabla, $datos, $last){
+    public function mdlNuevaordentrabajo($tabla, $datos, $last){
         $sql = (new Conexion)->conectar()->prepare("INSERT INTO $tabla() 
         VALUES (NULL, :folio, :fechaActa, NOW(), :acta, :idTecnico, :idEquipo, NULL, NULL, NULL, :idEmpresa, 0)");
 
@@ -24,9 +24,9 @@ Class mdlOrdenTrabajo{
     }
 
     public function mdlTodasOrdenes($tabla){
-        $sql = (new Conexion)->conectar()->prepare("SELECT ordenTrabajo.id_orden, ordenTrabajo.folio, 
-        ordenTrabajo.fecha_orden, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordenTrabajo.estado,
-        ordenTrabajo.id_equipo
+        $sql = (new Conexion)->conectar()->prepare("SELECT ordentrabajo.id_orden, ordentrabajo.folio, 
+        ordentrabajo.fecha_orden, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordentrabajo.estado,
+        ordentrabajo.id_equipo
         FROM $tabla
         INNER JOIN equipo
         ON $tabla.id_equipo = equipo.id_equipo
@@ -38,9 +38,9 @@ Class mdlOrdenTrabajo{
     }
 
     public function mdlBuscarOrden($tabla, $id){
-        $sql = (new Conexion)->conectar()->prepare("SELECT ordenTrabajo.id_orden, ordenTrabajo.folio, 
-        ordenTrabajo.fecha_orden, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordenTrabajo.estado, 
-        tecnicos.nomTecnico, tecnicos.id_tecnico, ordenTrabajo.diagnostico, ordenTrabajo.repuestos, ordenTrabajo.estado
+        $sql = (new Conexion)->conectar()->prepare("SELECT ordentrabajo.id_orden, ordentrabajo.folio, 
+        ordentrabajo.fecha_orden, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordentrabajo.estado, 
+        tecnicos.nomTecnico, tecnicos.id_tecnico, ordentrabajo.diagnostico, ordentrabajo.repuestos, ordentrabajo.estado
         FROM $tabla
         INNER JOIN equipo
         ON $tabla.id_equipo = equipo.id_equipo
@@ -80,29 +80,29 @@ Class mdlOrdenTrabajo{
     } 
 
     public function mdlTodosDespachos($tabla){
-        $sql = (new Conexion)->conectar()->prepare("SELECT ordenTrabajo.id_orden, ordenTrabajo.folio, 
-        ordenTrabajo.fecha_orden, ordenTrabajo.id_equipo, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordenTrabajo.estado, 
-        ordenTrabajo.cerrado
+        $sql = (new Conexion)->conectar()->prepare("SELECT ordentrabajo.id_orden, ordentrabajo.folio, 
+        ordentrabajo.fecha_orden, ordentrabajo.id_equipo, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordentrabajo.estado, 
+        ordentrabajo.cerrado
         FROM $tabla
         INNER JOIN equipo
         ON $tabla.id_equipo = equipo.id_equipo
         INNER JOIN empresa
         ON $tabla.id_empresa = empresa.id_empresa
-        WHERE ordenTrabajo.cerrado = 1");
+        WHERE ordentrabajo.cerrado = 1");
         $sql -> execute();
         return $sql -> fetchAll();
     }
     
     public function mdlTodosFinalizados($tabla){
-        $sql = (new Conexion)->conectar()->prepare("SELECT ordenTrabajo.id_orden, ordenTrabajo.folio, 
-        ordenTrabajo.fecha_orden, ordenTrabajo.id_equipo, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordenTrabajo.estado, 
-        ordenTrabajo.cerrado
+        $sql = (new Conexion)->conectar()->prepare("SELECT ordentrabajo.id_orden, ordentrabajo.folio, 
+        ordentrabajo.fecha_orden, ordentrabajo.id_equipo, equipo.nomEquipo, equipo.nSerie, empresa.razon_social, ordentrabajo.estado, 
+        ordentrabajo.cerrado
         FROM $tabla
         INNER JOIN equipo
         ON $tabla.id_equipo = equipo.id_equipo
         INNER JOIN empresa
         ON $tabla.id_empresa = empresa.id_empresa
-        WHERE ordenTrabajo.estado = 4 AND ordenTrabajo.cerrado = 0");
+        WHERE ordentrabajo.estado = 4 AND ordentrabajo.cerrado = 0");
         $sql -> execute();
         return $sql -> fetchAll();
     }

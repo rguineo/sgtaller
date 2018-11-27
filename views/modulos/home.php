@@ -2,9 +2,10 @@
   $ordenes = (new ctrOrdenTrabajo);
   $respuesta = $ordenes->ctrTodasOrdenes();
 
-  $entaller = (new ctrOrdenTrabajo);
-  $countEq = $entaller->ctrContarEq();
+  // $entaller = (new ctrOrdenTrabajo);
+  // $countEq = $entaller->ctrContarEq();
 ?>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -21,18 +22,6 @@
     <section class="content container-fluid">
 
     <div class="row">
-        <!-- <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Equipos en Taller</span>
-              <span class="info-box-number"><?php echo $countEq[0]; ?><small></small></span>
-            </div>
-
-          </div>
-         </div> -->
-
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
           <a href="terrenos"><span class="info-box-icon bg-aqua"><i class="fa fa-car"></i></a></span>
@@ -77,15 +66,7 @@
           </div>
         </div>
       </div>
-        <!-- <div><br> <center>
-          <a href="terrenos" class="btn btn-primary"><i class="fa fa-car"> Terreno</i></a>
-          <a href="ingresoTaller" class="btn btn-success"><i class="fa fa-plus"> Ingreso Taller</i></a>
-          <a href="ordenes" class="btn btn-warning"><i class="fa fa-play"> Ordenes Trabajo</i></a>
-          <a href="despacho" class="btn btn-success"><i class="fa fa-truck"> Despacho</i></a>
-          
-          <br><br>
-          </center>
-        </div> -->
+
         <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Estado Equipos en Taller</h3>
@@ -159,10 +140,6 @@
               <!-- /.table-responsive -->
             </div>
             <!-- /.box-body -->
-            <!-- <div class="box-footer clearfix">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Nuevo Orden</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">Ver Equipos</a>
-            </div> -->
             <!-- /.box-footer -->
           </div>
           <!-- /.box -->
